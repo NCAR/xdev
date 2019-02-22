@@ -1,7 +1,9 @@
-# xdev
-Experimental Development Team
+# Experimental Development Team
 
-## xdev-bot & xdev-bot-testing
+This repository is for the internal developments of the NCAR IOWA Experimental Development Team (xdev).
+
+## Related Repositories
+
 Bot: https://github.com/NCAR/xdev-bot
 
 Testing: https://github.com/NCAR/xdev-bot-testing
