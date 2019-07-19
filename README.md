@@ -2,7 +2,7 @@
 
 This repository is for the internal developments of the NCAR IOWA Experimental Development Team (xdev).
 
-Project Statuses Dashboard: https://ncar.github.io/status-dashboard/
+Project Statuses Dashboard: https://ncar.github.io/xdev-status-dashboard/
 
 ## Related Repositories
 
