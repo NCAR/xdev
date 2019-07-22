@@ -20,10 +20,10 @@ BLOG_AUTHOR = "The NCAR Experimental Development Team"  # (translatable)
 BLOG_TITLE = "NCAR XDev Blog"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://ncar.github.io/xdev-blog/"
+SITE_URL = "https://ncar.github.io/xdev/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://ncar.github.io/xdev-blog/"
+# BASE_URL = "https://ncar.github.io/xdev/"
 BLOG_EMAIL = "xdev@ucar.edu"
 BLOG_DESCRIPTION = "This is the blog of the Experimental Development Team at the National Center for Atmospheric Research."  # (translatable)
 
