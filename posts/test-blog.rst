@@ -1,6 +1,6 @@
 .. title: Test Blog
 .. slug: test-blog
-.. date: 2019-07-21 19:57:38 UTC-06:00
+.. date: 2019-07-21 20:00:00 UTC-06:00
 .. author: Kevin Paul
 .. tags: 
 .. category: 
