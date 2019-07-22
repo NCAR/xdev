@@ -1,4 +1,4 @@
-Sitemap: https://ncar.github.io/xdev-blog/sitemapindex.xml
+Sitemap: https://ncar.github.io/xdev/sitemapindex.xml
 
 User-Agent: *
 Host: ncar.github.io

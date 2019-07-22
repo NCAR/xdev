@@ -6,15 +6,23 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://ncar.github.io/xdev-blog/</loc>
-  <lastmod>2019-07-22T03:23:00Z</lastmod>
+  <loc>https://ncar.github.io/xdev/</loc>
+  <lastmod>2019-07-22T04:06:00Z</lastmod>
  </url>
  <url>
-  <loc>https://ncar.github.io/xdev-blog/archive.html</loc>
-  <lastmod>2019-07-22T03:23:00Z</lastmod>
+  <loc>https://ncar.github.io/xdev/2019/</loc>
+  <lastmod>2019-07-22T04:06:00Z</lastmod>
  </url>
  <url>
-  <loc>https://ncar.github.io/xdev-blog/categories/</loc>
-  <lastmod>2019-07-22T03:23:00Z</lastmod>
+  <loc>https://ncar.github.io/xdev/archive.html</loc>
+  <lastmod>2019-07-22T04:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ncar.github.io/xdev/categories/</loc>
+  <lastmod>2019-07-22T04:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ncar.github.io/xdev/posts/test-blog/</loc>
+  <lastmod>2019-07-22T04:06:00Z</lastmod>
  </url>
 </urlset>
