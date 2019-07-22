@@ -26,6 +26,7 @@ repository.  To write a new blog post, you should follow this procedure:
 4. Edit the file that was created in `site/posts/your-title.FMT` where `FMT` is either `rst`, `md`, or `ipynb`.  (Obviously, if you are creating a blog post from a Jupyter Notebook file, you will probably want to exit your `ipynb` file with Jupyter Notebook.)
 5. When your blog post is finished, make sure your changes are committed to your fork and then create a Pull Request.
 6. Tests that build the new web pages from your blog post will be run on CircleCI, and if these tests pass, then you need 2 reviews of your PR before it can be merged (so we read each others blog posts).
+7. Once the PR is merged, the new site will be generated on GitHub Pages automatically by a CircleCI job.  And, in a little while, the new website will be visible to the public.
 
 ## XDev Bot & Bot Testing Respositories
 
