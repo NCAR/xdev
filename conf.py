@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "The NCAR Experimental Development Team"  # (translatable)
-BLOG_TITLE = "NCAR XDev Blog"  # (translatable)
+BLOG_TITLE = "NCAR XDev"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://ncar.github.io/xdev/"
@@ -156,7 +156,7 @@ THEME = "bootstrap4"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
-THEME_COLOR = '#5670d4'
+THEME_COLOR = '#4a678a'
 
 # Theme configuration. Fully theme-dependent. (translatable)
 # Examples below are for bootblog4.
@@ -216,18 +216,18 @@ THEME_CONFIG = {
 #     )
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.ipynb", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
+    ("site/posts/*.rst", "posts", "post.tmpl"),
+    ("site/posts/*.md", "posts", "post.tmpl"),
+    ("site/posts/*.ipynb", "posts", "post.tmpl"),
+    ("site/posts/*.txt", "posts", "post.tmpl"),
+    ("site/posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
-    ("posts/*.ipynb", "posts", "post.tmpl"),
-    ("pages/*.txt", "pages", "page.tmpl"),
-    ("pages/*.html", "pages", "page.tmpl"),
+    ("site/pages/*.rst", "pages", "page.tmpl"),
+    ("site/pages/*.md", "pages", "page.tmpl"),
+    ("site/posts/*.ipynb", "posts", "post.tmpl"),
+    ("site/pages/*.txt", "pages", "page.tmpl"),
+    ("site/pages/*.html", "pages", "page.tmpl"),
 )
 
 
