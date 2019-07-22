@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "The NCAR Experimental Development Team"  # (translatable)
-BLOG_TITLE = "NCAR XDev Blog"  # (translatable)
+BLOG_TITLE = "NCAR XDev"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://ncar.github.io/xdev/"
@@ -156,7 +156,7 @@ THEME = "bootstrap4"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
-THEME_COLOR = '#5670d4'
+THEME_COLOR = '#4a678a'
 
 # Theme configuration. Fully theme-dependent. (translatable)
 # Examples below are for bootblog4.
