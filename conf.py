@@ -16,8 +16,8 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "The NCAR Experimental Development Team"  # (translatable)
-BLOG_TITLE = "NCAR XDev"  # (translatable)
+BLOG_AUTHOR = "The XDev Team"  # (translatable)
+BLOG_TITLE = "Experimental Development Team"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://ncar.github.io/xdev/"
@@ -25,7 +25,7 @@ SITE_URL = "https://ncar.github.io/xdev/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://ncar.github.io/xdev/"
 BLOG_EMAIL = "xdev@ucar.edu"
-BLOG_DESCRIPTION = "This is the blog of the Experimental Development Team at the National Center for Atmospheric Research."  # (translatable)
+BLOG_DESCRIPTION = "National Center for Atmospheric Research"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -152,11 +152,11 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "canterville"
+THEME = "xdev"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
-THEME_COLOR = '#4a678a'
+THEME_COLOR = '#1A658F'  # NCAR Blue
 
 # Theme configuration. Fully theme-dependent. (translatable)
 # Examples below are for bootblog4.
@@ -336,7 +336,7 @@ COMPILERS = {
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-LOGO_URL = 'images/logo.png'
+LOGO_URL = '/assets/img/CISL-contemp-logo-white-xdev.png'
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
@@ -1338,10 +1338,10 @@ WARN_ABOUT_TAG_METADATA = False
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    'TWITTER_URL': None,
-    'GITHUB_URL': 'https://github.com/xdev',
+    'TWITTER_URL': 'https://twitter.com/NCARXDev',
+    'GITHUB_URL': 'https://github.com/NCAR/xdev',
     'LINKEDIN_URL': None,
-    'BANNER_URL': '/images/mesa_lab.jpg'
+    'BANNER_URL': '/assets/img/mesa_lab.jpg'
 }
 
 # Add functions here and they will be called with template
