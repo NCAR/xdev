@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "The XDev Team"  # (translatable)
-BLOG_TITLE = "Experimental Development Team"  # (translatable)
+BLOG_TITLE = "XDEV @ NCAR"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://ncar.github.io/xdev/"
@@ -25,7 +25,7 @@ SITE_URL = "https://ncar.github.io/xdev/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://ncar.github.io/xdev/"
 BLOG_EMAIL = "xdev@ucar.edu"
-BLOG_DESCRIPTION = "National Center for Atmospheric Research"  # (translatable)
+BLOG_DESCRIPTION = "Developing. Prototyping."  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -1341,7 +1341,7 @@ GLOBAL_CONTEXT = {
     'TWITTER_URL': 'https://twitter.com/NCARXDev',
     'GITHUB_URL': 'https://github.com/NCAR/xdev',
     'LINKEDIN_URL': None,
-    'BANNER_URL': '/assets/img/mesa_lab.jpg'
+    'BANNER_URL': '/assets/img/mammatus.jpg'
 }
 
 # Add functions here and they will be called with template

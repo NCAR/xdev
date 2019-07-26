@@ -52,7 +52,7 @@ hr {
 }
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
-samp { font-family: monospace, serif; font-size: 1em; }
+samp { font-family: 'Source Code Pro', monospace, serif; font-size: 1em; }
 pre { white-space: pre-wrap; }
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 small { font-size: 80%; }
@@ -249,7 +249,7 @@ h6 {
 }
 
 a {
-    color: #4A4A4A;
+    color: transparent;
     transition: color 0.3s ease;
 }
 
@@ -343,7 +343,7 @@ mark {
 
 code, tt {
     padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: 'Source Code Pro', monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
     border: #E3EDF3 1px solid;
@@ -358,7 +358,7 @@ pre {
     border: #E3EDF3 1px solid;
     width: 100%;
     padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: 'Source Code Pro', monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
@@ -512,7 +512,7 @@ body.nav-opened .site-wrapper {
     height: 40rem;
     margin-bottom: 5rem;
     text-align: center;
-    background: #222 no-repeat center center;
+    background: #222 no-repeat center bottom;
     background-size: cover;
     overflow: hidden;
 }
@@ -875,9 +875,9 @@ body.nav-opened .menu-button .word {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
-    margin: 100px 0 10px 0;
+    margin: 10px 0 10px 0;
     font-size: 4rem;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     font-weight: 700;
     font-family: "Poppins", sans-serif;
     color: #fff;
