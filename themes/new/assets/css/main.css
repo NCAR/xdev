@@ -1,18 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.site-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapped {
+  display: inline-block;
+  text-align: left;
+}
+
 .site-header {
   color: #FFF;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0 2rem 0;
+  margin: 0 0 1rem 0;
   background-image: url("../img/mammatus.jpg");
   background-color: #000;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  min-width: 40rem;
+  min-width: 60rem;
 }
 
 .site-main {
-  width: 80%;
+  width: 40rem;
 }
 
 .site-footer {
