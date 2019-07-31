@@ -1,38 +1,174 @@
+html {
+  overflow-y: scroll;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   border: 0;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  display: block;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+header {
+  display: block;
+}
+
+main {
+  display: block;
+}
+
+div {
+  display: block;
+}
+
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  line-height: 1.6em;
+}
+
+a {
+  text-decoration: none;
 }
 
 .site-wrapper {
-  text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.wrapped {
-  display: inline-block;
-  text-align: left;
+.outer {
+  position: relative;
+  padding: 0 4vw;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 940px;
+  min-width: 320px;
+  width: 100%;
 }
 
 .site-header {
-  color: #FFF;
-  text-align: center;
-  padding: 2rem 0 2rem 0;
-  margin: 0 0 1rem 0;
+  position: relative;
+  padding: 12px 0;
   background-image: url("../img/mammatus.jpg");
   background-color: #000;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  min-width: 60rem;
+}
+
+.site-title {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vw 4vw;
+  text-align: center;
+  z-index: 10;
+}
+
+.site-title h1, .site-title h2, .site-title h3,
+.site-title h4, .site-title h5, .site-title h6 {
+  font-family: Audiowide, cursive;
+}
+
+.site-nav {
+  display: flex;
+  overflow-y: hidden;
+  z-index: 300;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 40px;
+  font-size: 1.2rem;
+}
+
+.site-nav-menu {
+  align-items: center;
+  overflow-x: auto;
+  margin-right: 10px;
+  padding-bottom: 80px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+
+.site-nav-social {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  opacity: 0.4;
+}
+
+.site-nav-social :hover {
+  opacity: 1.0;
+}
+
+
+.social-link {
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li, .nav li a {
+  color: #FFF;
+  padding: 10px 12px;
+  display: block;
+  margin: 0;
+}
+
+.nav li {
+  opacity: 0.4;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.nav li a :hover {
+  opacity: 1.0;
 }
 
 .site-main {
-  width: 40rem;
+  z-index: 100;
+  flex-grow: 1;
+  font-family: Merriweather, serif;
 }
 
 .site-footer {
-  text-align: right;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  color: #fff;
+  background: #000;
 }
