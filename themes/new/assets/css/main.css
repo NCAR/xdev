@@ -1,0 +1,20 @@
+.site-header {
+  color: #FFF;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-image: url("../img/mammatus.jpg");
+  background-color: #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-width: 40rem;
+}
+
+.site-main {
+  width: 80%;
+}
+
+.site-footer {
+  text-align: right;
+}
