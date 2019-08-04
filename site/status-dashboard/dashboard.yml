@@ -1,0 +1,64 @@
+- name: Core and Coordinated packages
+
+  packages:
+
+  - repo: NCAR/esmlab
+    badges: circleci, codecov, rtd, pypi, conda-forge
+
+  - repo: NCAR/esmlab-regrid
+    badges: circleci, codecov, rtd
+
+  - repo: NCAR/intake-esm
+    badges: circleci, codecov, rtd, pypi, conda-forge
+
+  - repo: NCAR/intake-esm-datastore
+    badges: None
+
+  - repo: NCAR/jupyterlab-pbs
+    badges: circleci
+
+  - repo: marbl-ecosys/marbl-forcing
+    badges: None
+
+  - repo: NCAR/mpirical
+    badges: circleci, rtd, codecov
+
+  - repo: NCAR/ncar-jobqueue
+    badges: pypi
+
+
+  - repo: NCAR/pop-tools
+    badges: rtd, circleci, codecov, pypi, conda-forge 
+
+  - repo: NCAR/xcollection
+    badges: circleci, codecov, rtd
+
+  - repo: NCAR/xdev-bot
+    badges: circleci, codecov
+
+  - repo: NCAR/xreshaper
+    badges: circleci, codecov, rtd
+
+
+- name: Associated packages
+
+  packages:
+
+  - repo: dask/dask
+    badges: rtd, pypi, conda-forge, defaults
+  
+  - repo: dask/dask-mpi
+    badges: rtd, pypi, conda-forge 
+
+  - repo: dask/dask-jobqueue
+    badges: rtd, pypi, conda-forge 
+
+  - repo: intake/intake
+    badges: rtd, pypi, conda-forge 
+  
+  - repo: intake/intake-xarray
+    badges: pypi, conda-forge 
+
+  - repo: pydata/xarray
+    badges: rtd, pypi, conda-forge, defaults
+    rtd_name: xray
