@@ -8,15 +8,23 @@ the `xdev-status-dashboard`) and the team blog.
 
 Dashboard: https://ncar.github.io/xdev-status-dashboard/
 
+The main configuration of the dashboard is done via the [dashboard.yml](./site/status-dashboard/dashboard.yml) file, which can contain several sections with a list of packages, and a list of services for each section.
+
+To update the dashboard with a new package or a new service, one needs to run the `make_status` script from the root directory:
+
+```bash
+python ./site/status-dashboard/make_status.py
+```
+
 ## XDev Blog
 
 The XDev blog site is deployed using GitHub Pages from this repository.  It uses (Nikola)[https://getnikola.com]
 to generate static web pages, the content of which are contained in files in the `site` directory of this
 repository.  To write a new blog post, you should follow this procedure:
 
-0. Make sure you have Nikola installed on your machine (`pip install nikola[extras]`)
-1. Fork this repository into your own space and check out your fork
-2. Use Nikola (from within your fork) to create a new blog post file in the format of your choosing 
+1. Make sure you have Nikola installed on your machine (`pip install nikola[extras]`)
+2. Fork this repository into your own space and check out your fork
+3. Use Nikola (from within your fork) to create a new blog post file in the format of your choosing 
    (`FORMAT` can be `rest`, `markdown`, or `ipynb`):
    
    ```bash

@@ -45,20 +45,20 @@
   packages:
 
   - repo: dask/dask
-    badges: rtd, pypi, conda-forge, defaults
+    badges: coveralls, travis, rtd, pypi, conda-forge
   
   - repo: dask/dask-mpi
-    badges: rtd, pypi, conda-forge 
+    badges: circleci, codecov, rtd, pypi, conda-forge 
 
   - repo: dask/dask-jobqueue
-    badges: rtd, pypi, conda-forge 
+    badges: travis, rtd, pypi, conda-forge 
 
   - repo: intake/intake
-    badges: rtd, pypi, conda-forge 
+    badges: travis, rtd, pypi, conda-forge 
   
   - repo: intake/intake-xarray
-    badges: pypi, conda-forge 
+    badges: travis, pypi, conda-forge 
 
   - repo: pydata/xarray
-    badges: rtd, pypi, conda-forge, defaults
+    badges: coveralls, travis, rtd, pypi, conda-forge
     rtd_name: xray
