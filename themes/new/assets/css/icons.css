@@ -16,6 +16,12 @@
     text-transform: none;
     line-height: 1;
     text-decoration: none !important;
+    vertical-align: bottom;
+    opacity: 0.6;
+}
+
+[class^="icon-"]:hover:before, [class*=" icon-"]:hover:before {
+    opacity: 1.0;
 }
 
 /* Each icon is created by inserting the correct character into the
