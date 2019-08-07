@@ -4,6 +4,7 @@
 version: 2
 
 jobs:
+
   build:
     docker:
       - image: circleci/python:latest
@@ -23,6 +24,7 @@ jobs:
           command: nikola build
       - store_artifacts:
           path: ./output/
+
   build_deploy:
     docker:
       - image: circleci/python:latest
