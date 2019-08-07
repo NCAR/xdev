@@ -336,7 +336,7 @@ COMPILERS = {
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-LOGO_URL = '/assets/img/CISL-contemp-logo-white-xdev.png'
+LOGO_URL = '/assets/img/xdev_logo.png'
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
