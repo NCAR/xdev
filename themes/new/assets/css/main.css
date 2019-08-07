@@ -2,6 +2,7 @@ html {
   overflow-y: scroll;
   font-family: "Helvetica Neue", sans-serif;
   background-color: #EFEFEF;
+  min-width: 400px;
 }
 
 article, span {
@@ -27,6 +28,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", sans-serif;
   margin: 0;
 }
 
@@ -69,14 +71,12 @@ a {
 }
 
 .site-header {
-  color: #FFF;
+  color: #EEE;
   position: relative;
   padding: 12px 0;
-  background-image: url("../img/NCAR-Waves.png");
-  background-color: #1A658F;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  background: #000;
+  /*background: #1A658F url("../img/mammatus.jpg") no-repeat center bottom;*/
+  /*background-size: cover;*/
 }
 
 .site-title {
@@ -102,7 +102,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   height: 40px;
-  top: -70px;
+  top: 0;
   font-size: 1.2rem;
 }
 
@@ -167,9 +167,11 @@ a {
 .site-footer {
   position: relative;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   color: #fff;
   background: #000;
+  /*background: #000 url("../img/CISL-contemp-logo-white.svg") no-repeat center 10px;*/
+  /*background-size: auto 40px;*/
 }
 
 .site-footer-content {
@@ -186,7 +188,7 @@ a {
 
 .post-feed {
   display: flex;
-  margin-top: -70px;
+  margin-top: 4vw;
   padding-top: 0;
   position: relative;
   flex-wrap: wrap;
@@ -194,26 +196,33 @@ a {
 
 .post-card {
   display: flex;
+  flex: 1 1 300px;
+  flex-direction: column;
   overflow: hidden;
   margin: 0 20px 40px;
   background: #fff 50%;
   background-size: cover;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  transition: all .5s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07);
+  transition: all .3s ease;
+  transform: translate3D(0, -1px, 0);
 }
 
 .post-card-image-link {
   position: relative;
   display: block;
   overflow: hidden;
-  flex: 1 1 auto;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px 5px 0 0;
 }
 
 .post-card-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 200px;
   background: #c5d2d9 url("../img/default.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
@@ -222,14 +231,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 0 1 357px;
+  flex-grow: 1;
 }
 
 .post-card-content-link {
-  padding: 30px 40px 0;
   position: relative;
   display: block;
   color: #15171a;
+  padding: 25px 25px 0;
 }
 
 .post-card-tags {
@@ -239,7 +248,6 @@ a {
   font-size: 1rem;
   line-height: 1.15em;
   font-weight: 500;
-  letter-spacing: .5px;
   text-transform: uppercase;
 }
 
@@ -247,24 +255,55 @@ a {
   font-size: 2rem;
 }
 
-.post-card-footer {
-  padding: 0 40px 25px;
+.post-card-excerpt {
+  color: #0c5460;
 }
 
 .post-card-author {
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 1.2rem;
+  padding: 0 0 25px 25px
 }
 
-@media (max-width: 900px) {
+.post-card-author a {
+  color: #738a94;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 800px) {
   .site-nav {
-    top: 0;
+    top: -70px;
   }
 
   .post-feed {
-    margin-top: 4vw;
+    margin-top: -70px;
+  }
+
+  .post-card {
+    flex: 1 1 100%;
+    flex-direction: row;
+  }
+
+  .post-card-image-link {
+    flex: 1 1 auto;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .post-card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .post-card-content {
+    flex: 0 1 357px;
+  }
+
+  .post-card-content-link {
+    padding: 30px 40px 0;
+  }
+
+  .post-card-author {
+    padding: 0 40px 30px;
   }
 }
-
