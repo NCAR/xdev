@@ -1,7 +1,6 @@
 html {
   overflow-y: scroll;
   font-family: "Helvetica Neue", sans-serif;
-  background-color: #EFEFEF;
   min-width: 400px;
 }
 
@@ -39,8 +38,8 @@ header, main, div {
 ul {
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   padding-inline-start: 40px;
 }
 
@@ -52,10 +51,20 @@ a {
   text-decoration: none;
 }
 
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
 .site-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #EFEFEF;
 }
 
 .outer {
@@ -66,7 +75,6 @@ a {
 .inner {
   margin: 0 auto;
   max-width: 940px;
-  min-width: 320px;
   width: 100%;
 }
 
@@ -84,7 +92,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4vw 4vw 8vw 4vw;
+  padding: 6vw 4vw 6vw 4vw;
   text-align: center;
   z-index: 10;
 }
@@ -109,11 +117,10 @@ a {
 .site-nav-menu {
   align-items: center;
   overflow-x: auto;
-  margin-right: 10px;
+  margin-right: 0px;
   padding-bottom: 80px;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
   font-family: "Poppins", sans-serif;
+  white-space: nowrap;
 }
 
 .site-nav-social {
@@ -141,21 +148,27 @@ a {
   list-style: none;
 }
 
-.nav li {
-  padding: 0;
+.nav-item {
+  display: block;
+  padding: 10px 12px;
+  margin: 0;
   text-transform: uppercase;
 }
 
-.nav li :hover {
+.nav-link {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.nav-item :hover {
   opacity: 1.0;
 }
 
-.nav li a {
-  padding: 10px 12px;
-  color: #fff;
+.nav-logo, .nav-logo img {
   display: block;
-  margin: 0;
-  opacity: 0.6;
+  width: auto;
+  height: 24px;
+  opacity: 1.0;
 }
 
 .site-main {
@@ -170,8 +183,6 @@ a {
   padding-bottom: 20px;
   color: #fff;
   background: #000;
-  /*background: #000 url("../img/CISL-contemp-logo-white.svg") no-repeat center 10px;*/
-  /*background-size: auto 40px;*/
 }
 
 .site-footer-content {
@@ -268,6 +279,49 @@ a {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 0.8rem;
+}
+
+.post-full {
+  position: relative;
+  z-index: 50;
+  background: #FFF;
+  margin-bottom: 40px;
+}
+
+.post-full-header {
+  margin: 0 auto;
+  padding: 3vw 3vw 1vw 3vw;
+  text-align: center;
+}
+
+.post-full-meta, .post-full-meta a {
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #738a94;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.post-full-meta-divider {
+  display: inline-block;
+  margin: 0 6px 1px;
+}
+
+.post-full-image {
+  margin: 0 -10vw -165px;
+  height: 800px;
+  background: #c5d2d9 50%;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.post-full-title {
+  margin: 1vw;
+  color: #090a0b;
+  font-size: 3rem;
 }
 
 @media (min-width: 800px) {
