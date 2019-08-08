@@ -6,7 +6,7 @@ the `xdev-status-dashboard`) and the team blog.
 
 ## Project Status Dashboard
 
-Dashboard: https://ncar.github.io/xdev-status-dashboard/
+Dashboard: https://ncar.github.io/xdev/pages/status/
 
 The main configuration of the dashboard is done via the [dashboard.yml](./site/status-dashboard/dashboard.yml) file, which can contain several sections with a list of packages, and a list of services for each section.
 

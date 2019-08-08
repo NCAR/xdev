@@ -46,8 +46,8 @@ jobs:
       - run:
           name: Build site with Nikola and deploy to GitHub Pages
           command: |
-            git config --global user.name 'xdev@ucar.edu'
-            git config --global user.email 'Xdev Bot'
+            git config --global user.name 'Xdev Bot'
+            git config --global user.email '47308153+xdev-bot@users.noreply.github.com'
             nikola build
             nikola github_deploy -m 'Nikola auto deploy'
             
@@ -60,6 +60,7 @@ workflows:
             branches:
               ignore:
                 - gh-pages
+              
       - build_deploy:
           filters:
             branches:
