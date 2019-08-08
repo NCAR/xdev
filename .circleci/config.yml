@@ -28,6 +28,12 @@ jobs:
       - image: circleci/python:latest
     steps:
       - checkout
+
+      # Add deployment key fingerprint for CircleCI to use for a push
+      - add_ssh_keys:
+          fingerprints:
+            - "be:0d:dc:08:a7:cd:87:ae:84:ca:02:81:73:56:82:07"
+
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "conf.py" }}
       - run:
@@ -42,8 +48,11 @@ jobs:
           command: nikola build
       - run:
           name: Deploy to GitHub Pages
-          command: .circleci/deploy.sh
-
+          command: |
+            git config --global user.name 'xdev@ucar.edu'
+            git config --global user.email 'Xdev Bot'
+            git pull --all
+            
 workflows:
   version: 2
   build:
@@ -52,10 +61,11 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
-      - build_deploy:
-          context: xdev-blog
-          filters:
-            branches:
-              only:
-                - master
+                - gh-pages
+      - build_deploy
+          # filters:
+          #   branches:
+          #     only:
+          #       - master
+          #     ignore:
+          #       - gh-pages
