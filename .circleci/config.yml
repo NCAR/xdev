@@ -44,15 +44,12 @@ jobs:
           paths:
             - "$HOME/.cache/pip"
       - run:
-          name: Build site with Nikola
-          command: nikola build
-      - run:
-          name: Deploy to GitHub Pages
+          name: Build site with Nikola and deploy to GitHub Pages
           command: |
             git config --global user.name 'xdev@ucar.edu'
             git config --global user.email 'Xdev Bot'
-            git status
-            git config --list 
+            nikola build
+            nikola github_deploy -m 'Nikola auto deploy'
             
 workflows:
   version: 2
@@ -63,10 +60,10 @@ workflows:
             branches:
               ignore:
                 - gh-pages
-      - build_deploy
-          # filters:
-          #   branches:
-          #     only:
-          #       - master
-          #     ignore:
-          #       - gh-pages
+      - build_deploy:
+          filters:
+            branches:
+              only:
+                - master
+              ignore:
+                - gh-pages
