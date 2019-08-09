@@ -234,7 +234,10 @@ img {
 .post-card-image {
   width: auto;
   height: 200px;
-  background: #c5d2d9 url("../img/default.jpg") no-repeat 50% 50%;
+  background-color: #c5d2d9;
+  background-image: url("../img/default.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
 }
 
@@ -267,7 +270,7 @@ img {
 }
 
 .post-card-excerpt {
-  color: #0c5460;
+  color: #333333;
 }
 
 .post-card-author {
@@ -311,7 +314,7 @@ img {
 }
 
 .post-full-image {
-  margin: 0 -10vw -165px;
+  margin: 0 -10vw -280px;
   height: 800px;
   background: #c5d2d9 50%;
   background-size: cover;
@@ -323,6 +326,40 @@ img {
   color: #090a0b;
   font-size: 3rem;
 }
+
+.post-full-content {
+  position: relative;
+  margin: 0 auto;
+  padding: 70px 100px 0;
+  min-height: 280px;
+  font-size: 1rem;
+  line-height: 1.6em;
+  background: #fff;
+}
+
+.post-full-content:after, .post-full-content:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    z-index: -1;
+    display: block;
+    width: 20px;
+    height: 200px;
+    background: rgba(39,44,49,.15);
+    filter: blur(5px);
+}
+
+.post-full-content:before {
+  left: -5px;
+  transform: rotate(-5deg);
+}
+
+.post-full-content:after {
+  right: -5px;
+  transform: rotate(5deg);
+}
+
+
 
 @media (min-width: 800px) {
   .site-nav {
@@ -359,5 +396,17 @@ img {
 
   .post-card-author {
     padding: 0 40px 30px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .post-full-image {
+    margin: 0 -4vw -280px;
+    height: 600px;
+    border-radius: 0;
+  }
+
+  .post-full-content {
+    padding: 5vw 7vw 0;
   }
 }
