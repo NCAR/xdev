@@ -9,56 +9,26 @@ ${base.html_headstart()}
 </%block>
 ${template_hooks['extra_head']()}
 </head>
-<body class="nav-closed">
-${header.html_navigation_links()}
-<div class="site-wrapper">
-    % if 'main_index' in pagekind and BANNER_URL :
-    <header class="main-header" style="background-image: url(${BANNER_URL})">
-    % elif 'post_page' in pagekind and post.meta('banner'):
-    <header class="main-header" style="background-image: url(${post.meta('banner')})">
-    % else:
-    <header class="main-header post-head no-cover">
-    % endif
-        <nav class="main-nav overlay clearfix">
-            <a class="blog-logo" href="${blog_url}"><img src="${logo_url}" alt="Blog Logo" /></a>
-            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
-        </nav>
-        % if 'main_index' in pagekind:
-        <div class="vertical">
-            <div class="main-header-content inner">
-                <h1 class="page-title">${title}</h1>
-                <h2 class="page-description">${description}</h2>
-                % if GITHUB_URL:
-                <a  href="${GITHUB_URL}" target="_blank">
-                    <span class="icon-github" style="color:white;font-size:2em"></span>
-                </a>
-                &nbsp;
-                % endif
-                % if TWITTER_URL:
-                <a class="bloglogo" href=${TWITTER_URL} target="_blank">
-                    <span class="icon-twitter" style="color:white;font-size:2em"></span>
-                </a>
-                &nbsp;
-                % endif
-                % if LINKEDIN_URL:
-                <a  href="${LINKEDIN_URL}" target="_blank">
-                    <span class="icon-linkedin" style="color:white;font-size:2em"></span>
-                </a>
-                &nbsp;
-                % endif
-            </div>
-        </div>
-        % endif
-    </header>
+<body>
+  % if 'main_index' in pagekind:
+  <div class="site-wrapper">
+  % else:
+  <div class="site-wrapper" style="background: #FFF">
+  % endif
 
-    <main id="content" class="content" role="main">
+    ${header.html_header()}
+
+    <main class="site-main outer" role="main">
+      <div class="inner">
         <%block name="content"></%block>
+      </div>
     </main>
+
     ${footer.html_footer()}
-</div>
-${base.late_load_js()}
-<%block name="extra_js"></%block>
-${body_end}
-${template_hooks['body_end']()}
+  </div>
+  ${base.late_load_js()}
+  <%block name="extra_js"></%block>
+  ${body_end}
+  ${template_hooks['body_end']()}
 </body>
 </html>

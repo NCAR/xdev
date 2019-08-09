@@ -82,9 +82,9 @@ img {
   color: #EEE;
   position: relative;
   padding: 12px 0;
-  background: #000;
-  /*background: #1A658F url("../img/mammatus.jpg") no-repeat center bottom;*/
-  /*background-size: cover;*/
+  background: #000 no-repeat center bottom;
+  background-size: cover;
+  /*background-image: url("/assets/img/mammatus.jpg");*/
 }
 
 .site-title {
@@ -92,7 +92,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6vw 4vw 6vw 4vw;
+  padding: 6vw 4vw 8vw 4vw;
   text-align: center;
   z-index: 10;
 }
