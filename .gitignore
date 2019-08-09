@@ -1,5 +1,7 @@
 cache
+.doit.db
 .doit.db.db
+.DS_Store
 __pycache__
 output
 .idea/
