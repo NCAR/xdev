@@ -1,0 +1,72 @@
+/* Import the font file with the icons in it */
+@font-face {
+  font-family: 'genericons';
+  src: url('../fonts/Genericons.woff') format('woff'),
+       url('../fonts/Genericons.ttf') format('truetype');
+  font-weight: normal; font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "genericons", "Open Sans", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    vertical-align: top;
+    opacity: 0.6;
+}
+
+[class^="icon-"]:hover:before, [class*=" icon-"]:hover:before {
+    opacity: 1.0;
+}
+
+/* Each icon is created by inserting the correct character into the
+   content of the :before pseudo element. Like a boss. */
+.icon-github:before {
+    content: "\f200";
+}
+
+.icon-hugo:before{
+    content:"\f216";
+}
+
+.icon-ghost:before {
+    content: "\f100";
+}
+.icon-feed:before {
+    content: "\f413";
+}
+.icon-twitter:before {
+    content: "\f202";
+}
+.icon-google-plus:before {
+    content: "\f206";
+}
+.icon-facebook:before {
+    content: "\f203";
+}
+.icon-instagram:before {
+    content: "\f215";
+}
+.icon-pinterest:before {
+    content: "\f210";
+}
+.icon-linkedin:before {
+    content: "\f208";
+}
+.icon-arrow-left:before {
+    content: "\f431";
+}
+.icon-stats:before {
+    content: "\f508";
+}
+.icon-location:before {
+    content: "\f417";
+}
+.icon-link:before {
+    content: "\f442";
+}

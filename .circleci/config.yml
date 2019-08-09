@@ -4,11 +4,15 @@
 version: 2
 
 jobs:
+
   build:
     docker:
       - image: circleci/python:latest
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "be:0d:dc:08:a7:cd:87:ae:84:ca:02:81:73:56:82:07"
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "conf.py" }}
       - run:
@@ -23,17 +27,15 @@ jobs:
           command: nikola build
       - store_artifacts:
           path: ./output/
+
   build_deploy:
     docker:
       - image: circleci/python:latest
     steps:
       - checkout
-
-      # Add deployment key fingerprint for CircleCI to use for a push
       - add_ssh_keys:
           fingerprints:
             - "be:0d:dc:08:a7:cd:87:ae:84:ca:02:81:73:56:82:07"
-
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "conf.py" }}
       - run:
@@ -50,17 +52,19 @@ jobs:
             git config --global user.email '47308153+xdev-bot@users.noreply.github.com'
             nikola build
             nikola github_deploy -m 'Nikola auto deploy'
-            
+
 workflows:
   version: 2
   build:
     jobs:
+
       - build:
           filters:
             branches:
               ignore:
                 - gh-pages
                 - master
+
       - build_deploy:
           filters:
             branches:
