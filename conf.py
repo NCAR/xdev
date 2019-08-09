@@ -138,12 +138,16 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/", "About"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS"),
         ("/pages/status/", "Dashboard"),
     ),
 }
+# ("/archive.html", "Archive"),
+# ("/categories/", "Tags"),
+# ("/rss.xml", "RSS"),
 
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
