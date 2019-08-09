@@ -109,9 +109,9 @@ img {
   z-index: 300;
   justify-content: space-between;
   align-items: flex-start;
-  height: 40px;
-  top: 0;
-  font-size: 1.2rem;
+  height: 30px;
+  bottom: 0;
+  font-size: 1rem;
 }
 
 .site-nav-menu {
@@ -167,8 +167,9 @@ img {
 .nav-logo, .nav-logo img {
   display: block;
   width: auto;
-  height: 24px;
+  height: 20px;
   opacity: 1.0;
+  vertical-align: top;
 }
 
 .site-main {
