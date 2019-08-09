@@ -51,7 +51,7 @@ jobs:
             git config --global user.name 'Xdev Bot'
             git config --global user.email '47308153+xdev-bot@users.noreply.github.com'
             nikola build
-            nikola github_deploy -m 'Nikola auto deploy'
+            nikola github_deploy -m '[ci skip] Nikola auto deploy'
 
 workflows:
   version: 2
