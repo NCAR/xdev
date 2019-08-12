@@ -67,5 +67,5 @@ for section in config:
 template = Template(open(os.path.join(here, 'template.html'), 'r').read())
 
 
-with open(os.path.join(here, '../pages/status.html'), 'w') as f:
+with open(os.path.join(here, '../site/pages/status.html'), 'w') as f:
     f.write(template.render(config=config))

@@ -138,16 +138,13 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/", "About"),
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS"),
-        ("/pages/status/", "Dashboard"),
+        ("/site/pages/about/", "About"),
+        ("/site/archive.html", "Archive"),
+        ("/site/tags/", "Tags"),
+        ("/site/rss.xml", "RSS"),
+        ("/site/pages/status/", "Dashboard"),
     ),
 }
-# ("/archive.html", "Archive"),
-# ("/categories/", "Tags"),
-# ("/rss.xml", "RSS"),
 
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
@@ -221,18 +218,18 @@ THEME_CONFIG = {
 #     )
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.ipynb", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
+    ("site/posts/*.rst", "posts", "post.tmpl"),
+    ("site/posts/*.md", "posts", "post.tmpl"),
+    ("site/posts/*.ipynb", "posts", "post.tmpl"),
+    ("site/posts/*.txt", "posts", "post.tmpl"),
+    ("site/posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
-    ("posts/*.ipynb", "posts", "post.tmpl"),
-    ("pages/*.txt", "pages", "page.tmpl"),
-    ("pages/*.html", "pages", "page.tmpl"),
+    ("site/pages/*.rst", "pages", "page.tmpl"),
+    ("site/pages/*.md", "pages", "page.tmpl"),
+    ("site/posts/*.ipynb", "posts", "post.tmpl"),
+    ("site/pages/*.txt", "pages", "page.tmpl"),
+    ("site/pages/*.html", "pages", "page.tmpl"),
 )
 
 
@@ -279,12 +276,14 @@ TIMEZONE = "America/Denver"
 # Default is:
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
+FILES_FOLDERS = {'site/files': ''}
 
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
 # Default is:
 # LISTINGS_FOLDERS = {'listings': 'listings'}
 # Which means process listings from 'listings' into 'output/listings'
+LISTINGS_FOLDERS = {'site/listings': 'listings'}
 
 # A mapping of languages to file-extensions that represent that language.
 # Feel free to add or delete extensions to any list, but don't add any new
@@ -355,7 +354,7 @@ SHOW_BLOG_TITLE = False
 # output / TRANSLATION[lang] / TAG_PATH / tag.html (list of posts for a tag)
 # output / TRANSLATION[lang] / TAG_PATH / tag RSS_EXTENSION (RSS feed for a tag)
 # (translatable)
-# TAG_PATH = "categories"
+TAG_PATH = "tags"
 
 # By default, the list of tags is stored in
 #     output / TRANSLATION[lang] / TAG_PATH / index.html
@@ -417,8 +416,8 @@ HIDDEN_TAGS = ['mathjax']
 # output / TRANSLATION[lang] / CATEGORY_PATH / CATEGORY_PREFIX category.html (list of posts for a category)
 # output / TRANSLATION[lang] / CATEGORY_PATH / CATEGORY_PREFIX category RSS_EXTENSION (RSS feed for a category)
 # (translatable)
-# CATEGORY_PATH = "categories"
-# CATEGORY_PREFIX = "cat_"
+CATEGORY_PATH = "categories"
+CATEGORY_PREFIX = "cat_"
 
 # By default, the list of categories is stored in
 #     output / TRANSLATION[lang] / CATEGORY_PATH / index.html
@@ -433,7 +432,7 @@ HIDDEN_TAGS = ['mathjax']
 # using a forward slash ('/') to separate paths. Use a backslash ('\') to escape
 # a forward slash or a backslash (i.e. '\//\\' is a path specifying the
 # subcategory called '\' of the top-level category called '/').
-CATEGORY_ALLOW_HIERARCHIES = False
+CATEGORY_ALLOW_HIERARCHIES = True
 # If CATEGORY_OUTPUT_FLAT_HIERARCHY is set to True, the output written to output
 # contains only the name of the leaf category and not the whole path.
 CATEGORY_OUTPUT_FLAT_HIERARCHY = False
@@ -508,14 +507,14 @@ HIDDEN_CATEGORIES = []
 
 # If ENABLE_AUTHOR_PAGES is set to True and there is more than one
 # author, author pages are generated.
-# ENABLE_AUTHOR_PAGES = True
+ENABLE_AUTHOR_PAGES = True
 
 # Path to author pages. Final locations are:
 # output / TRANSLATION[lang] / AUTHOR_PATH / index.html (list of authors)
 # output / TRANSLATION[lang] / AUTHOR_PATH / author.html (list of posts by an author)
 # output / TRANSLATION[lang] / AUTHOR_PATH / author RSS_EXTENSION (RSS feed for an author)
 # (translatable)
-# AUTHOR_PATH = "authors"
+AUTHOR_PATH = "authors"
 
 # If AUTHOR_PAGES_ARE_INDEXES is set to True, each author's page will contain
 # the posts themselves. If set to False, it will be just a list of links.
@@ -549,7 +548,7 @@ FRONT_INDEX_HEADER = {
 }
 
 # Create per-month archives instead of per-year
-# CREATE_MONTHLY_ARCHIVE = False
+CREATE_MONTHLY_ARCHIVE = True
 # Create one large archive instead of per-year
 # CREATE_SINGLE_ARCHIVE = False
 # Create year, month, and day archives each with a (long) list of posts
@@ -565,8 +564,8 @@ FRONT_INDEX_HEADER = {
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / index.html
 # output / TRANSLATION[lang] / ARCHIVE_PATH / YEAR / MONTH / DAY / index.html
 # (translatable)
-# ARCHIVE_PATH = ""
-# ARCHIVE_FILENAME = "archive.html"
+ARCHIVE_PATH = "archives"
+ARCHIVE_FILENAME = "index.html"
 
 # If ARCHIVES_ARE_INDEXES is set to True, each archive page which contains a list
 # of posts will contain the posts themselves. If set to False, it will be just a
@@ -653,11 +652,11 @@ GITHUB_COMMIT_SOURCE = True
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
 # to the location of conf.py
-# OUTPUT_FOLDER = 'output'
+OUTPUT_FOLDER = 'site/output'
 
 # where the "cache" of partial generated content should be located
 # default: 'cache'
-# CACHE_FOLDER = 'cache'
+CACHE_FOLDER = 'site/cache'
 
 # Filters to apply to the output.
 # A directory where the keys are either: a file extensions, or
@@ -809,7 +808,7 @@ GITHUB_COMMIT_SOURCE = True
 # (the thumbnail has ``.thumbnail`` added before the file extension by default,
 # but a different naming template can be configured with IMAGE_THUMBNAIL_FORMAT).
 
-IMAGE_FOLDERS = {'images': 'images'}
+IMAGE_FOLDERS = {'site/images': 'images'}
 # IMAGE_THUMBNAIL_SIZE = 400
 # IMAGE_THUMBNAIL_FORMAT = '{name}.thumbnail{ext}'
 
