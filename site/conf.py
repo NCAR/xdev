@@ -138,11 +138,11 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/site/pages/about/", "About"),
-        ("/site/archive.html", "Archive"),
-        ("/site/tags/", "Tags"),
-        ("/site/rss.xml", "RSS"),
-        ("/site/pages/status/", "Dashboard"),
+        ("/pages/about/", "About"),
+        ("/archive.html", "Archive"),
+        ("/tags/", "Tags"),
+        ("/rss.xml", "RSS"),
+        ("/pages/status/", "Dashboard"),
     ),
 }
 
@@ -218,18 +218,18 @@ THEME_CONFIG = {
 #     )
 
 POSTS = (
-    ("site/posts/*.rst", "posts", "post.tmpl"),
-    ("site/posts/*.md", "posts", "post.tmpl"),
-    ("site/posts/*.ipynb", "posts", "post.tmpl"),
-    ("site/posts/*.txt", "posts", "post.tmpl"),
-    ("site/posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.md", "posts", "post.tmpl"),
+    ("posts/*.ipynb", "posts", "post.tmpl"),
+    ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("site/pages/*.rst", "pages", "page.tmpl"),
-    ("site/pages/*.md", "pages", "page.tmpl"),
-    ("site/posts/*.ipynb", "posts", "post.tmpl"),
-    ("site/pages/*.txt", "pages", "page.tmpl"),
-    ("site/pages/*.html", "pages", "page.tmpl"),
+    ("pages/*.rst", "pages", "page.tmpl"),
+    ("pages/*.md", "pages", "page.tmpl"),
+    ("posts/*.ipynb", "posts", "post.tmpl"),
+    ("pages/*.txt", "pages", "page.tmpl"),
+    ("pages/*.html", "pages", "page.tmpl"),
 )
 
 
@@ -276,14 +276,14 @@ TIMEZONE = "America/Denver"
 # Default is:
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
-FILES_FOLDERS = {'site/files': ''}
+FILES_FOLDERS = {'files': ''}
 
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
 # Default is:
 # LISTINGS_FOLDERS = {'listings': 'listings'}
 # Which means process listings from 'listings' into 'output/listings'
-LISTINGS_FOLDERS = {'site/listings': 'listings'}
+LISTINGS_FOLDERS = {'listings': 'listings'}
 
 # A mapping of languages to file-extensions that represent that language.
 # Feel free to add or delete extensions to any list, but don't add any new
@@ -652,11 +652,11 @@ GITHUB_COMMIT_SOURCE = True
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
 # to the location of conf.py
-OUTPUT_FOLDER = 'site/output'
+OUTPUT_FOLDER = 'output'
 
 # where the "cache" of partial generated content should be located
 # default: 'cache'
-CACHE_FOLDER = 'site/cache'
+CACHE_FOLDER = 'cache'
 
 # Filters to apply to the output.
 # A directory where the keys are either: a file extensions, or
@@ -808,7 +808,7 @@ CACHE_FOLDER = 'site/cache'
 # (the thumbnail has ``.thumbnail`` added before the file extension by default,
 # but a different naming template can be configured with IMAGE_THUMBNAIL_FORMAT).
 
-IMAGE_FOLDERS = {'site/images': 'images'}
+IMAGE_FOLDERS = {'images': 'images'}
 # IMAGE_THUMBNAIL_SIZE = 400
 # IMAGE_THUMBNAIL_FORMAT = '{name}.thumbnail{ext}'
 
