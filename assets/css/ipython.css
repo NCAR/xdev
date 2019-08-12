@@ -1,0 +1,21 @@
+div.cell {
+  padding-left: 0;
+}
+
+div.text_cell>div.prompt {
+  display: none;
+}
+
+.rendered_html h1, .rendered_html h1:first-child,
+.rendered_html h2, .rendered_html h2:first-child,
+.rendered_html h3, .rendered_html h3:first-child,
+.rendered_html h4, .rendered_html h4:first-child,
+.rendered_html h5, .rendered_html h5:first-child,
+.rendered_html h6, .rendered_html h6:first-child {
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.rendered_html p {
+  margin: 0;
+}
