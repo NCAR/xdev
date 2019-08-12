@@ -1,0 +1,17 @@
+## -*- coding: utf-8 -*-
+
+<%def name="html_footer()">
+    <footer class="site-footer outer">
+      <div class="site-footer-content inner">
+        <div class="site-footer-image">
+          <a href="https://www2.cisl.ucar.edu/"><img src="/assets/img/CISL-contemp-logo-white.svg" height="40" alt="CISL"></a>
+        </div>
+        % if content_footer:
+        <div class="site-footer-sections">
+          <section>${content_footer}</section>
+          ${template_hooks['page_footer']()}
+        </div>
+        % endif
+      </div>
+    </footer>
+</%def>

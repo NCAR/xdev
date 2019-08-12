@@ -1,0 +1,60 @@
+## -*- coding: utf-8 -*-
+<%namespace name="base" file="base_helper.tmpl" import="*"/>
+
+<%def name="html_header()">
+    % if 'main_index' in pagekind and BANNER_URL:
+    <header class="site-header outer" style="background-image: url(${BANNER_URL})">
+    % else:
+    <header class="site-header outer">
+    % endif
+      <div class="inner">
+        % if 'main_index' in pagekind:
+        ${html_site_title()}
+        % endif
+        ${html_navigation_links()}
+      </div>
+    </header>
+</%def>
+
+<%def name="html_site_title()">
+    <div class="site-title">
+      % if SHOW_BLOG_TITLE:
+      <h1 style="height: 3rem;">${title}</h1>
+      % else:
+      <h1><img class="site-logo" src="${logo_url}" alt="Logo" style="height: 3rem;"></h1>
+      % endif
+      <h3>${description}</h3>
+    </div>
+</%def>
+
+<%def name="html_navigation_links()">
+    % if 'main_index' in pagekind:
+    <nav class="site-nav">
+    % else:
+    <nav class="site-nav" style="top: 0;">
+    % endif
+      <div class="site-nav-menu">
+        <ul class="nav" role="menu">
+          % if not 'main_index' in pagekind:
+          <li class="nav-item" role="menuitem"><a class="nav-logo" href="/"><img src="${logo_url}" alt="Xdev"></a></li>
+          % endif
+          ${html_navigation_links_entries(navigation_links)}
+          ${html_navigation_links_entries(navigation_alt_links)}
+        </ul>
+      </div>
+      <div class="site-nav-social">
+        % if GITHUB_URL:
+        <a href="https://github.com/NCAR/xdev" class="social-link" target="_blank"><span class="icon-github"></span></a>
+        % endif
+        % if TWITTER_URL:
+        <a href="/" class="social-link" target="_blank"><span class="icon-twitter"></span></a>
+        % endif
+      </div>
+    </nav>
+</%def>
+
+<%def name="html_navigation_links_entries(navigation_links_source)">
+    %for url, text in navigation_links_source[lang]:
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="${url}">${text}</a></li>
+    %endfor
+</%def>
