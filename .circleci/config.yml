@@ -24,9 +24,9 @@ jobs:
             - "$HOME/.cache/pip"
       - run:
           name: Build site with Nikola
-          command: nikola build
+          command: cd site && nikola build
       - store_artifacts:
-          path: ./output/
+          path: ./site/output/
 
   build_deploy:
     docker:
@@ -50,6 +50,7 @@ jobs:
           command: |
             git config --global user.name 'Xdev Bot'
             git config --global user.email '47308153+xdev-bot@users.noreply.github.com'
+            cd site
             nikola build
             nikola github_deploy -m '[ci skip] Nikola auto deploy'
 
