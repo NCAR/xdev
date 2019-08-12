@@ -50,7 +50,7 @@
         </section>
       </header>
       % if post.meta('banner'):
-      <figure class="post-full-image" style="background-image: url(assets/img/post-default.jpg)"></figure>
+      <figure class="post-full-image" style="background-image: url(${post.meta('banner')})"></figure>
       % endif
       <section class="post-full-content">${post.text()}</section>
     </article>

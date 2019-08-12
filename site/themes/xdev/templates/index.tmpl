@@ -28,8 +28,8 @@
 % for post in posts:
     <article class="post-card">
       % if post.meta('banner'):
-      <a class="post-card-image-link" href="post1.html">
-        <div class="post-card-image" style="background-image: url(assets/img/post-default.jpg)"></div>
+      <a class="post-card-image-link" href="${post.permalink()}">
+        <div class="post-card-image" style="background-image: url(${post.meta('banner')})"></div>
       </a>
       <div class="post-card-content">
       % else:

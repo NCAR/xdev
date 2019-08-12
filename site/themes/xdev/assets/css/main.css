@@ -57,7 +57,7 @@ img {
 }
 
 p.more, p.more a {
-  margin: 8px 0 0 0;
+  margin: 1rem 0 0 0;
   font-family: "Helvetica Neue", sans-serif;
   display: flex;
   justify-content: left;
@@ -256,7 +256,8 @@ p.more, p.more a {
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-  padding: 25px 25px 0;
+  padding: 25px 25px 20px;
+  width: 100%;
 }
 
 .post-card-content-link {
@@ -374,7 +375,7 @@ p.more, p.more a {
 
   .post-card-content {
     flex: 0 1 357px;
-    padding: 30px 40px 0;
+    padding: 30px 40px 20px;
   }
 
   .post-card-author {
