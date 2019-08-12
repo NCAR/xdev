@@ -37,8 +37,24 @@
       % endif
         <a class="post-card-content-link" href="${post.permalink()}">
           <header class="post-card-header">
-            <span class="post-card-tags">${post.meta('keywords')|h}</span>
             <h2 class="post-card-title">${post.title()|h}</h2>
+            <section class="post-meta">
+              <time class="post-meta-date" datetime="${post.formatted_date('webiso')}">
+                ${post.formatted_date(date_format)|h}
+              </time>
+              <span class="post-meta-divider">|</span>
+              % if author_pages_generated:
+              <a href="${_link('author', post.author())}">${post.author()|h}</a>
+              % else:
+              ${post.author()|h}
+              % endif
+              % if post.tags:
+              <span class="post-meta-divider">|</span>
+              % endif
+              % for tag in post.tags:
+              <a href="link://tag/${tag}">#${tag}</a>,
+              % endfor
+            </section>
           </header>
           <section class="post-card-excerpt">
             % if index_teasers:
@@ -47,13 +63,6 @@
             ${post.text(teaser_only=False)}
             % endif
           </section>
-          <footer class="post-card-author">
-            % if author_pages_generated:
-            <a href="${_link('author', post.author())}">${post.author()|h}</a>
-            % else:
-            ${post.author()|h}
-            % endif
-          </footer>
         </a>
       </div>
     </article>

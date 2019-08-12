@@ -56,6 +56,16 @@ img {
   max-width: 100%;
 }
 
+p.more, p.more a {
+  margin: 8px 0 0 0;
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: left;
+  color: #738a94;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 *, :after, :before {
   box-sizing: inherit;
 }
@@ -166,7 +176,7 @@ img {
 
 .nav-logo, .nav-logo img {
   display: block;
-  width: auto;
+  width: 64px;
   height: 20px;
   opacity: 1.0;
 }
@@ -246,23 +256,13 @@ img {
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  padding: 25px 25px 0;
 }
 
 .post-card-content-link {
   position: relative;
   display: block;
   color: #15171a;
-  padding: 25px 25px 0;
-}
-
-.post-card-tags {
-  display: block;
-  margin-bottom: 4px;
-  color: #738a94;
-  font-size: 1rem;
-  line-height: 1.15em;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .post-card-title {
@@ -273,15 +273,19 @@ img {
   color: #333333;
 }
 
-.post-card-author {
-  padding: 0 0 25px 25px
+.post-meta, .post-meta a {
+  font-family: "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: left;
+  color: #738a94;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
-.post-card-author a {
-  color: #738a94;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+.post-meta-divider {
+  display: inline-block;
+  margin: 0 6px 1px;
 }
 
 .post-full {
@@ -294,23 +298,7 @@ img {
 .post-full-header {
   margin: 0 auto;
   padding: 3vw 3vw 1vw 3vw;
-  text-align: center;
-}
-
-.post-full-meta, .post-full-meta a {
-  font-family: "Helvetica Neue", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #738a94;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.post-full-meta-divider {
-  display: inline-block;
-  margin: 0 6px 1px;
+  text-align: left;
 }
 
 .post-full-image {
@@ -359,8 +347,6 @@ img {
   transform: rotate(5deg);
 }
 
-
-
 @media (min-width: 800px) {
   .site-nav {
     top: -70px;
@@ -388,9 +374,6 @@ img {
 
   .post-card-content {
     flex: 0 1 357px;
-  }
-
-  .post-card-content-link {
     padding: 30px 40px 0;
   }
 
