@@ -6,5 +6,6 @@
 .. link: 
 .. description: 
 .. type: text
+.. banner: /assets/img/post-default.jpg
 
 Write your post here.

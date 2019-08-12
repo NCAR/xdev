@@ -30,27 +30,27 @@
 
     <article class="post-full">
       <header class="post-full-header">
-        <section class="post-full-meta">
-          <time class="post-full-meta-date" datetime="${post.formatted_date('webiso')}">
+        <h1 class="post-full-title">${post.title()}</h1>
+        <section class="post-meta">
+          <time class="post-meta-date" datetime="${post.formatted_date('webiso')}">
             ${post.formatted_date(date_format)|h}
           </time>
-          <span class="post-full-meta-divider">|</span>
+          <span class="post-meta-divider">|</span>
           % if author_pages_generated:
           <a href="${_link('author', post.author())}">${post.author()|h}</a>
           % else:
           ${post.author()|h}
           % endif
           % if post.tags:
-          <span class="post-full-meta-divider">|</span>
+          <span class="post-meta-divider">|</span>
           % endif
           % for tag in post.tags:
           <a href="link://tag/${tag}">#${tag}</a>,
           % endfor
         </section>
-        <h1 class="post-full-title">${post.title()}</h1>
       </header>
       % if post.meta('banner'):
-      <figure class="post-full-image" style="background-image: url(assets/img/post-default.jpg)"></figure>
+      <figure class="post-full-image" style="background-image: url(${post.meta('banner')})"></figure>
       % endif
       <section class="post-full-content">${post.text()}</section>
     </article>
