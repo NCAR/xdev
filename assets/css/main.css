@@ -280,7 +280,7 @@ p.more, p.more a {
   justify-content: left;
   color: #738a94;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 4px;
 }
 
@@ -311,7 +311,7 @@ p.more, p.more a {
 }
 
 .post-full-title {
-  margin: 1vw;
+  margin: 1vw 0;
   color: #090a0b;
   font-size: 3rem;
 }
