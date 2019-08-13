@@ -4,7 +4,7 @@
     <footer class="site-footer outer">
       <div class="site-footer-content inner">
         <div class="site-footer-image">
-          <a href="https://www2.cisl.ucar.edu/"><img src="/assets/img/CISL-contemp-logo-white.svg" height="40" alt="CISL"></a>
+          <a href="https://www2.cisl.ucar.edu/"><img src="/assets/img/CISL-contemp-logo-white.svg" height="38" alt="CISL"></a>
         </div>
         % if content_footer:
         <div class="site-footer-sections">
@@ -12,6 +12,13 @@
           ${template_hooks['page_footer']()}
         </div>
         % endif
+        <br>
+        <div class="site-footer-image">
+          <a href="https://nsf.gov/"><img src="/assets/img/footer-logo-nsf.png" height="50" alt="NSF"></a>
+        </div>
+        <div class="site-footer-sections" style="min-width: 400px;">
+          <section>This material is based upon work supported by the National Center for Atmospheric Research, a major facility sponsored by the National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</section>
+        </div>
       </div>
     </footer>
 </%def>

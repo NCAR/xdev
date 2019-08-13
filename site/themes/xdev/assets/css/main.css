@@ -1,7 +1,7 @@
 html {
   overflow-y: scroll;
   font-family: "Helvetica Neue", sans-serif;
-  min-width: 400px;
+  min-width: 475px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -96,6 +96,11 @@ p.more, p.more a {
   background: #000 no-repeat center bottom;
   background-size: cover;
   /*background-image: url("/assets/img/mammatus.jpg");*/
+}
+
+.site-header-logo {
+  padding: 6px 0 0 18px;
+  margin: 0 0 -62px 0;
 }
 
 .site-title {
@@ -206,6 +211,19 @@ p.more, p.more a {
 
 .site-footer-content, .site-footer-content a {
   color: hsla(0,0%,100%,.7);
+}
+
+.site-footer-image img {
+  vertical-align: center;
+  padding: 0;
+}
+
+.site-footer-image span {
+  padding: 10px;
+}
+
+.site-footer-sections section {
+  padding: 10px 0;
 }
 
 .post-feed {
