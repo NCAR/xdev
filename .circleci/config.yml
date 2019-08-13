@@ -14,12 +14,12 @@ jobs:
           fingerprints:
             - "be:0d:dc:08:a7:cd:87:ae:84:ca:02:81:73:56:82:07"
       - restore_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "conf.py" }}
+          key: deps1-{{ .Branch }}-{{ checksum "site/conf.py" }}
       - run:
           name: Install Nikola
           command: sudo pip install nikola[extras]
       - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "conf.py" }}
+          key: deps1-{{ .Branch }}-{{ checksum "site/conf.py" }}
           paths:
             - "$HOME/.cache/pip"
       - run:
@@ -37,12 +37,12 @@ jobs:
           fingerprints:
             - "be:0d:dc:08:a7:cd:87:ae:84:ca:02:81:73:56:82:07"
       - restore_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "conf.py" }}
+          key: deps1-{{ .Branch }}-{{ checksum "site/conf.py" }}
       - run:
           name: Install Nikola
           command: sudo pip install nikola[extras]
       - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "conf.py" }}
+          key: deps1-{{ .Branch }}-{{ checksum "site/conf.py" }}
           paths:
             - "$HOME/.cache/pip"
       - run:
