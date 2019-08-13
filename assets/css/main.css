@@ -2,6 +2,7 @@ html {
   overflow-y: scroll;
   font-family: "Helvetica Neue", sans-serif;
   min-width: 400px;
+  -webkit-text-size-adjust: 100%;
 }
 
 article, span {
@@ -257,7 +258,6 @@ p.more, p.more a {
   justify-content: space-between;
   flex-grow: 1;
   padding: 25px 25px 20px;
-  width: 100%;
 }
 
 .post-card-content-link {
@@ -280,7 +280,7 @@ p.more, p.more a {
   justify-content: left;
   color: #738a94;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 4px;
 }
 
