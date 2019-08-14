@@ -108,7 +108,7 @@ p.more, p.more a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6vw 4vw 8vw 4vw;
+  padding: 6vw 4vw;
   text-align: center;
   z-index: 10;
 }
@@ -195,35 +195,36 @@ p.more, p.more a {
 
 .site-footer {
   position: relative;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   color: #fff;
   background: #000;
 }
 
 .site-footer-content {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   font-size: 0.8rem;
+  padding: 12px 0;
+  border-bottom-width: 1px;
+  border-bottom-color: #777777;
+  border-bottom-style: solid;
+  margin: 0 0 12px 0;
 }
 
 .site-footer-content, .site-footer-content a {
   color: hsla(0,0%,100%,.7);
 }
 
-.site-footer-image img {
-  vertical-align: center;
+.site-footer-image, .site-footer-image img {
+  padding: 0 15px 12px 0;
+}
+
+.site-footer-section section {
   padding: 0;
-}
-
-.site-footer-image span {
-  padding: 10px;
-}
-
-.site-footer-sections section {
-  padding: 10px 0;
 }
 
 .post-feed {
@@ -236,7 +237,7 @@ p.more, p.more a {
 
 .post-card {
   display: flex;
-  flex: 1 1 300px;
+  flex: 1 1 360px;
   flex-direction: column;
   overflow: hidden;
   margin: 0 20px 40px;
@@ -366,7 +367,11 @@ p.more, p.more a {
   transform: rotate(5deg);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
+  .site-title {
+    padding: 6vw 4vw 10vw;
+  }
+
   .site-nav {
     top: -70px;
   }
@@ -392,7 +397,7 @@ p.more, p.more a {
   }
 
   .post-card-content {
-    flex: 0 1 357px;
+    flex: 0 1 360px;
     padding: 30px 40px 20px;
   }
 
@@ -401,7 +406,7 @@ p.more, p.more a {
   }
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 940px) {
   .post-full-image {
     margin: 0 -4vw -280px;
     height: 600px;
