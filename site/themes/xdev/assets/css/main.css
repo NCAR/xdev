@@ -225,7 +225,7 @@ p.more, p.more a {
   border-bottom-width: 1px;
   border-bottom-color: #777777;
   border-bottom-style: solid;
-  margin: 0 0 12px 0;
+  margin-bottom: 12px;
 }
 
 .site-footer-content, .site-footer-content a {
