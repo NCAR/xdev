@@ -99,8 +99,21 @@ p.more, p.more a {
 }
 
 .site-header-logo {
-  padding: 6px 0 0 18px;
-  margin: 0 0 -62px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  background-color: #333333;
+  margin: 0 0 -62px 12px;
+  width: fit-content;
+}
+
+.site-header-logo span {
+  font-size: 8pt;
+  padding-bottom: 6px;
 }
 
 .site-title {
