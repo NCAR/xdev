@@ -7,10 +7,12 @@
     % else:
     <header class="site-header outer">
     % endif
+      % if 'main_index' in pagekind:
       <div class="site-header-logo">
         <span>Supported by</span>
         <a href="https://nsf.gov"><img src="/assets/img/NSF_4-Color_bitmap_Logo.png" height="50" alt="NSF"></a>
       </div>
+      % endif
       <div class="inner">
         % if 'main_index' in pagekind:
         ${html_site_title()}
