@@ -30,3 +30,7 @@ div.text_cell>div.prompt {
 .rendered_html p:last-child {
   margin: 10px 0 0 0;
 }
+
+.rendered_html pre {
+  white-space: pre-wrap;
+}
