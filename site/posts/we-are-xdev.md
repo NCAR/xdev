@@ -1,7 +1,7 @@
 <!--
 .. title: We are Xdev!
 .. slug: we-are-xdev
-.. date: 2019-08-26 15:50:22 UTC-06:00
+.. date: 2019-11-01 12:00:00 UTC-06:00
 .. tags: open source, open development
 .. category: 
 .. link: 
@@ -20,6 +20,8 @@ guidance from remarkably effective communities like [Pangeo](https://pangeo.io),
 to show the enormous potential of Open Source development when coupled with modern software best
 practices, and we started to develop a plan of how to shift, albeit slowly, both NCAR and the
 geoscience community toward a better future.
+
+<!-- TEASER_END -->
 
 To implement our plan, Matt and I started to see how much benefit to NCAR it could be to have 
 a small, Agile team that was dedicated to prototyping new technologies for the benefit of the 
