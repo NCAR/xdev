@@ -2,7 +2,7 @@ div.cell {
   padding-left: 0;
 }
 
-div.text_cell>div.prompt {
+div.text_cell div.prompt {
   display: none;
 }
 
@@ -33,4 +33,8 @@ div.text_cell>div.prompt {
 
 .rendered_html pre {
   white-space: pre-wrap;
+}
+
+a.anchor-link {
+  display: none;
 }
