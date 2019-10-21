@@ -1,0 +1,21 @@
+<%inherit file="story.tmpl"/>
+## -*- coding: utf-8 -*-
+<%namespace name="math" file="math_helper.tmpl"/>
+<%inherit file="base.tmpl"/>
+
+<%block name="extra_head">
+    ${parent.extra_head()}
+    ${math.math_styles_ifpost(post)}
+</%block>
+
+<%block name="content">
+
+    <article class="post-full">
+      <header class="post-full-header">
+        <h1 class="post-full-title">${post.title()}</h1>
+      </header>
+      <section class="post-full-content">${post.text()}</section>
+    </article>
+
+</article>
+</%block>
