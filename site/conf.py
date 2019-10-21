@@ -140,7 +140,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/pages/about/", "About"),
 #        ("/archive.html", "Archive"),
-        ("/tags/", "Tags"),
+#        ("/tags/", "Tags"),
         ("/rss.xml", "RSS"),
         ("/pages/status/", "Dashboard"),
     ),
@@ -366,7 +366,7 @@ TAG_PATH = "tags"
 
 # If TAG_PAGES_ARE_INDEXES is set to True, each tag's page will contain
 # the posts themselves. If set to False, it will be just a list of links.
-# TAG_PAGES_ARE_INDEXES = False
+# TAG_PAGES_ARE_INDEXES = True
 
 # Set descriptions for tag pages to make them more interesting. The
 # default is no description. The value is used in the meta description
