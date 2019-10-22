@@ -34,7 +34,7 @@ Currently, the Xdev Team consists of:
   [Marine Biogeochemistry Library](https://marbl-ecosys.github.io/)
   ([MARBL](https://marbl-ecosys.github.io/)).  Mike has also helps with countless other small
   projects dealing with the CESM infrastructure.
-- **Mohammad Abouali**: Mohammad is a new software engineer at NCAR assisting with the 
+- **Mohammad Abouali**: Moe is a software engineer at NCAR on the 
   [GeoCAT](https://geocat.ucar.edu/) team, assisting with the "Pivot to Python" NCL effort.
   Mohammad has a strong background in software engineering in the private sector and has a
   deep understanding of modern software best practices.
