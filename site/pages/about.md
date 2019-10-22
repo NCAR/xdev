@@ -12,7 +12,7 @@
 The NCAR Experimental Development (Xdev) Team is a small team of software engineers
 dedicated to the advancement and development of modern tools and techniques
 in scalable data analysis for geoscientists.  The Xdev Team was created as part
-of the [Pangeo](https://pangeo.io) collaboration.
+of a collaboration with the [Pangeo](https://pangeo.io) community.
 
 Currently, the Xdev Team consists of:
 
