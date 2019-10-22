@@ -29,9 +29,11 @@ Currently, the Xdev Team consists of:
 - **Brian Bonnlander**: Brian is a computer scientist with a specialty in machine learning and
   a strong motivation to provide high-level tooling to scientists that abstract way complex
   computing issues.
-- **Micheal Levy**: Mike is a software engineer working on the Community Earth System Model
-  (CESM), where his main task is to maintain the Parallel Ocean Program (POP) repository.  Mike
-  has also helps with countless other small projects dealing with the CESM infrastructure.
+- **Michael Levy**: Mike is a software engineer working on the Community Earth System Model
+  (CESM), where his main task is to develop and maintain the
+  [Marine Biogeochemistry Library](https://marbl-ecosys.github.io/)
+  ([MARBL](https://marbl-ecosys.github.io/)).  Mike has also helps with countless other small
+  projects dealing with the CESM infrastructure.
 - **Mohammad Abouali**: Mohammad is a new software engineer at NCAR assisting with the 
   [GeoCAT](https://geocat.ucar.edu/) team, assisting with the "Pivot to Python" NCL effort.
   Mohammad has a strong background in software engineering in the private sector and has a
