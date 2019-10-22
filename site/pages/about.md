@@ -36,6 +36,6 @@ Currently, the Xdev Team consists of:
   projects dealing with the CESM infrastructure.
 - **Mohammad Abouali**: Moe is a software engineer at NCAR on the 
   [GeoCAT](https://geocat.ucar.edu/) team, assisting with the "Pivot to Python" NCL effort.
-  Mohammad has a strong background in software engineering in the private sector and has a
+  Moe has a strong background in software engineering in the private sector and has a
   deep understanding of modern software best practices.
   
