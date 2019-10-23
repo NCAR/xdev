@@ -5,4 +5,5 @@ cache
 __pycache__
 output
 .idea/
+.vscode
 .ipynb_checkpoints
