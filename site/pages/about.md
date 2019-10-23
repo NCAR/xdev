@@ -27,8 +27,8 @@ Currently, the Xdev Team consists of:
   transitioned into software engineering with a specialty in working with scientists to develop
   Python-based solutions to their workflows.
 - **Brian Bonnlander**: Brian is a computer scientist with a specialty in machine learning and
-  a strong motivation to provide high-level tooling to provide high-level data analysis tools
-  that allow scientists to focus on science, rather than software engineering.
+  a strong motivation to provide high-level data analysis tools that allow scientists to focus
+  on science, rather than software engineering.
 - **Michael Levy**: Mike is a software engineer working on the Community Earth System Model
   (CESM), where his main task is to develop and maintain the
   [Marine Biogeochemistry Library](https://marbl-ecosys.github.io/)
