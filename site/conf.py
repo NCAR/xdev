@@ -1339,7 +1339,7 @@ WARN_ABOUT_TAG_METADATA = False
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    'TWITTER_URL': 'https://twitter.com/NCARXDev',
+    'TWITTER_URL': 'https://twitter.com/NCARXdev',
     'GITHUB_URL': 'https://github.com/NCAR/xdev',
     'LINKEDIN_URL': None
 }
