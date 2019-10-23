@@ -19,7 +19,7 @@ Currently, the Xdev Team consists of:
 - **Kevin Paul (Engineering Lead)**: Kevin is a scientist and software engineer at NCAR with a
   specialization in developing parallel Python tools for data post-processing, most recently developing
   tools to post-process the CESM contributions for CMIP6.
-- **Matthew Long (Science Lead)**: Matt is a Scientist in the Climate & Global Dynamics laboratory
+- **Matthew Long (Science Lead)**: Matt is a scientist in the Climate & Global Dynamics laboratory
   at NCAR with research foci in Earth system modeling, ocean ecosystems, and biogeochemistry.
 - **Anderson Banihirwe**: Anderson is a software engineer at NCAR with a deep understanding
   of the Python ecosystem, modern software best practices, and modern data analysis.
