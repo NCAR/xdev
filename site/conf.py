@@ -138,9 +138,9 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-#        ("/pages/about/", "About"),
+        ("/pages/about/", "About"),
 #        ("/archive.html", "Archive"),
-        ("/tags/", "Tags"),
+#        ("/tags/", "Tags"),
         ("/rss.xml", "RSS"),
         ("/pages/status/", "Dashboard"),
     ),
@@ -366,7 +366,7 @@ TAG_PATH = "tags"
 
 # If TAG_PAGES_ARE_INDEXES is set to True, each tag's page will contain
 # the posts themselves. If set to False, it will be just a list of links.
-# TAG_PAGES_ARE_INDEXES = False
+# TAG_PAGES_ARE_INDEXES = True
 
 # Set descriptions for tag pages to make them more interesting. The
 # default is no description. The value is used in the meta description
@@ -1339,7 +1339,7 @@ WARN_ABOUT_TAG_METADATA = False
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    'TWITTER_URL': 'https://twitter.com/NCARXDev',
+    'TWITTER_URL': 'https://twitter.com/NCARXdev',
     'GITHUB_URL': 'https://github.com/NCAR/xdev',
     'LINKEDIN_URL': None
 }
