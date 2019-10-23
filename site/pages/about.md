@@ -32,7 +32,7 @@ Currently, the Xdev Team consists of:
 - **Michael Levy**: Mike is a software engineer working on the Community Earth System Model
   (CESM), where his main task is to develop and maintain the
   [Marine Biogeochemistry Library](https://marbl-ecosys.github.io/)
-  ([MARBL](https://marbl-ecosys.github.io/)).  Mike has also helps with countless other small
+  ([MARBL](https://marbl-ecosys.github.io/)).  Mike has also helped with countless other small
   projects dealing with the CESM infrastructure.
 - **Mohammad Abouali**: Moe is a computational scientist working as a software engineer at NCAR on the 
   [GeoCAT](https://geocat.ucar.edu/) team, assisting with the "Pivot to Python" NCL effort.
