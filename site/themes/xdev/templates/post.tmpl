@@ -59,11 +59,16 @@
     <footer class="post-footer">
     % if not post.meta('nocomments') and site_has_comments:
       <section class="comments hidden-print">
-        <h2>${messages("Comments")}</h2>
-        ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
+        <h2 style="padding-left: 80px">Comments</h2>
+        <script src="https://utteranc.es/client.js"
+                repo="NCAR/xdev-blog-comments"
+                issue-term="title"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
       </section>
     % endif
     ${math.math_scripts_ifpost(post)}
 </article>
-${comments.comment_link_script()}
 </%block>
