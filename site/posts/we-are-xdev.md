@@ -1,7 +1,7 @@
 <!--
 .. title: We are Xdev!
 .. slug: we-are-xdev
-.. date: 2019-12-01 12:00:00 UTC-06:00
+.. date: 2019-12-06 12:00:00 UTC-06:00
 .. tags: open source, open development
 .. category: 
 .. link: 
