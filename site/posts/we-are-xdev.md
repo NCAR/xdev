@@ -5,7 +5,7 @@
 .. tags: open source, open development
 .. category: 
 .. link: 
-.. description: 
+.. description: About the Xdev Team at NCAR
 .. type: text
 .. author: Kevin Paul
 -->
