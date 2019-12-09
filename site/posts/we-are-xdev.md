@@ -15,7 +15,7 @@ More than a year ago, [Matthew Long](http://www.cgd.ucar.edu/staff/mclong/) and
 lot of what we do here at [NCAR](https://ncar.ucar.edu/), as well as *how* we do
 it, needed a bit of a facelift.  Our pitch was simple: As an institution that
 supports the geoscientific community by providing valuable datasets, supercomputing
-facilities, and computer models, NCAR need's to _exemplify_ modern best practices
+facilities, and computer models, NCAR needs to _exemplify_ modern best practices
 in the _development_ and _use_ of these resources.  We took inspiration from the
 remarkably effective [Pangeo](https://pangeo.io) community, which continues to show
 enormous success with Open Source development when coupled with modern software
