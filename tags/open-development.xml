@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev (Posts about open development)</title><link>https://ncar.github.io/xdev/</link><description></description><atom:link href="https://ncar.github.io/xdev/tags/open-development.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 UCAR Apache 2.0</copyright><lastBuildDate>Mon, 09 Dec 2019 20:06:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>We are Xdev!</title><link>https://ncar.github.io/xdev/posts/we-are-xdev/</link><dc:creator>Kevin Paul</dc:creator><description>&lt;div&gt;&lt;p&gt;More than a year ago, &lt;a href="http://www.cgd.ucar.edu/staff/mclong/"&gt;Matthew Long&lt;/a&gt; and
+&lt;a href="https://staff.ucar.edu/users/kpaul"&gt;I&lt;/a&gt; started shopping around the idea that a
+lot of what we do here at &lt;a href="https://ncar.ucar.edu/"&gt;NCAR&lt;/a&gt;, as well as &lt;em&gt;how&lt;/em&gt; we do
+it, needed a bit of a facelift.  Our pitch was simple: As an institution that
+supports the geoscientific community by providing valuable datasets, supercomputing
+facilities, and computer models, NCAR needs to &lt;em&gt;exemplify&lt;/em&gt; modern best practices
+in the &lt;em&gt;development&lt;/em&gt; and &lt;em&gt;use&lt;/em&gt; of these resources.  We took inspiration from the
+remarkably effective &lt;a href="https://pangeo.io"&gt;Pangeo&lt;/a&gt; community, which continues to show
+enormous success with Open Source development when coupled with modern software
+best practices, and we started to develop a plan of how to help shift, albeit
+slowly, both NCAR and---though collaboration with the Pangeo community---the
+geoscience community toward a better future.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/we-are-xdev/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>open development</category><category>open source</category><guid>https://ncar.github.io/xdev/posts/we-are-xdev/</guid><pubDate>Mon, 09 Dec 2019 18:00:00 GMT</pubDate></item></channel></rss>
