@@ -22,25 +22,49 @@ The XDev blog site is deployed using GitHub Pages from this repository.  It uses
 to generate static web pages, the content of which are contained in files in the `site` directory of this
 repository.  To write a new blog post, you should follow this procedure:
 
-1. Make sure you have Nikola installed on your machine (`pip install nikola[extras]`)
-2. Fork this repository into your own space and check out your fork
-3. Use Nikola (from within your fork) to create a new blog post file in the format of your choosing 
-   (`FORMAT` can be `rest`, `markdown`, or `ipynb`):
+1. Make sure you have Nikola installed on your machine (`pip install nikola[extras]`) in a 
+   separate conda environment (e.g., I call my conda environment `xdev` to match the repo.).
+2. Fork this repository into your own space and check out your fork.
+3. Use Nikola (from within your fork) to create a new blog post file in the format of your
+   choosing (`FORMAT` can be `rest`, `markdown`, or `ipynb`):
    
    ```bash
    nikola new_post -f FORMAT -a "Your Name"
    ```
    and follow the prompt from Nikola to give your blog post a title (and hit enter).
-4. Edit the file that was created in `site/posts/your-title.FMT` where `FMT` is either `rst`, `md`, or `ipynb`.  (Obviously, if you are creating a blog post from a Jupyter Notebook file, you will probably want to exit your `ipynb` file with Jupyter Notebook or Lab.)
-5. To view how your blog post will look when published, you can run a local web server with the following commands:
+4. Note important metadata fields within the blog post file:
+   
+   - `title`: A string that can have spaces (will be the text at the top of the blog
+     post HTML page).
+   - `slug`: This is a string that _cannot_ have spaces.  It will become the name of the
+     blog post file (with extension matching the FORMAT chosen in Step 3).  Nikola will
+     automatically generate this for you to match the `title` string, with spaces replaced
+     by hyphens and other punctuation removed.
+   - `date`: This is the displayed date and time of the blog post.  On the main page, the
+     posts will be ordered in reverse chronological order of this date-time.
+   - `tags`: Comma-separated strings (can have spaces) that topically categorize the post
+   - `description`: A very short description of the blog post.  This is displayed in the
+     card when the link to the post is generated from a tweet (i.e., a Twitter announcement).
+   - `author`: This should be your name (i.e., the author of the blog post).
+
+   Other metadata fields are less critical.
+4. Edit the file that was created in `site/posts/your-title.FMT` where `FMT` is either `rst`,
+   `md`, or `ipynb`.  (Obviously, if you are creating a blog post from a Jupyter Notebook
+   file, you will probably want to exit your `ipynb` file with Jupyter Notebook or Lab.)
+5. To view how your blog post will look when published, you can run a local web server with
+   the following commands:
 
    ```bash
    nikola build && nikola serve
    ```
    
-6. When your blog post is finished, make sure your changes are committed to your fork and then create a Pull Request.
-7. Tests that build the new web pages from your blog post will be run on CircleCI, and if these tests pass, then you need 2 reviews of your PR before it can be merged (so we read each others blog posts).
-8. Once the PR is merged, the new site will be generated on GitHub Pages automatically by a CircleCI job.  And, in a little while, the new website will be visible to the public.
+6. When your blog post is finished, make sure your changes are committed to your fork and
+   then create a Pull Request.
+7. Tests that build the new web pages from your blog post will be run on CircleCI, and if
+   these tests pass, then you need 2 reviews of your PR before it can be merged (so we read
+   each others blog posts).
+8. Once the PR is merged, the new site will be generated on GitHub Pages automatically by a
+   CircleCI job.  And, in a little while, the new website will be visible to the public.
 
 ## XDev Bot & Bot Testing Respositories
 
