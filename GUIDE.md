@@ -265,64 +265,59 @@ _Development_.  However, there are a lot of aspects of what we do that fall
 outside of, or peripheral to, these practices.  As a team, this is the area
 of guidance that I believe we need to develop more.
 
-### 3.1 Stay focused.
+### 3.1 Periodically check your mirrors.
 
-With so many different activities going on in the group, and so many other
-activities happening in the development space around us (e.g., the Pangeo
-community), it is very easy to get distracted and pulled off work on which
-we are trying to focus.  In fact, I would say that, at this moment, this is
-the most difficult part of what we do.  Hence, I would further say that the
-recommendations in this section need the most development and input from the
-team, as a whole.
+Like driving a car, you need to periodically check your "mirrors" to see what
+is going on around you.  For us, that means checking your GitHub notifications
+periodically, checking your email, checking Zulip, _etc._.  However, you shouldn't
+go down the rabit hole whenever a new notification comes in.  Instead, you
+should assess whether the notification _does_ or _does not_ require a response.
+If the notification _does_ require a response, you must determine if that
+response can be delayed or must be immediate.  In general, I recommend short
+responses _immediately_ and longer responses (e.g., significant code modification)
+later, _after you are done with your current task_.  In fact, if a notification
+requires significant work, I would recommend an immediate _short_ response
+indicating that a _longer_ response will be coming.  I recommend this
+approach because it allows you to stay focused as much as possible.
 
-- **Xdev Project Board:** We created the [Xdev Project Board](https://github.com/NCAR/xdev/projects/1)
-  (and the Xdev Bot) to help us chronical our work in a transparent way.  The
-  Project Board gives us a single place to go to see what all we are working on
-  and what all needs to be done.  Unfortunately, the Project Board (currently)
-  does a bad job of helping to identify what needs to be done next (i.e.,
-  prioritization), and it can actually be distracting from the work that you
-  are actually working on now.
+### 3.2 Be transparent.
 
-  The Xdev Project Board was not designed to be a replacement for GitHub
-  notifications.  GitHub notifications should be seen as the _primary_
-  mechanism for keeping you up-to-date on the development work we are
-  doing.  Hence, the Xdev Project Board should really be seen more as an
-  attempt at making up for the deficiencies of GitHub notifications when it
-  comes to organizing our work _as a team_.  GitHub notifications do some
-  things very well, such as:
+With everything that we do, we should strive to do it _in the open_.  That means
+not only holding communications in public forums (e.g., GitHub Issues and PRs),
+but also working in _public_ repositories.  There is no real reason why anything
+that _we_ do should be private.
 
-  - informing you when someone else has an _issue_,
-  - informing you when someone else needs your input (@-mentions), and
-  - informing you when changes are made to software you are working on.
+The [Xdev Project Board](https://github.com/NCAR/xdev/projects/1) was created
+to make all of our work transparent.  To this end, it does a good job of putting
+everything we are doing (and hope to do in the future) in one place.  However,
+the Project Board (currently) does a bad job of helping to identify what needs
+to be done next (i.e., prioritization), and it can actually be distracting from
+the work that you are actually working on now.
 
-  GitHub notifications do some things poorly, such as:
+The Xdev Project Board was not designed to be a replacement for GitHub
+notifications.  GitHub notifications should be seen as the _primary_ mechanism
+for keeping you up-to-date on the development work we are doing.
 
-  - letting you know what the rest of the team is working on,
-  - letting you know what you should work on next, and
-  - keeping you focused on the task currently at hand.
+### 3.3 Assign yourself to GitHub Issues
 
-  (Note: There may be more pluses and minuses to GitHub notifications,
-  and I welcome your input here.)
+You can assign yourself to any GitHub Issue that you think would be nice to work
+on in the future.  Then, you can search the Xdev Project Board with the
+`assignee:githubid` tag to _focus in_ on your own planned work.  I recommend this
+approach because it also communicates to the rest of the team what you plan to
+work on.  _Note: You can assign yourself to an Issue even if someone else has
+assigned themself.  There can be more than one assignee!_
 
-  Currently, the Xdev Project Board helps with the first GitHub notification
-  deficiency bullet, above.  However, it doesn't help with the other two
-  bullets.
+### 3.4 Measure twice, cut once.
 
-- **Control your GitHub notifications:** (See the [section above](#1-2-control-your-notifications).)
-  Controling your GitHub notifications is the only way that I can think of
-  to address the "distraction" problem.  However, this assumes that you
-  change your notification preferences every time to switch from one project
-  to another.  This is very cumbersome when switching from project to
-  project and back to your original project.  However, if you can focus on
-  one project at a time, for a long enough period of time, then this approach
-  can help.
+The best way of helping yourself stay focused and avoiding distraction
+(currently) is with good planning.  With only the Xdev Project Board, or just
+responding to GitHub notifications, it is very easy to get distracted from
+you current task at hand.  It is also extremely difficult to know what to
+do next.
 
-- **Assign yourself to GitHub Issues:** You can assign yourself to any GitHub
-  issue that you think would be nice to work on in the future.  Then, you can
-  search the Xdev Project Board with the `assignee:githubid` tag to limit
-  distractions.  I recommend this approach because it also communicates to
-  the rest of the team what you plan to work on.  _Note: You can assign yourself
-  to an Issue even if someone else has assigned themself.  There can be more
-  than one assignee!_
-
-
+To aid with this, you should plan your work over weeks _ahead of time_.  This
+planning should be done with the relevant members of the Xdev Team, so that
+the plan is well thought out and reviewed.  Currently, we do not have an
+explicit mechanism to do this, so it must be done with _ad hoc_ interactions.
+However, I am open to better ways of planning and possibly encoding our plans
+in our organizational tools (such as the Xdev Project Board).
