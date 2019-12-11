@@ -1,14 +1,24 @@
-# Xdev Processes
+# Xdev Team Guide
 
 In this document, I will try to detail the processes that we, as a team,
-should always follow.  I encourage others to add "rules" and suggestions
-for process to this document as described below.
+should always follow.  I encourage others to add guidance and suggestions
+for our process to this document as described below.
 
 ## Communication Process
 
-Other than in-person communications, we use 3 platforms for our team
+Other than in-person communications, we use 3 platforms for our _team_
 communications.  Preference should be given to GitHub, then Zulip, and
 lastly email.
+
+Please keep in mind that _other_ developer communities might use other
+platforms for communication.  It is important that you follow and use those
+platforms when doing work _as a member_ of that community.  For example,
+both [Dask](https://gitter.im/dask/dev) and [Xarray](https://gitter.im/pydata/xarray)
+use Gitter for developer communications, in addition to GitHub.  This can
+get unwieldy, but I recommend _focusing_ on one project at a time and
+limiting your communication (and notifications,
+[see below](#control-your-notifications)) to those that are most relevant
+to your project.
 
 ### Use GitHub for all communication, when possible.
 
@@ -103,11 +113,32 @@ We still encourage the use of _descriptive branch names_ in your fork,
 describing the feature/fix that is being implemented, so that GitHub
 history graphs can be more descriptive than just "master was merged into
 master".  Even if you have rights to directly push into a repository,
-we recommend doing everything in forks and pull requests.
+we recommend doing everything through forks and pull requests.
+
+Also, keep in might that the Git best practice of "commit early and
+commit often" also, in a way, applies to forks+branches.  Try to keep each
+fork+branch limited to changes that implement _only one feature_; Do not
+implement multiple features in one fork+branch.  This can seem like an
+inconvenient rule, but it helps others when they look at the history
+later.
 
 ### Follow Git best practices.
 
 Whenever possible, we also recommend using standard Git best practices,
-such as descriptive commit messages, many small commits (rather than one
-big commit), 
+such as:
+
+- _Do_ write descriptive commit messages,
+- _Do_ commit early and commit often,
+- _Don't_ change the published history of a repository.
+
+There are other git best practices that many other teams suggest (and
+sometimes demand), but, for now, we will not demand them.  These include
+the ["squash and merge"](https://blog.pairworking.com/why-you-should-care-about-squash-and-merge-in-git-675856bf66b0)
+rule and the ["no merge commits"](https://shinglyu.com/web/2018/03/25/merge-pull-requests-without-merge-commits.html)
+rule.  If there is demand from the team that we _do_ implement these 
+rules, then we can discuss them and how best to implement them.
+
+### U
+
+
    
