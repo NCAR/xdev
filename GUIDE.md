@@ -4,7 +4,7 @@ In this document, I will try to detail the processes that we, as a team,
 should always follow.  I encourage others to add guidance and suggestions
 for our process to this document as described below.
 
-## Communication Process
+## 1. Communication Process
 
 Other than in-person communications, we use 3 platforms for our _team_
 communications.  Preference should be given to GitHub, then Zulip, and
@@ -20,7 +20,7 @@ limiting your communication (and notifications,
 [see below](#control-your-notifications)) to those that are most relevant
 to your project.
 
-### Use GitHub for all communication, when possible.
+### 1.1 Use GitHub for all communication, when possible.
 
 The idea here is that there should be one best method for communication
 with the team.  This method should be _open_ for all to read, so that
@@ -37,7 +37,7 @@ know how we got to those products, too.  This includes the following:
   set their [GitHub notification preferences](https://help.github.com/en/github/receiving-notifications-about-activity-on-github/choosing-the-delivery-method-for-your-notifications)
   to notify you in a way that will not be lost or missed.)
 
-### Control your GitHub notifications.
+### 1.2 Control your GitHub notifications.
 
 For GitHub to be effective for communication, you need to make sure
 _both_ that you are receiving  notifications from GitHub _and_ that
@@ -71,7 +71,7 @@ _working on only_.  Once you finish work on one collection of repositories
 and move to another project (with a different collection of repositories),
 you can changed the repositories that you are watching.
 
-### Use Zulip for all other electronic communication.
+### 1.3 Use Zulip for all other electronic communication.
 
 The idea here is that our communication with each other should be recorded
 somewhere.  Zulip allows us to record our _quick_ chat-like communications,
@@ -80,7 +80,7 @@ turn-around.  For longer discussions and less urgent communication, use
 GitHub.  Try to avoid too many private messages, preferring to communicate
 in the open, but private messages (and email) are good for some things.
 
-### Use Email sparingly.
+### 1.4 Use Email sparingly.
 
 Email is useful for some forms of communication.  For example, email is
 the only form of communication with someone who is not on GitHub (or is
@@ -90,7 +90,7 @@ of communication with the team, such as notifications of being out of the
 office or similar, email is fine for this (and it is easy since it simply
 involves CCing the xdev@ucar.edu mail alias).
 
-### Be nice!!!
+### 1.5 Be nice!!!
 
 This is a no-brainer.  We are all busy, and we all have stresses in our
 life that come from outside of our work lives, _in addition_ to the
@@ -98,14 +98,14 @@ stresses that come from work itself.  Always be cognizant of this fact,
 and be kind and compassionate to each other and to others that we work
 with.  Kindness makes everyone's job easier.
 
-## Work Process
+## 2. Work Process
 
 As open source developers, all of our work should be done in an _open space_.
 This means GitHub and associated Git repositories.  There are many ways of
 working with Git and with GitHub, and I will try to describe the ways that
 we encourage as part of Xdev.
 
-### Use Forks+Branches instead of just Branches.
+### 2.1 Use Forks+Branches instead of just Branches.
 
 Whenever development happens, we strongly encourage you to do everything
 in a _fork_, instead of directly pushing changes into the main repository.
@@ -122,7 +122,7 @@ implement multiple features in one fork+branch.  This can seem like an
 inconvenient rule, but it helps others when they look at the history
 later.
 
-### Follow Git best practices.
+### 2.2 Follow Git best practices.
 
 Whenever possible, we also recommend using standard Git best practices,
 such as:
@@ -141,7 +141,7 @@ rules, then we can discuss them and how best to implement them.
 We also recommend the use of [Git pre-commit hooks](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/)
 for formatting code whenever you make new changes.
 
-### Clearly define (and use) project Conda environments.
+### 2.3 Clearly define (and use) project Conda environments.
 
 Whenever working on a project, whether it be software development or
 testing or helping scientists translate code into Python or developing
@@ -173,7 +173,7 @@ in a project repository (unless used for testing on CI,
 [see below](#use-ci-for-as-much-as-possible.)), so we recommend sharing these
 environment files with collaborators upon request.
 
-### Use CI for as much as possible.
+### 2.4 Use CI for as much as possible.
 
 Many of our projects use CircleCI for continuous integration (e.g., PR
 testing) and continuous deployment (e.g., the Xdev blog website).  I
@@ -255,5 +255,9 @@ whenever a Pull Request is _created_ (and when edits/changes are made to an
 existing PR).  You can either use GitHub to block commits directly into the
 master branch (i.e., force all commits to go through PRs), or you can also
 run CI on changes made directly to your master branch.  I recommend setting
-up your CI to _build (and publish) documentation_ whenever a PR is _merged_.
+up your CI to _build (and publish) documentation_ only when a PR is _merged_
+(i.e., only after it has been tested and approved).
+
+### 2.5 Stay focused.
+
 
