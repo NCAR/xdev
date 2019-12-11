@@ -4,7 +4,7 @@ In this document, I will try to detail the processes that we, as a team,
 should always follow.  I encourage others to add guidance and suggestions
 for our process to this document as described below.
 
-## 1. Communication Process
+## 1. Communication Processes
 
 Other than in-person communications, we use 3 platforms for our _team_
 communications.  Preference should be given to GitHub, then Zulip, and
@@ -17,7 +17,7 @@ both [Dask](https://gitter.im/dask/dev) and [Xarray](https://gitter.im/pydata/xa
 use Gitter for developer communications, in addition to GitHub.  This can
 get unwieldy, but I recommend _focusing_ on one project at a time and
 limiting your communication (and notifications,
-[see below](#control-your-notifications)) to those that are most relevant
+[see below](#1-2-control-your-notifications)) to those that are most relevant
 to your project.
 
 ### 1.1 Use GitHub for all communication, when possible.
@@ -98,7 +98,7 @@ stresses that come from work itself.  Always be cognizant of this fact,
 and be kind and compassionate to each other and to others that we work
 with.  Kindness makes everyone's job easier.
 
-## 2. Work Process
+## 2. Development Processes
 
 As open source developers, all of our work should be done in an _open space_.
 This means GitHub and associated Git repositories.  There are many ways of
@@ -153,7 +153,7 @@ create and manage these environments.
 It can be useful to _share_ these environments with other collaborators
 at times.  If all you need is an environment for testing a specific
 package, we usually keep a Conda YAML environment file in the CI
-directory for the package of interest ([see below](#use-ci-for-as-much-as-possible.)).
+directory for the package of interest ([see below](#2-4-use-ci-for-as-much-as-possible)).
 However, if you are doing a project that requires multiple packages that
 are not dependencies of each other, then I advise learning how to easily
 take a "snapshot" of your environment via `conda`:
@@ -258,6 +258,71 @@ run CI on changes made directly to your master branch.  I recommend setting
 up your CI to _build (and publish) documentation_ only when a PR is _merged_
 (i.e., only after it has been tested and approved).
 
-### 2.5 Stay focused.
+## 3. General Work Practices
+
+In general, most of what we do can be categorized as _Communication_ and/or
+_Development_.  However, there are a lot of aspects of what we do that fall
+outside of, or peripheral to, these practices.  As a team, this is the area
+of guidance that I believe we need to develop more.
+
+### 3.1 Stay focused.
+
+With so many different activities going on in the group, and so many other
+activities happening in the development space around us (e.g., the Pangeo
+community), it is very easy to get distracted and pulled off work on which
+we are trying to focus.  In fact, I would say that, at this moment, this is
+the most difficult part of what we do.  Hence, I would further say that the
+recommendations in this section need the most development and input from the
+team, as a whole.
+
+- **Xdev Project Board:** We created the [Xdev Project Board](https://github.com/NCAR/xdev/projects/1)
+  (and the Xdev Bot) to help us chronical our work in a transparent way.  The
+  Project Board gives us a single place to go to see what all we are working on
+  and what all needs to be done.  Unfortunately, the Project Board (currently)
+  does a bad job of helping to identify what needs to be done next (i.e.,
+  prioritization), and it can actually be distracting from the work that you
+  are actually working on now.
+
+  The Xdev Project Board was not designed to be a replacement for GitHub
+  notifications.  GitHub notifications should be seen as the _primary_
+  mechanism for keeping you up-to-date on the development work we are
+  doing.  Hence, the Xdev Project Board should really be seen more as an
+  attempt at making up for the deficiencies of GitHub notifications when it
+  comes to organizing our work _as a team_.  GitHub notifications do some
+  things very well, such as:
+
+  - informing you when someone else has an _issue_,
+  - informing you when someone else needs your input (@-mentions), and
+  - informing you when changes are made to software you are working on.
+
+  GitHub notifications do some things poorly, such as:
+
+  - letting you know what the rest of the team is working on,
+  - letting you know what you should work on next, and
+  - keeping you focused on the task currently at hand.
+
+  (Note: There may be more pluses and minuses to GitHub notifications,
+  and I welcome your input here.)
+
+  Currently, the Xdev Project Board helps with the first GitHub notification
+  deficiency bullet, above.  However, it doesn't help with the other two
+  bullets.
+
+- **Control your GitHub notifications:** (See the [section above](#1-2-control-your-notifications).)
+  Controling your GitHub notifications is the only way that I can think of
+  to address the "distraction" problem.  However, this assumes that you
+  change your notification preferences every time to switch from one project
+  to another.  This is very cumbersome when switching from project to
+  project and back to your original project.  However, if you can focus on
+  one project at a time, for a long enough period of time, then this approach
+  can help.
+
+- **Assign yourself to GitHub Issues:** You can assign yourself to any GitHub
+  issue that you think would be nice to work on in the future.  Then, you can
+  search the Xdev Project Board with the `assignee:githubid` tag to limit
+  distractions.  I recommend this approach because it also communicates to
+  the rest of the team what you plan to work on.  _Note: You can assign yourself
+  to an Issue even if someone else has assigned themself.  There can be more
+  than one assignee!_
 
 
