@@ -48,12 +48,12 @@ must understand the 2 ways you can get notifications in GitHub:
 
 - **_Watching_:** GitHub allows you to "watch" a _repository_.  GitHub
   notifies you of any new Issues or Pull Requests and any comments made
-  on those Issues and Pull Requests.  ...So, watching an actively 
+  on those Issues and Pull Requests.  ...So, watching an actively
   developed repository can lead to a _lot_ of notifications.
 
 - **_Subscribing_:** Individual Issues and Pull Requests can be
   "subscribed" to.  And, even if you aren't watching the repository,
-  once you subscribe to an Issue or Pull Request, you will get 
+  once you subscribe to an Issue or Pull Request, you will get
   notifications every time a comment is made on them.  If you make
   a comment to any Issue or Pull Request (whether you own the repo
   or not, or whether you are watching the repo or not), you will
@@ -135,10 +135,125 @@ There are other git best practices that many other teams suggest (and
 sometimes demand), but, for now, we will not demand them.  These include
 the ["squash and merge"](https://blog.pairworking.com/why-you-should-care-about-squash-and-merge-in-git-675856bf66b0)
 rule and the ["no merge commits"](https://shinglyu.com/web/2018/03/25/merge-pull-requests-without-merge-commits.html)
-rule.  If there is demand from the team that we _do_ implement these 
+rule.  If there is demand from the team that we _do_ implement these
 rules, then we can discuss them and how best to implement them.
 
-### U
+We also recommend the use of [Git pre-commit hooks](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/)
+for formatting code whenever you make new changes.
 
+### Clearly define (and use) project Conda environments.
 
-   
+Whenever working on a project, whether it be software development or
+testing or helping scientists translate code into Python or developing
+educational material and documentation, it is important to do your work
+within a virtual environment that safely provides all of the software
+dependencies you need for your work.  We recommend using Miniconda to
+create and manage these environments.
+
+It can be useful to _share_ these environments with other collaborators
+at times.  If all you need is an environment for testing a specific
+package, we usually keep a Conda YAML environment file in the CI
+directory for the package of interest ([see below](#use-ci-for-as-much-as-possible.)).
+However, if you are doing a project that requires multiple packages that
+are not dependencies of each other, then I advise learning how to easily
+take a "snapshot" of your environment via `conda`:
+
+```bash
+conda env export > environment.yml
+```
+
+and then to create this environment from the YAML file:
+
+```bash
+conda env create -f environment.yml
+```
+
+Normally, it is not considered good practice to include YAML environment files
+in a project repository (unless used for testing on CI,
+[see below](#use-ci-for-as-much-as-possible.)), so we recommend sharing these
+environment files with collaborators upon request.
+
+### Use CI for as much as possible.
+
+Many of our projects use CircleCI for continuous integration (e.g., PR
+testing) and continuous deployment (e.g., the Xdev blog website).  I
+highly recommend doing the same in _all_ of our project repos.  If CI
+has not been enabled in an Xdev repository that you are working within,
+then take the time to enable it.  I recommend using CI for _all_ of these
+tasks, when appropriate:
+
+- **Testing:** When we write code (almost always in Python), we recommend
+  using PyTest (`conda install pytest`) for testing.  Typically, there are two
+  recommended organizational patterns used for tests:
+  - place a `tests` directory _parallel_ to the package directory (e.g., the
+    `tests` directory and the `package` directory in the root of your repository),
+    with the contents of the `tests` directory mirroring the directory structure
+    within the `package` directory, or
+  - place a `tests` directory inside each `package` directory and subdirectory
+    (i.e., sub-package).
+  We do not prescribe one approach over another, only that it remain consistent.
+
+- **Linting:** We recommend enforcing code formatting standards.  For these
+  purposes, we recommend the combined use of `flake8` and `black`.  The `black`
+  tool is an _opinionated_ Python code formatter.  Namely, it will change your
+  source code to match a set of formatting rules, and you have some control over
+  the rules you wish to enforce.  The `flake8` tool checks to make sure your
+  Python source code complies with the PEP8 standard.  Typically, you run
+  `black` and then `flake8` to make sure your reformatted code is PEP8
+  compliant.
+
+  There are many other tools to help lint your source code, such as `isort`
+  (sorting your import statements) and `blacken-docs` (formats Python code
+  snippets that show up in your documentation) and others.  I believe that these
+  tools are optional, and I would consider `flake8` and `black` to be more of a
+  requirement (or much stronger recommendation).
+
+  For CI, you only want to check that the code that is being submitted via a
+  PR is formatted correctly.  It is difficult (but not impossible) to allow your
+  CI service to actually _format_ the submitted code for you, so for simplicity,
+  we usually just check to make sure that the code is formatted correctly and
+  fail the CI check if it is not.  Hence, we typically only run `flake8` in
+  our CI tests.
+
+  However, it is _strongly_ advised that you run both `black` and then `flake8`
+  on your code whenever you make git commits.  Fortunately, there is a way to
+  automate this through the use of [Git pre-commit hooks](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/).
+  This feature will run these tools _every time you commit_, instead of only
+  running them via CI.
+
+- **Documentation Building:** As always, whenever you write code you should
+  write documentation for it.  We recommend the use of [Sphinx](http://www.sphinx-doc.org/en/master/usage/quickstart.html)
+  for documentation.  Sphinx can also automatically generate API documentation
+  based on Python docstrings within your source code.  So, every time you add
+  new code to your repository, you should update the API docs.  Using CI, you can
+  test that your documentation actually builds (without failure).
+
+  [Readthedocs](https://readthedocs.org/) is a CI service that can be set up
+  to build your documentation and _host_ it for you on their servers.  It is
+  quite easy to set up and use, and so we recommend it for the actual
+  publication of your documentation.
+
+  _A note about advertisements on Readthedocs_: Readthedocs.org provides their
+  documentation hosting service to _open source projects_ for free, but it pays
+  for the running of the service through commercial/enterprise-level services
+  (that commercial customers pay for) and advertisements that are displayed on
+  the freely hosted documentation websites.  Some people think that it is
+  unethical to have advertisements for free and open source scientific
+  software websites (and particularly for NCAR, tax-funded work).  If this is a
+  concern you need to avoid, then I recommend hosting your documentation via
+  [GitHub Pages](https://pages.github.com/) which can let you host content,
+  such as documentation, directly from your GitHub repository.  To make this
+  work, however, we recommend that you create a CI job (e.g., via CircleCI)
+  to build _and commit_ your updated documentation for display on your GitHub
+  pages site ([see here](https://circleci.com/blog/deploying-documentation-to-github-pages-with-continuous-integration/)).
+
+CI services are the critical lynchpin of open source community software development,
+so they should be used whenever possible.
+
+I recommend setting your CI up to run _tests_ (including _linting_ tests)
+whenever a Pull Request is _created_ (and when edits/changes are made to an
+existing PR).  You can either use GitHub to block commits directly into the
+master branch (i.e., force all commits to go through PRs), or you can also
+run CI on changes made directly to your master branch.  I recommend setting
+up your CI to _build (and publish) documentation_ whenever a PR is _merged_.
+
