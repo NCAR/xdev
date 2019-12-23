@@ -1,64 +1,83 @@
-- name: Core and Coordinated packages
+- name: Core and Coordinated Projects
 
-  packages:
+  projects:
+    - repo: NCAR/intake-esm
+      badges: circleci, rtd, pypi, conda
 
-  - repo: NCAR/esmlab
-    badges: circleci, codecov, rtd, pypi, conda-forge
+    - repo: NCAR/intake-esm-datastore
+      badges: None
 
-  - repo: NCAR/esmlab-regrid
-    badges: circleci, codecov, rtd
+    - repo: NCAR/esmlab
+      badges: circleci, rtd, pypi, conda
 
-  - repo: NCAR/intake-esm
-    badges: circleci, codecov, rtd, pypi, conda-forge
+    - repo: NCAR/mpirical
+      badges: circleci, rtd,
 
-  - repo: NCAR/intake-esm-datastore
-    badges: None
+    - repo: NCAR/ncar-jobqueue
+      badges: pypi
 
-  - repo: NCAR/jupyterlab-pbs
-    badges: circleci
+    - repo: NCAR/notebook-gallery
+      badges: circleci
 
-  - repo: marbl-ecosys/marbl-forcing
-    badges: None
+    - repo: NCAR/esm-collection-spec
+      badges: circleci
 
-  - repo: NCAR/mpirical
-    badges: circleci, rtd, codecov
-
-  - repo: NCAR/ncar-jobqueue
-    badges: pypi
-
-
-  - repo: NCAR/pop-tools
-    badges: rtd, circleci, codecov, pypi, conda-forge 
-
-  - repo: NCAR/xcollection
-    badges: circleci, codecov, rtd
-
-  - repo: NCAR/xdev-bot
-    badges: circleci, codecov
-
-  - repo: NCAR/xreshaper
-    badges: circleci, codecov, rtd
+    - repo: NCAR/ncar-python-tutorial
+      badges: circleci
 
 
-- name: Associated packages
 
-  packages:
+- name: Affiliated Projects
 
-  - repo: dask/dask
-    badges: coveralls, travis, rtd, pypi, conda-forge
-  
-  - repo: dask/dask-mpi
-    badges: circleci, codecov, rtd, pypi, conda-forge 
+  projects:
 
-  - repo: dask/dask-jobqueue
-    badges: travis, rtd, pypi, conda-forge 
+    - repo: matt-long/xpersist
+      badges: githubci
 
-  - repo: intake/intake
-    badges: travis, rtd, pypi, conda-forge 
-  
-  - repo: intake/intake-xarray
-    badges: travis, pypi, conda-forge 
+    - repo: NCAR/pop-tools
+      badges: rtd, circleci
 
-  - repo: pydata/xarray
-    badges: coveralls, travis, rtd, pypi, conda-forge
-    rtd_name: xray
+
+    - repo: NCAR/cesm-lens-aws
+      badges: None
+
+    - repo: coderepocenter/AxisUtilities
+      badges: circleci, pypi, rtd, conda
+      rtd_name: axisutilities
+      conda_channel: aciacs
+
+
+- name: Upstream Core Projects
+
+  projects:
+    - repo: dask/dask
+      badges: travis, rtd, pypi, conda
+
+    - repo: dask/dask-mpi
+      badges: circleci, rtd, pypi, conda
+
+    - repo: dask/dask-jobqueue
+      badges: travis, rtd, pypi, conda
+
+    - repo: dask/distributed
+      badges: travis, rtd, pypi, conda
+
+    - repo: intake/intake
+      badges: travis, rtd, pypi, conda
+
+    - repo: pydata/xarray
+      badges: travis, rtd, pypi, conda
+      rtd_name: xray
+
+
+- name: XDev Infrastructure
+  projects:
+    - repo: NCAR/xdev-bot
+      badges: circleci
+
+    - repo: NCAR/xdev
+      badges: circleci
+
+    - repo: NCAR/xdev-docker-images
+      badges: githubci
+      gh_workflow_name: Miniconda

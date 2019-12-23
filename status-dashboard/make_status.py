@@ -1,68 +1,77 @@
 #!/usr/bin/env python
 
+import os
 import sys
+
 from jinja2 import Template
 from yaml import safe_load as load
-import os 
 
 here = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(here, 'dashboard.yml')) as f:
     config = load(f)
 
-existing = {package['repo'].split('/')[1].lower(): package for section in config for package in section['packages']}
+existing = {
+    project['repo'].split('/')[1].lower(): project
+    for section in config
+    for project in section['projects']
+}
 
-# Also get affiliated packages
+# Also get affiliated projects
 registry = []
 # for section in config:
-#     if section['name'] == 'Affiliated Packages':
+#     if section['name'] == 'Affiliated projects':
 #         affiliated = section
 #         break
 # else:
-#     print("Could not find affiliated package section in dashboard.yml")
+#     print("Could not find affiliated project section in dashboard.yml")
 #     sys.exit(1)
 
-for package in registry:
-    # FIXME: Not all repo name is actual package name.
-    pkg_name = package['name'].lower()
+for project in registry:
+    # FIXME: Not all repo name is actual project name.
+    pkg_name = project['name'].lower()
 
     if pkg_name in existing:
         entry = existing[pkg_name]
     else:
         entry = {}
     if 'repo' not in entry:
-        if 'github.com' in package['repo_url']:
-            entry['repo'] = package['repo_url'].split('github.com/')[1]
+        if 'github.com' in project['repo_url']:
+            entry['repo'] = project['repo_url'].split('github.com/')[1]
         else:
-            print("Skipping package {0} which is not on GitHub".format(package['name']))
+            print('Skipping project {0} which is not on GitHub'.format(project['name']))
     if 'pypi_name' not in entry:
-        entry['pypi_name'] = package['pypi_name']
+        entry['pypi_name'] = project['pypi_name']
     if 'badges' not in entry:
         entry['badges'] = 'travis, coveralls, rtd, pypi, conda'
     # if pkg_name not in existing:
-    #     affiliated['packages'].append(entry)
+    #     affiliated['projects'].append(entry)
 
 for section in config:
-    for package in section['packages']:
-        package['user'], package['name'] = package['repo'].split('/')
-        package['badges'] = [x.strip() for x in package['badges'].split(',')]
-        package['conda_package'] = package.get('conda_package', package['name'])
-        if 'rtd' in package['badges'] and 'rtd_name' not in package:
-            package['rtd_name'] = package['name']
-        if 'pypi' in package['badges'] and 'pypi_name' not in package:
-            package['pypi_name'] = package['name']
-        if 'appveyor' in package['badges'] and 'appveyor_project' not in package:
-            package['appveyor_project'] = package['repo']
-        if 'circleci' in package['badges'] and 'circleci_project' not in package:
-            package['circleci_project'] = package['repo']
-        if 'travis' in package['badges']:
-            if 'travis_project' not in package:
-                package['travis_project'] = package['repo']
-            package['travis_dot'] = package.get('travis_dot', 'org')
-        if 'conda' in package['badges'] and 'conda_channel' not in package:
-            package['conda_channel'] = 'intake'
+    for project in section['projects']:
+        project['user'], project['name'] = project['repo'].split('/')
+        project['badges'] = [x.strip() for x in project['badges'].split(',')]
+        project['conda_project'] = project.get('conda_project', project['name'])
+        if 'rtd' in project['badges'] and 'rtd_name' not in project:
+            project['rtd_name'] = project['name']
+        if 'pypi' in project['badges'] and 'pypi_name' not in project:
+            project['pypi_name'] = project['name']
+        if 'appveyor' in project['badges'] and 'appveyor_project' not in project:
+            project['appveyor_project'] = project['repo']
+        if 'circleci' in project['badges'] and 'circleci_project' not in project:
+            project['circleci_project'] = project['repo']
+        if 'travis' in project['badges']:
+            if 'travis_project' not in project:
+                project['travis_project'] = project['repo']
+            project['travis_dot'] = project.get('travis_dot', 'org')
+        if 'conda' in project['badges']:
+            project['conda_channel'] = project.get('conda_channel', 'conda-forge')
 
-# affiliated['packages'] = sorted(affiliated['packages'], key=lambda x: x['name'].lower())
+        if 'githubci' in project['badges']:
+            project['githubci'] = project['repo']
+            project['gh_workflow_name'] = project.get('gh_workflow_name', 'CI')
+
+# affiliated['projects'] = sorted(affiliated['projects'], key=lambda x: x['name'].lower())
 
 template = Template(open(os.path.join(here, 'template.html'), 'r').read())
 
