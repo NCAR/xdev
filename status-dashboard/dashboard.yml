@@ -37,8 +37,6 @@
     - repo: NCAR/pop-tools
       badges: rtd, circleci
 
-    - repo: marbl-ecosys/cesm2-marbl
-      badges: None
 
     - repo: NCAR/cesm-lens-aws
       badges: None
