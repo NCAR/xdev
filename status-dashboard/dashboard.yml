@@ -1,4 +1,4 @@
-- name: Core and Coordinated projects
+- name: Core and Coordinated Projects
 
   projects:
     - repo: NCAR/intake-esm
@@ -16,14 +16,8 @@
     - repo: NCAR/ncar-jobqueue
       badges: pypi
 
-    - repo: NCAR/pop-tools
-      badges: rtd, circleci
-
     - repo: NCAR/notebook-gallery
       badges: circleci
-
-    - repo: matt-long/xpersist
-      badges: githubci
 
     - repo: NCAR/esm-collection-spec
       badges: circleci
@@ -31,24 +25,28 @@
     - repo: NCAR/ncar-python-tutorial
       badges: circleci
 
+
+
+- name: Affiliated Projects
+
+  projects:
+
+    - repo: matt-long/xpersist
+      badges: githubci
+
+    - repo: NCAR/pop-tools
+      badges: rtd, circleci
+
+    - repo: NCAR/cesm-lens-aws
+      badges: None
+
     - repo: coderepocenter/AxisUtilities
       badges: circleci, pypi, rtd, conda
       rtd_name: axisutilities
       conda_channel: aciacs
 
-- name: Infrastructure
-  projects:
-    - repo: NCAR/xdev-bot
-      badges: circleci
 
-    - repo: NCAR/xdev
-      badges: circleci
-
-    - repo: NCAR/xdev-docker-images
-      badges: githubci
-      gh_workflow_name: Miniconda
-
-- name: Associated projects
+- name: Upstream Core Projects
 
   projects:
     - repo: dask/dask
@@ -69,3 +67,16 @@
     - repo: pydata/xarray
       badges: travis, rtd, pypi, conda
       rtd_name: xray
+
+
+- name: XDev Infrastructure
+  projects:
+    - repo: NCAR/xdev-bot
+      badges: circleci
+
+    - repo: NCAR/xdev
+      badges: circleci
+
+    - repo: NCAR/xdev-docker-images
+      badges: githubci
+      gh_workflow_name: Miniconda
