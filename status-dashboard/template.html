@@ -2,100 +2,125 @@
 .. title: Project Status Dashboard
 .. slug: status
 .. date: 2019-08-04 11:39:27 UTC-06:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
+.. tags:
+.. category:
+.. link:
+.. description:
 .. type: text
 -->
-
 <html>
-  <head>
-  </head>
-  <body>
-    <div id="wrapper" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif !important; text-align: center !important">
+
+<head>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      text-align: center;
+    }
+
+    td {
+      padding: 5px;
+    }
+
+    table {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
     {% for section in config %}
     <h2>{{ section.name }}</h2>
-    <table align='center' style='margin-bottom: 50px !important;'>
+    <table align="center">
       <tr>
         <th>Name</th>
-        <th>CI</th>
-        <th>Coverage</th>
+        <th>Travis</th>
+        <th>CircleCI</th>
+        <th>GitHubCI</th>
+        <!-- <th>Coverage</th> -->
         <th>ReadTheDocs</th>
         <th>PyPI</th>
-        <th>Conda-Forge</th>
+        <th>Conda</th>
       </tr>
-      {% for package in section.packages %}
+      {% for project in section.projects %}
       <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/{{ package.repo }}">{{ package.name }}</a>
+        <td align="left">
+          <a href="http://github.com/{{ project.repo }}">{{ project.name }}</a>
         </td>
-          {% if 'circleci' in package.badges %}
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/{{ package.repo }}/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/{{ package.repo }}/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          {% elif 'travis' in package.badges %}
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://travis-ci.org/{{ package.repo }}/tree/master">            
-              <img src="https://img.shields.io/travis/{{ package.repo }}/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-
-          {% else %}
-          <td style='padding: 5px !important;' align='center'>-</td>
-          {% endif %}
-          {% if 'codecov' in package.badges %}
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/{{ package.repo }}">
-              <img src="https://img.shields.io/codecov/c/github/{{ package.repo }}.svg?style=for-the-badge"> 
-            </a>
-          </td>
-
-          {% elif 'coveralls' in package.badges %}
-          <td style='padding: 5px !important;' align='left'> 
-            <a href="https://coveralls.io/github/{{ package.repo }}">
-              <img src="https://img.shields.io/coveralls/github/{{ package.repo }}.svg?style=for-the-badge"> 
-            </a>
-          </td>
-
-          {% else %}
-          <td style='padding: 5px !important;' align='center'>-</td>
-          {% endif %}
-          {% if 'rtd' in package.badges %}
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://{{ package.rtd_name }}.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/{{ package.rtd_name }}/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          {% else %}
-          <td style='padding: 5px !important;' align='center'>-</td>
-          {% endif %}
-          {% if 'pypi' in package.badges %}
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/{{ package.pypi_name }}">
-              <img src="https://img.shields.io/pypi/v/{{ package.pypi_name }}.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          {% else %}
-          <td style='padding: 5px !important;' align='center'>-</td>
-          {% endif %}
-          {% if 'conda-forge' in package.badges %}
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/{{ package.conda_package }}">
-              <img src="https://img.shields.io/conda/vn/conda-forge/{{ package.conda_package }}.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          {% else %}
-          <td style='padding: 5px !important;' align='center'>-</td>
-          {% endif %}
+        {% if 'travis' in project.badges %}
+        <td align="left">
+          <a href="https://travis-ci.org/{{ project.travis_project }}">
+            <!-- <img src="https://travis-ci.org/{{ project.travis_project }}.svg?branch=master&logo=travis"> -->
+            <img src="https://img.shields.io/travis/{{ project.travis_project }}?&logo=travis" />
+          </a>
+        </td>
+        {% else %}
+        <td align="center">-</td>
+        {% endif %} {% if 'circleci' in project.badges %}
+        <td align="left">
+          <a href="https://circleci.com/gh/{{ project.circleci_project }}">
+            <img src="https://circleci.com/gh/{{ project.circleci_project }}.svg?style=svg" />
+          </a>
+        </td>
+        {% else %}
+        <td align="center">-</td>
+        {% endif %} {% if 'githubci' in project.badges %}
+        <td align="left">
+          <a href="https://github.com/{{ project.repo }}/actions">
+            <!-- <img src="https://github.com/{{ project.repo }}/workflows/{{project.gh_workflow_name}}/badge.svg"> -->
+            <img
+              src="https://img.shields.io/github/workflow/status/{{ project.repo }}/{{ project.gh_workflow_name }}?logo=github" />
+          </a>
+        </td>
+        {% else %}
+        <td align="center">-</td>
+        {% endif %}
+        <!-- {% if 'coveralls' in project.badges %}
+        <td align='left'>
+          <a href="https://coveralls.io/r/{{ project.repo }}?branch=master">
+            <img src="https://coveralls.io/repos/{{ project.repo }}/badge.svg?branch=master">
+          </a>
+        </td>
+        {% elif 'codecov' in project.badges %}
+        <td align='left'>
+          <a href="https://codecov.io/gh/{{ project.repo }}?branch=master">
+            <img src="https://codecov.io/gh/{{ project.repo }}/branch/master/graph/badge.svg">
+          </a>
+        </td>
+        {% else %}
+        <td align='center'>-</td>
+        {% endif %} -->
+        {% if 'rtd' in project.badges %}
+        <td align="left">
+          <a href="https://readthedocs.org/projects/{{ project.rtd_name }}/?badge=latest">
+            <img src="https://readthedocs.org/projects/{{ project.rtd_name }}/badge/?version=latest" />
+          </a>
+        </td>
+        {% else %}
+        <td align="center">-</td>
+        {% endif %} {% if 'pypi' in project.badges %}
+        <td align="left">
+          <a href="https://pypi.org/project/{{ project.pypi_name }}">
+            <img src="https://img.shields.io/pypi/v/{{ project.pypi_name }}.svg" />
+          </a>
+        </td>
+        {% else %}
+        <td align="center">-</td>
+        {% endif %} {% if 'conda' in project.badges %}
+        <td align="left">
+          <a href="https://anaconda.org/{{ project.conda_channel }}/{{ project.conda_project }}">
+            <img src="https://img.shields.io/conda/vn/{{ project.conda_channel }}/{{ project.conda_project }}.svg?" />
+          </a>
+        </td>
+        {% else %}
+        <td align="center">-</td>
+        {% endif %}
       </tr>
       {% endfor %}
     </table>
+
     {% endfor %}
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>

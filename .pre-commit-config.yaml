@@ -28,8 +28,3 @@ repos:
     rev: v4.3.21
     hooks:
       - id: isort
-
-  - repo: https://github.com/prettier/prettier
-    rev: 1.19.1
-    hooks:
-      - id: prettier
