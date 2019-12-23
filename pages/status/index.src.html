@@ -2,686 +2,806 @@
 .. title: Project Status Dashboard
 .. slug: status
 .. date: 2019-08-04 11:39:27 UTC-06:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
+.. tags:
+.. category:
+.. link:
+.. description:
 .. type: text
 -->
-
 <html>
-  <head>
-  </head>
-  <body>
-    <div id="wrapper" style="font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif !important; text-align: center !important">
-    
-    <h2>Core and Coordinated packages</h2>
-    <table align='center' style='margin-bottom: 50px !important;'>
+
+<head>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      text-align: center;
+    }
+
+    td {
+      padding: 5px;
+    }
+
+    table {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <h2>Core and Coordinated Projects</h2>
+    <table align="center">
       <tr>
         <th>Name</th>
-        <th>CI</th>
-        <th>Coverage</th>
+        <th>Travis</th>
+        <th>CircleCI</th>
+        <th>GitHubCI</th>
+        <!-- <th>Coverage</th> -->
         <th>ReadTheDocs</th>
         <th>PyPI</th>
-        <th>Conda-Forge</th>
+        <th>Conda</th>
       </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/NCAR/esmlab">esmlab</a>
-        </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/esmlab/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/esmlab/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/esmlab">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/esmlab.svg?style=for-the-badge"> 
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://esmlab.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/esmlab/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/esmlab">
-              <img src="https://img.shields.io/pypi/v/esmlab.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/esmlab">
-              <img src="https://img.shields.io/conda/vn/conda-forge/esmlab.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
-      </tr>
-      
       <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/NCAR/esmlab-regrid">esmlab-regrid</a>
-        </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/esmlab-regrid/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/esmlab-regrid/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/esmlab-regrid">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/esmlab-regrid.svg?style=for-the-badge"> 
-            </a>
-          </td>
-
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://esmlab-regrid.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/esmlab-regrid/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-      </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
           <a href="http://github.com/NCAR/intake-esm">intake-esm</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/intake-esm/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/intake-esm/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/intake-esm">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/intake-esm.svg?style=for-the-badge"> 
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://intake-esm.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/intake-esm/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/intake-esm">
-              <img src="https://img.shields.io/pypi/v/intake-esm.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/intake-esm">
-              <img src="https://img.shields.io/conda/vn/conda-forge/intake-esm.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/intake-esm">
+            <img src="https://circleci.com/gh/NCAR/intake-esm.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/intake-esm/?badge=latest">
+            <img src="https://readthedocs.org/projects/intake-esm/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/intake-esm">
+            <img src="https://img.shields.io/pypi/v/intake-esm.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/intake-esm">
+            <img src="https://img.shields.io/conda/vn/conda-forge/intake-esm.svg?" />
+          </a>
+        </td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
           <a href="http://github.com/NCAR/intake-esm-datastore">intake-esm-datastore</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/NCAR/jupyterlab-pbs">jupyterlab-pbs</a>
+        <td align="left">
+          <a href="http://github.com/NCAR/esmlab">esmlab</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/jupyterlab-pbs/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/jupyterlab-pbs/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-      </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/marbl-ecosys/marbl-forcing">marbl-forcing</a>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/esmlab">
+            <img src="https://circleci.com/gh/NCAR/esmlab.svg?style=svg" />
+          </a>
         </td>
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/esmlab/?badge=latest">
+            <img src="https://readthedocs.org/projects/esmlab/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/esmlab">
+            <img src="https://img.shields.io/pypi/v/esmlab.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/esmlab">
+            <img src="https://img.shields.io/conda/vn/conda-forge/esmlab.svg?" />
+          </a>
+        </td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
           <a href="http://github.com/NCAR/mpirical">mpirical</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/mpirical/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/mpirical/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/mpirical">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/mpirical.svg?style=for-the-badge"> 
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://mpirical.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/mpirical/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/mpirical">
+            <img src="https://circleci.com/gh/NCAR/mpirical.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/mpirical/?badge=latest">
+            <img src="https://readthedocs.org/projects/mpirical/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
           <a href="http://github.com/NCAR/ncar-jobqueue">ncar-jobqueue</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/ncar-jobqueue">
-              <img src="https://img.shields.io/pypi/v/ncar-jobqueue.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-      </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/NCAR/pop-tools">pop-tools</a>
-        </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/pop-tools/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/pop-tools/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/pop-tools">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/pop-tools.svg?style=for-the-badge"> 
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pop-tools.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/pop-tools/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/pop-tools">
-              <img src="https://img.shields.io/pypi/v/pop-tools.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/pop-tools">
-              <img src="https://img.shields.io/conda/vn/conda-forge/pop-tools.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
-      </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/NCAR/xcollection">xcollection</a>
-        </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/xcollection/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/xcollection/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/xcollection">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/xcollection.svg?style=for-the-badge"> 
-            </a>
-          </td>
+        <td align="center">-</td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://xcollection.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/xcollection/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-      </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/NCAR/xdev-bot">xdev-bot</a>
-        </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/xdev-bot/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/xdev-bot/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/xdev-bot">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/xdev-bot.svg?style=for-the-badge"> 
-            </a>
-          </td>
+        <td align="center">-</td>
 
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-      </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/NCAR/xreshaper">xreshaper</a>
-        </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/NCAR/xreshaper/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/NCAR/xreshaper/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/NCAR/xreshaper">
-              <img src="https://img.shields.io/codecov/c/github/NCAR/xreshaper.svg?style=for-the-badge"> 
-            </a>
-          </td>
+        <td align="center">-</td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://xreshaper.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/xreshaper/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/ncar-jobqueue">
+            <img src="https://img.shields.io/pypi/v/ncar-jobqueue.svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
       </tr>
-      
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/notebook-gallery">notebook-gallery</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/notebook-gallery">
+            <img src="https://circleci.com/gh/NCAR/notebook-gallery.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/esm-collection-spec">esm-collection-spec</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/esm-collection-spec">
+            <img src="https://circleci.com/gh/NCAR/esm-collection-spec.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/ncar-python-tutorial">ncar-python-tutorial</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/ncar-python-tutorial">
+            <img src="https://circleci.com/gh/NCAR/ncar-python-tutorial.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
     </table>
-    
-    <h2>Associated packages</h2>
-    <table align='center' style='margin-bottom: 50px !important;'>
+
+
+    <h2>Affiliated Projects</h2>
+    <table align="center">
       <tr>
         <th>Name</th>
-        <th>CI</th>
-        <th>Coverage</th>
+        <th>Travis</th>
+        <th>CircleCI</th>
+        <th>GitHubCI</th>
+        <!-- <th>Coverage</th> -->
         <th>ReadTheDocs</th>
         <th>PyPI</th>
-        <th>Conda-Forge</th>
+        <th>Conda</th>
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
+          <a href="http://github.com/matt-long/xpersist">xpersist</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://github.com/matt-long/xpersist/actions">
+            <!-- <img src="https://github.com/matt-long/xpersist/workflows/CI/badge.svg"> -->
+            <img
+              src="https://img.shields.io/github/workflow/status/matt-long/xpersist/CI?logo=github" />
+          </a>
+        </td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/pop-tools">pop-tools</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/pop-tools">
+            <img src="https://circleci.com/gh/NCAR/pop-tools.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/pop-tools/?badge=latest">
+            <img src="https://readthedocs.org/projects/pop-tools/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/marbl-ecosys/cesm2-marbl">cesm2-marbl</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/cesm-lens-aws">cesm-lens-aws</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/coderepocenter/AxisUtilities">AxisUtilities</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/coderepocenter/AxisUtilities">
+            <img src="https://circleci.com/gh/coderepocenter/AxisUtilities.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/axisutilities/?badge=latest">
+            <img src="https://readthedocs.org/projects/axisutilities/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/AxisUtilities">
+            <img src="https://img.shields.io/pypi/v/AxisUtilities.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/aciacs/AxisUtilities">
+            <img src="https://img.shields.io/conda/vn/aciacs/AxisUtilities.svg?" />
+          </a>
+        </td>
+
+      </tr>
+
+    </table>
+
+
+    <h2>Upstream Core Projects</h2>
+    <table align="center">
+      <tr>
+        <th>Name</th>
+        <th>Travis</th>
+        <th>CircleCI</th>
+        <th>GitHubCI</th>
+        <!-- <th>Coverage</th> -->
+        <th>ReadTheDocs</th>
+        <th>PyPI</th>
+        <th>Conda</th>
+      </tr>
+
+      <tr>
+        <td align="left">
           <a href="http://github.com/dask/dask">dask</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://travis-ci.org/dask/dask/tree/master">            
-              <img src="https://img.shields.io/travis/dask/dask/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'> 
-            <a href="https://coveralls.io/github/dask/dask">
-              <img src="https://img.shields.io/coveralls/github/dask/dask.svg?style=for-the-badge"> 
-            </a>
-          </td>
+        <td align="left">
+          <a href="https://travis-ci.org/dask/dask">
+            <!-- <img src="https://travis-ci.org/dask/dask.svg?branch=master&logo=travis"> -->
+            <img src="https://img.shields.io/travis/dask/dask?&logo=travis" />
+          </a>
+        </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://dask.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/dask/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/dask">
-              <img src="https://img.shields.io/pypi/v/dask.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/dask">
-              <img src="https://img.shields.io/conda/vn/conda-forge/dask.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/dask/?badge=latest">
+            <img src="https://readthedocs.org/projects/dask/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/dask">
+            <img src="https://img.shields.io/pypi/v/dask.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/dask">
+            <img src="https://img.shields.io/conda/vn/conda-forge/dask.svg?" />
+          </a>
+        </td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
           <a href="http://github.com/dask/dask-mpi">dask-mpi</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://circleci.com/gh/dask/dask-mpi/tree/master">            
-              <img src="https://img.shields.io/circleci/project/github/dask/dask-mpi/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://codecov.io/gh/dask/dask-mpi">
-              <img src="https://img.shields.io/codecov/c/github/dask/dask-mpi.svg?style=for-the-badge"> 
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://dask-mpi.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/dask-mpi/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/dask-mpi">
-              <img src="https://img.shields.io/pypi/v/dask-mpi.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/dask-mpi">
-              <img src="https://img.shields.io/conda/vn/conda-forge/dask-mpi.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/dask/dask-mpi">
+            <img src="https://circleci.com/gh/dask/dask-mpi.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/dask-mpi/?badge=latest">
+            <img src="https://readthedocs.org/projects/dask-mpi/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/dask-mpi">
+            <img src="https://img.shields.io/pypi/v/dask-mpi.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/dask-mpi">
+            <img src="https://img.shields.io/conda/vn/conda-forge/dask-mpi.svg?" />
+          </a>
+        </td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
           <a href="http://github.com/dask/dask-jobqueue">dask-jobqueue</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://travis-ci.org/dask/dask-jobqueue/tree/master">            
-              <img src="https://img.shields.io/travis/dask/dask-jobqueue/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://dask-jobqueue.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/dask-jobqueue/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/dask-jobqueue">
-              <img src="https://img.shields.io/pypi/v/dask-jobqueue.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/dask-jobqueue">
-              <img src="https://img.shields.io/conda/vn/conda-forge/dask-jobqueue.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
+        <td align="left">
+          <a href="https://travis-ci.org/dask/dask-jobqueue">
+            <!-- <img src="https://travis-ci.org/dask/dask-jobqueue.svg?branch=master&logo=travis"> -->
+            <img src="https://img.shields.io/travis/dask/dask-jobqueue?&logo=travis" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/dask-jobqueue/?badge=latest">
+            <img src="https://readthedocs.org/projects/dask-jobqueue/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/dask-jobqueue">
+            <img src="https://img.shields.io/pypi/v/dask-jobqueue.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/dask-jobqueue">
+            <img src="https://img.shields.io/conda/vn/conda-forge/dask-jobqueue.svg?" />
+          </a>
+        </td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
+          <a href="http://github.com/dask/distributed">distributed</a>
+        </td>
+
+        <td align="left">
+          <a href="https://travis-ci.org/dask/distributed">
+            <!-- <img src="https://travis-ci.org/dask/distributed.svg?branch=master&logo=travis"> -->
+            <img src="https://img.shields.io/travis/dask/distributed?&logo=travis" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/distributed/?badge=latest">
+            <img src="https://readthedocs.org/projects/distributed/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/distributed">
+            <img src="https://img.shields.io/pypi/v/distributed.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/distributed">
+            <img src="https://img.shields.io/conda/vn/conda-forge/distributed.svg?" />
+          </a>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
           <a href="http://github.com/intake/intake">intake</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://travis-ci.org/intake/intake/tree/master">            
-              <img src="https://img.shields.io/travis/intake/intake/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://intake.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/intake/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/intake">
-              <img src="https://img.shields.io/pypi/v/intake.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/intake">
-              <img src="https://img.shields.io/conda/vn/conda-forge/intake.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
-      </tr>
-      
-      <tr>
-        <td style='padding: 5px !important;' align='left'>
-          <a href="http://github.com/intake/intake-xarray">intake-xarray</a>
+        <td align="left">
+          <a href="https://travis-ci.org/intake/intake">
+            <!-- <img src="https://travis-ci.org/intake/intake.svg?branch=master&logo=travis"> -->
+            <img src="https://img.shields.io/travis/intake/intake?&logo=travis" />
+          </a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://travis-ci.org/intake/intake-xarray/tree/master">            
-              <img src="https://img.shields.io/travis/intake/intake-xarray/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='center'>-</td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/intake-xarray">
-              <img src="https://img.shields.io/pypi/v/intake-xarray.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/intake-xarray">
-              <img src="https://img.shields.io/conda/vn/conda-forge/intake-xarray.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/intake/?badge=latest">
+            <img src="https://readthedocs.org/projects/intake/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/intake">
+            <img src="https://img.shields.io/pypi/v/intake.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/intake">
+            <img src="https://img.shields.io/conda/vn/conda-forge/intake.svg?" />
+          </a>
+        </td>
+
       </tr>
-      
+
       <tr>
-        <td style='padding: 5px !important;' align='left'>
+        <td align="left">
           <a href="http://github.com/pydata/xarray">xarray</a>
         </td>
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://travis-ci.org/pydata/xarray/tree/master">            
-              <img src="https://img.shields.io/travis/pydata/xarray/master.svg?style=for-the-badge&logo=circleci">
-            </a>
-          </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'> 
-            <a href="https://coveralls.io/github/pydata/xarray">
-              <img src="https://img.shields.io/coveralls/github/pydata/xarray.svg?style=for-the-badge"> 
-            </a>
-          </td>
+        <td align="left">
+          <a href="https://travis-ci.org/pydata/xarray">
+            <!-- <img src="https://travis-ci.org/pydata/xarray.svg?branch=master&logo=travis"> -->
+            <img src="https://img.shields.io/travis/pydata/xarray?&logo=travis" />
+          </a>
+        </td>
 
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://xray.readthedocs.io/en/latest/?badge=latest">
-              <img src="https://img.shields.io/readthedocs/xray/latest.svg?style=for-the-badge">
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://pypi.python.org/pypi/xarray">
-              <img src="https://img.shields.io/pypi/v/xarray.svg?style=for-the-badge&colorB=cc77dd">
-              
-            </a>
-          </td>
-          
-          
-          <td style='padding: 5px !important;' align='left'>
-            <a href="https://anaconda.org/conda-forge/xarray">
-              <img src="https://img.shields.io/conda/vn/conda-forge/xarray.svg?style=for-the-badge&colorB=4488ff">
-              
-            </a>
-          </td>
-          
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="left">
+          <a href="https://readthedocs.org/projects/xray/?badge=latest">
+            <img src="https://readthedocs.org/projects/xray/badge/?version=latest" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://pypi.org/project/xarray">
+            <img src="https://img.shields.io/pypi/v/xarray.svg" />
+          </a>
+        </td>
+
+        <td align="left">
+          <a href="https://anaconda.org/conda-forge/xarray">
+            <img src="https://img.shields.io/conda/vn/conda-forge/xarray.svg?" />
+          </a>
+        </td>
+
       </tr>
-      
+
     </table>
-    
-    </div>
-  </body>
+
+
+    <h2>XDev Infrastructure</h2>
+    <table align="center">
+      <tr>
+        <th>Name</th>
+        <th>Travis</th>
+        <th>CircleCI</th>
+        <th>GitHubCI</th>
+        <!-- <th>Coverage</th> -->
+        <th>ReadTheDocs</th>
+        <th>PyPI</th>
+        <th>Conda</th>
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/xdev-bot">xdev-bot</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/xdev-bot">
+            <img src="https://circleci.com/gh/NCAR/xdev-bot.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/xdev">xdev</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://circleci.com/gh/NCAR/xdev">
+            <img src="https://circleci.com/gh/NCAR/xdev.svg?style=svg" />
+          </a>
+        </td>
+
+        <td align="center">-</td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+      <tr>
+        <td align="left">
+          <a href="http://github.com/NCAR/xdev-docker-images">xdev-docker-images</a>
+        </td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="left">
+          <a href="https://github.com/NCAR/xdev-docker-images/actions">
+            <!-- <img src="https://github.com/NCAR/xdev-docker-images/workflows/Miniconda/badge.svg"> -->
+            <img
+              src="https://img.shields.io/github/workflow/status/NCAR/xdev-docker-images/Miniconda?logo=github" />
+          </a>
+        </td>
+
+        <!--
+        <td align='center'>-</td>
+         -->
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+        <td align="center">-</td>
+
+      </tr>
+
+    </table>
+
+
+  </div>
+</body>
+
 </html>
