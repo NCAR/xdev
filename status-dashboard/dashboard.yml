@@ -1,11 +1,17 @@
 - name: Core and Coordinated Projects
-
   projects:
     - repo: NCAR/intake-esm
-      badges: circleci, rtd, pypi, conda
+      badges: circleci, rtd, pypi, conda, githubci
+      gh_workflow_name: code-style
 
     - repo: NCAR/intake-esm-datastore
       badges: None
+
+    - repo: NCAR/esm-collection-spec
+      badges: circleci
+
+    - repo: NCAR/esmcol-validator
+      badges: conda, pypi, githubci
 
     - repo: NCAR/esmlab
       badges: circleci, rtd, pypi, conda
@@ -14,41 +20,38 @@
       badges: circleci, rtd,
 
     - repo: NCAR/ncar-jobqueue
-      badges: pypi
+      badges: pypi, githubci
 
+    - repo: NCAR/xtimeutil
+      badges: circleci, rtd, pypi, conda, githubci
+      gh_workflow_name: code-style
+
+- name: Education Material
+  projects:
     - repo: NCAR/notebook-gallery
-      badges: circleci
-
-    - repo: NCAR/esm-collection-spec
       badges: circleci
 
     - repo: NCAR/ncar-python-tutorial
       badges: circleci
 
 
-
 - name: Affiliated Projects
-
   projects:
-
     - repo: matt-long/xpersist
       badges: githubci
 
     - repo: NCAR/pop-tools
-      badges: rtd, circleci
-
+      badges: rtd, circleci, githubci
+      gh_workflow_name: code-style
 
     - repo: NCAR/cesm-lens-aws
       badges: None
 
-    - repo: coderepocenter/AxisUtilities
-      badges: circleci, pypi, rtd, conda
-      rtd_name: axisutilities
-      conda_channel: aciacs
+    - repo: jhamman/xpublish
+      badges: githubci, pypi, conda, rtd
 
 
 - name: Upstream Core Projects
-
   projects:
     - repo: dask/dask
       badges: travis, rtd, pypi, conda
