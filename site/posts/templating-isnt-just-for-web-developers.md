@@ -123,7 +123,7 @@ Jinja2 template.  To do so, the easiest first step would be to just
 replace every `[]`-bracketted item with a Jinja2 *expressions*,
 which are repressented with `{{}}`-brackets:
 
-```text
+```jinja
 {{ your_address }}
 
 {{ date }}
@@ -133,7 +133,7 @@ which are repressented with `{{}}`-brackets:
 {{ recipient_company }}
 {{ recipient_address }}
 
-{{ greeting }}  {{ recipient_name }}:
+{{ greeting }} {{ recipient_name }}:
 
 {{ letter_body }}
 
@@ -153,14 +153,9 @@ Python script.  First, let's start writing a Python script that
 can "render" this Jinja2 template:
 
 ```python
-#!/usr/bin/env python
-
 from jinja2 import Environment, FileSystemLoader
 
-env = Environment(
-    loader=FileSystemLoader('./')
-)
-
+env = Environment(loader=FileSystemLoader('./'))
 template = env.get_template('letter.j2')
 
 data = {}
@@ -168,3 +163,245 @@ data = {}
 print(template.render(**data))
 ```
 
+If you were to run this script as it current exists, you would
+get a lot of blank lines, and some "floating" punctuation.
+Something like this:
+
+```text
+
+
+
+
+
+
+
+
+
+ :
+
+
+
+,
+
+
+
+```
+
+This is because the `data` variable is empty.  In other words,
+all of those `{{ var_name }}` template variables *never got defined!*
+Jinja2 assumes that anything that isn't defined is an empty string.
+
+So, if we were to fill in the `data` dictionary with some data
+with keys matching the template variables, we should see something
+different.
+
+```python
+from datetime import datetime
+
+data = {
+    'your_name': "Jane Smith",
+    'your_title': "Attorney at Law",
+    'your_address': """1234 Somewhere Street
+Atown, XY  12345""",
+    'date': datetime.now().strftime("%Y %B %d"),
+    'recipient_name': "Joe Smith",
+    'recipient_title': "Head of Marketing",
+    'recipient_company': "Better Stuff, Inc.",
+    'recipient_address': """5678 Nowhere Drive
+Someberg, YZ  56789""",
+    'greeting': 'Dear',
+    'closing': 'Sincerely',
+}
+```
+
+And with that change, the output should now look like:
+
+```text
+1234 Somewhere Street
+Atown, XY  12345
+
+2020 May 11
+
+Joe Smith
+Head of Marketing
+Better Stuff, Inc.
+5678 Nowhere Drive
+Someberg, YZ  56789
+
+Dear Joe Smith:
+
+
+
+Sincerely,
+
+Jane Smith
+Attorney at Law
+```
+
+Does it make sense?  Let's explain what's going on here.
+
+In our Python code, we are creating some data (literally `data`)
+that we want to hand off to the "template engine" to insert into
+the template, itself.  The template engine (`jinja2`) searches
+through the template document for all occurrences of `{{ key }}`
+for each `key` in the `data` dictionary (or each keyward argument
+in the `render()` function).  And it does simple substition of
+the string `{{ key }}` with `data[key]`.  Any `{{ key }}`
+not found in the `data` dictionary will be replaced with an
+empty string, and any `key` in the `data` dictionary *not* found
+in the template document will be ignored.
+
+That's it.  That's a *lot* of what templating is all about.
+
+But not everything.
+
+## Jinja2 Statements
+
+This letter template is nice, but we want to send out *emails*,
+not actual postage.  You don't have time for snail mail!
+
+So, we *could* write another template for an email, but for the
+sake of edification, let's just modify our existing template
+to be *dual purpose*.  In particular, some of the template
+variables are just not used when writing emails (`your_address`,
+`date`, `recipient_name`, `recipient_title`, `recipient_company`,
+`recipient_address`).  But if we leave these variables undeclared,
+then there will be odd whitespace at the top of our email.  So,
+we will add another template variable for the sole purpose of
+specifying if the document we are writing is a letter or an
+email.  We'll label this variable `is_letter`, and we'll
+insert it into our template document with some `if` *statements*,
+like so:
+
+```jinja
+{% if is_letter %}
+{{ your_address }}
+
+{{ date }}
+
+{{ recipient_name }}
+{{ recipient_title }}
+{{ recipient_company }}
+{{ recipient_address }}
+
+{% endif %}
+{{ greeting }} {{ recipient_name }}:
+
+{{ letter_body }}
+
+{{ closing }},
+
+{{ your_name }}
+{{ your_title }}
+```
+
+By default, if we don't specify `is_letter` in the
+`data` variable in our Python script, it will default
+to an empty string.  And in Python, that evaluates
+to `False` in a boolean check.  So, the top part
+of our template will not be displayed if `is_letter`
+is `False` or unset.  That is, you must explicitly
+*set* `is_letter` or it will assume it is an email.
+
+There are a lot more kinds of *statements* (`{% %}`-syntax)
+you can place in your templates, but this is just a
+simple example of what you can do.
+
+Note also that these template variables are all native
+Python data types, which means you can declare a template
+variable to be a `list`, for example, and index into that
+list in the template itself.
+
+## Inheritance
+
+The last thing to explain that is useful with templating
+is *inheritance*.  If we wanted to print out the same
+letter for every recipient, we *could* just as easily
+write the `letter_body` in the Python script, itself.
+However, since the `letter_body` could be quite long,
+we will put it in *another* template file.  One that
+inherits from the original.
+
+To do this, we will first change the `letter_body` from
+a template *variable* to a template *block* in our
+`letter.j2` template file, like so:
+
+```jinja2
+{% if is_letter %}
+{{ your_address }}
+
+{{ date }}
+
+{{ recipient_name }}
+{{ recipient_title }}
+{{ recipient_company }}
+{{ recipient_address }}
+
+{% endif %}
+{{ greeting }} {{ recipient_name }}:
+
+{% block letter_body %}
+{% endblock %}
+
+{{ closing }},
+
+{{ your_name }}
+{{ your_title }}
+```
+
+And then we will write a second template file
+(called, for example, `scam.j2`), that looks like this:
+
+```jinja2
+{% extends "letter.j2" %}
+
+{% block letter_body %}
+(...contents of my letter...)
+{% endblock %}
+```
+
+Now, change our script to render the `scam.j2`
+template instead of the `letter.j2` template and
+see what it outputs.  You should get something like
+this:
+
+```text
+
+Dear Joe Smith:
+
+
+...contents of my letter...
+
+
+Sincerely,
+
+Jane Smith
+Attorney at Law
+```
+
+and if you want to remove those extraneous blank
+lines, you might want to set `trim_blocks=True` in
+the `Environment` declaration.  Then, you should
+see something like this:
+
+```text
+Dear Joe Smith:
+
+...contents of my letter...
+
+Sincerely,
+
+Jane Smith
+Attorney at Law
+```
+
+And that's it!  Now, you are an expert in templating
+with Jinja2!  Feel free to attempt your own Spanish
+Prisoner con.  (***Not advised!***)
+
+Well, maybe not an *expert*.  There's a lot I didn't
+talk about that you can read about in the Jinja2
+[documentation](https://jinja.palletsprojects.com/).
+Hopefully, though, you can see how something like this
+can be *extremely useful* when generating HTML pages
+for a website.
