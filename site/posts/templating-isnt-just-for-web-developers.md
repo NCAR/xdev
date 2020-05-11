@@ -16,6 +16,7 @@ with frontend design.  It didn't take me long to realize that my
 explanation was convoluted and confusing, not that I stopped talking,
 mind you.  Attribute that to being unprepared, or sleep deprived (i.e.,
 child *still* not sleeping through the night!), or just a bad teacher.
+<!-- TEASER_END -->
 Regardless, I decided to point them to a tutorial online that
 *certainly must exist*, but after a brief Google search (which you
 should read as, "I didn't find anything in the first page of search
