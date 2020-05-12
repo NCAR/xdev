@@ -147,7 +147,8 @@ which are represented with `{{}}`-brackets:
 Also, notice that I have converted the text labels inside the
 `[]`-brackets into valid Python variable names.  Let's assume
 that this new *template file* is called `letter.j2` (where
-the `.j2` means it is a Jinja2 template).
+the `.j2` means it is a Jinja2 template, but Jinja2 does not
+care what extension the file actually has).
 
 We can now "write" this letter using Python variables from a
 Python script.  First, let's start writing a Python script that
