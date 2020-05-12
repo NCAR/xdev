@@ -122,7 +122,7 @@ just string substitution...but with a touch more sophistication.
 So, to start out, we are going to convert this text template into a
 Jinja2 template.  To do so, the easiest first step would be to just
 replace every `[]`-bracketted item with a Jinja2 *expressions*,
-which are repressented with `{{}}`-brackets:
+which are represented with `{{}}`-brackets:
 
 ```jinja
 {{ your_address }}
