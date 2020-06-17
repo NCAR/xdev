@@ -1,6 +1,6 @@
 # Experimental Development Team
 
-This repository is for the internal developments of the NCAR IOWA Experimental Development Team (Xdev).
+This repository is for the internal developments of the NCAR Experimental Development Team (Xdev).
 This repository contains information about the team, links to team products (such as the `xdev-bot` and
 the `xdev-status-dashboard`) and the team blog.
 
