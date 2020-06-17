@@ -37,11 +37,10 @@ stemming from the two Xdev Vision Statements:
 1. **Workflows:** scalable tools and platform for performing large-scale
    interactive data analysis efficiently and effectively.  This campaign
    is tied to the first Xdev Vision Statement.
+   See [campaigns/workflows.md](campaigns/workflows.md)
 
 2. **Education, Outreach, Community Building:** teaching scientists how to
    use and contribute back to the open source tools upon which the the
    analysis platform is built.  This campaign is tied to the second Xdev
    Vision Statement.
-
-More in-depth information about these Campaigns can be found in the
-`campaigns/` folder.
+   See [campaigns/eocb.md](campaigns/eocb.md)
