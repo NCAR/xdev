@@ -1,6 +1,6 @@
 # Experimental Development Team
 
-This repository is for the internal developments of the NCAR IOWA Experimental Development Team (xdev).
+This repository is for the internal developments of the NCAR Experimental Development Team (Xdev).
 This repository contains information about the team, links to team products (such as the `xdev-bot` and
 the `xdev-status-dashboard`) and the team blog.
 
@@ -18,9 +18,9 @@ To update the dashboard with a new package or a new service, one needs to run th
 python ./status-dashboard/make_status.py
 ```
 
-## XDev Blog
+## Xdev Blog
 
-The XDev blog site is deployed using GitHub Pages from this repository. It uses [Nikola](https://getnikola.com)
+The Xdev blog site is deployed using GitHub Pages from this repository. It uses [Nikola](https://getnikola.com)
 to generate static web pages, the content of which are contained in files in the `site` directory of this
 repository. To write a new blog post, you should follow this procedure:
 
@@ -71,7 +71,7 @@ repository. To write a new blog post, you should follow this procedure:
 9. Once the PR is merged, the new site will be generated on GitHub Pages automatically by a
    CircleCI job. And, in a little while, the new website will be visible to the public.
 
-## XDev Bot & Bot Testing Respositories
+## Xdev Bot & Bot Testing Respositories
 
 Bot: https://github.com/NCAR/xdev-bot
 
