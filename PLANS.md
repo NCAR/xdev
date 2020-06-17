@@ -42,3 +42,6 @@ stemming from the two Xdev Vision Statements:
    use and contribute back to the open source tools upon which the the
    analysis platform is built.  This campaign is tied to the second Xdev
    Vision Statement.
+
+More in-depth information about these Campaigns can be found in the
+`campaigns/` folder.
