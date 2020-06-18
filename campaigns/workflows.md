@@ -14,20 +14,65 @@ particular process structure to them:
 5. **Publication**: Produce images and/or papers from the computed artifacts
 
 Implied by this process is the existence of a **Platform** for the user upon
-which each step in the above process is conducted.
-*It is not necessary that the same platform be used for each step.*
-In fact, multiple platforms *could* be used in a single step (e.g., during
-the *Search & Discovery* phase, the scientist might use a combination of web
-searching to find the larger dataset or collection, and then move to a Jupyter
-Notebook to make queries of the larger dataset to produce subsets).  It is not
-critical that a *single platform* be emphasized or prioritized, but making it
-easier and more productive for the scientist is critical.  That could mean
-reducing the number of platforms the scientist must use, but it could also mean
-making multiple platforms inter-operate better.
+which each step in the above process is conducted.  *It is not necessary that
+the same platform be used for each step.*  In fact, multiple platforms *could*
+be used in a single step.  For example, during the *Search & Discovery* phase,
+the scientist might use a combination of web searching to find the larger
+dataset or collection, and then move to a Jupyter Notebook to make queries of
+the larger dataset to produce subsets).  It is not critical that a *single
+platform* be emphasized or prioritized, but making it easier and more
+productive for the scientist is critical.  That could mean reducing the number
+of platforms the scientist must use, but it could also mean making multiple
+platforms inter-operate better.
 
-Throughout this process, there are many tools in the Pangeo ecosystem that can
-be used to improve the scientist's UX.  Some thoughts on these different phases
-and aspects of the process follow.
+It is extremely important to understand that this process, as described above,
+is just conceptual.  No scientist simply moves through this process *in order*
+nor in a *single pass*.  That is, scientists that perform actual analysis many
+times jump forward and back in the process.  For example, a scientist may jump
+forward from the *Ingestion* phase to the *Check-point* phase before doing any
+actual *Analysis*.  Or, a scientist may jump back to the *Search & Discovery*
+phase to find another dataset to compare with one they originally started
+analyzing.  A scientist might also *iterate* on their analysis, effectively
+making this process *cyclic*.  For example, a scientist might *publish* their
+Notebook with the expectation that their Notebook can be found during the
+*Search & Discovery* phase.
+
+## Current State
+
+Many aspects of the above process have solutions already in the Pangeo ecosystem.
+However, many other aspects of the above process dot not have solutions, or have
+solutions that don't intergrate together, or are simply imperfect.  We will discuss
+aspects of each element in the above process in greater detail below.
+
+### Platform
+
+#### Current State & Limitations
+
+- Deployments of the **Platform** for multiple users consist of a JupyterHub
+  that authenticates and spawns single-user JupyterLab instances.
+- The JupyterHub can provide system-wide kernel environments or user-specific
+  custom kernels (via the `nb_conda_kernel`+`ipykernel` JupyterLab extensions)
+  for use in a user's Notebook.
+- Notebooks are saved in the user's personal storage space, or wherever they
+  can access from their *home* directories (or the directory JupyterLab is
+  launched from)
+- On NCAR's HPC system, JupyterLab sessions are spawned on HPC compute nodes.
+- Notebooks with their kernel/environment can be shared via Binder, which
+  requires a BinderHub service running "near" the JupyterHub service
+- Local data (or data available from the JupyterLab session) cannot easily
+  be "discovered"
+- User-created Notebooks cannot easily be discovered
+- Sharing Binders (i.e., "Binderized" Notebooks) entails containerization
+
+#### Future State & Problems to Solve
+
+- One NCAR's HPC, can JupyterLab sessions be placed on the login nodes?
+- Can feedback from the system can be fed to the JupyterLab session running
+  (e.g., system is going down, you have exceeded resource limitations, etc.)?
+- What's the best way of publishing and sharing Notebooks?
+- What's the best way of sharing environments/kernels *with* the Notebooks?
+- How can we make published Notebooks easily *discoverable*?
+- How can we easily re-use Notebook content (code or generated data) in other Notebooks?
 
 ### Search & Discovery (S&E)
 
@@ -115,19 +160,6 @@ all of NCAR's datasets.  That means functionality to deal with structured
 
 Additionally, though, the Publication phase includes sharing and
 distribution of Jupyter notebooks and the results from Jupyter notebooks.
-
-### Platform
-
-While not a phase in the typical data analysis workflow, the Platform
-is critical for performing the workflow phases.  The Platform includes
-interactive usage via Jupyter notebooks, as well as batch-model usage
-for canned diagnostics and analyses.  In general, the Platform is the
-same as the Pangeo platform, meaning that it is a Python platform
-consisting of Xarray, Dask and related technology.  Jupyter is critical
-for interactive development, but with tools like Papermill, Jupyter
-could also be critical in batch-mode operations.  All use cases should,
-ideally, leverage the same technology, so the use of Jupyter notebooks
-in batch-mode analysis should be *seriously* considered.
 
 ## Objectives
 
