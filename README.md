@@ -1,8 +1,15 @@
 # Experimental Development Team
 
 This repository is for the internal developments of the NCAR Experimental Development Team (Xdev).
-This repository contains information about the team, links to team products (such as the `xdev-bot` and
-the `xdev-status-dashboard`) and the team blog.
+This repository contains information about the team, links to team products (such as the `xdev-bot`
+and the `xdev-status-dashboard`) and the team blog hosted on GitHub Pages.
+
+## Team Scope & Strategy
+
+The scope of work performed by the Xdev Team is described in the [SCOPE](SCOPE.md) document.
+That document also links to documents in the [campaigns](campaigns) and the
+[projects](projects) directories.  If you want to know about the mission, vision and strategic
+plans for the Xdev Team, start with the [Xdev SCOPE](SCOPE.md).
 
 ## Project Status Dashboard
 
