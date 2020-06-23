@@ -7,9 +7,9 @@ Improving Scientific Data Analysis Workflows
 In a very general sense, scientific data analysis workflows usually have a
 particular process structure to them:
 
-1. **Search & Discovery**: Locate the data you need to analyze
-2. **Ingestion**: Open and read this data into a useful format
-3. **Analysis**: Perform some computations on this data
+1. **Search & Discovery**: Locate the *starting point* for your analysis
+2. **Ingestion**: Open and read this data or code into a useful format
+3. **Analysis**: Perform some computations on the data
 4. **Check-point**: Save computed artifact as a new dataset
 5. **Publication**: Produce images and/or papers from the computed artifacts
 
@@ -37,14 +37,94 @@ making this process *cyclic*.  For example, a scientist might *publish* their
 Notebook with the expectation that their Notebook can be found during the
 *Search & Discovery* phase.
 
-## Current State
+## Vision
 
-Many aspects of the above process have solutions already in the Pangeo ecosystem.
-However, many other aspects of the above process dot not have solutions, or have
-solutions that don't intergrate together, or are simply imperfect.  We will discuss
-aspects of each element in the above process in greater detail below.
+The Xdev Vision Statements ([SCOPE](../SCOPE.md#Xdev-Vision-Statements)) are easy
+to state in brief, but harder to state in detail.  I will try to describe what I
+see as the vision of the future of scientific workflows, based on the Pangeo
+ecosystem.
+
+### 1. Search & Discovery
+
+The *Search & Discovery* phase in scientific workflows describes a user
+looking for a starting point for their analysis.  This includes searching for,
+and discovering, a particular dataset or datasets, but it also includes searching
+for, and discovering, a particular *existing* workflow that a user either
+(1) modifies to create a new workflow or (2) extends to add to the workflow.
+Thus, users need to be able to search for both data that they can ingest into
+their Notebooks *and other* Notebooks that they can modify or extend.
+
+When searching for *data*, it makes sense for the entry point for the workflow
+be *either* from within JupyterLab (e.g., a "Data Search" tab provided by a
+JupyterLab extension that hooks into a service like DASH) *or* from an external
+website (e.g., [the DASH repository](https://www2.cisl.ucar.edu/dash)).  Ideally,
+datasets selected from a search from *within* JupyterLab would provide data to the
+user in a form that is *ready for analysis* (e.g., an Xarray Dataset).  Ideally,
+datasets selected from an external website would automatically take the user to a
+JupyterLab session with the data "pre-loaded" in an analysis-ready format (e.g.,
+an Xarray Dataset).
+
+When searching for *workflows* to modify or extend, like the *data* searches,
+it makes sense for the entry point for the *new* workflow be *either* from within
+JupyterLab or from an external website.  Ideally, workflows selected for modification
+would load the selected Notebook into JupyterLab in a *usable state* (i.e., with
+the kernel required to run the Notebook).  Ideally, workflows selected for
+extension should make available a "public API" of elements from the *original*
+workflow that can be used in the *new* workflow, without the user needing to
+manually *run* the original workflow Notebook.  In either case, the result is
+a running JupyterLab session with the new Notebook loaded.
+
+#### Possible Projects
+
+- A JupyterLab extension that provides a service connected to the DASH respository
+  that can "inject" `intake` code into your running Notebook (or launch a new
+  Notebook) by appending a new cell.
+- A JupyterLab extension that connects to a service where Notebooks can be "added"
+  or "retrieved" from a shared "repository."
+  - A further expansion of this service that can "import" elements from the selected
+    Notebook without the need to run the selected Notebook (see [Check-point](#4-check-point))
+- A searchable website of "shared" Notebooks that launches selected Notebooks in
+  a JupyterLab session, copying the Notebook into the user's personal space.  ...This
+  would be like a Notebook Gallery with Binder links from each Notebook, if each
+  Binder session could persist.
+  - Make elements inside each Notebook in the Gallery "importable" into other Notebooks.
+
+### 2. Ingestion
+
+The *Ingestion* phase describes the step in a scientific workflow when the
+user loads the data they want into an analysis-ready format.  This phase should
+abstract away concepts that the user should not need to know about the data itself,
+such as the format of the data and where the data is located.  Ideally, the user
+should only need to understand the semantics describing the aspects of the data
+that actually impact their analysis.  Data format or location should not be
+completely *hidden* from the user, but they should not need to know anything
+about that to perform analysis.
+
+Ideally, a user would simply "select a dataset" (see [Search & Discovery](#1-search-discovery))
+and be provided with a queriable object, such as an "intermediate" catalog object
+or an Xarray Dataset.  The user should be able to search and slice this object
+using terminology that is understood by the *users of the data*, not the developers
+of the software.
+
+#### Possible Projects
+
+### 3. Analysis
+
+#### Possible Projects
+
+### 4. Check-point
+
+#### Possible Projects
+
+### 5. Publication
+
+#### Possible Projects
 
 ### Platform
+
+#### Possible Projects
+
+-----------
 
 #### Current State & Limitations
 
