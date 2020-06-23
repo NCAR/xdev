@@ -39,7 +39,7 @@ Notebook with the expectation that their Notebook can be found during the
 
 ## Vision
 
-The Xdev Vision Statements ([SCOPE](../SCOPE.md#Xdev-Vision-Statements)) are easy
+The Xdev Vision Statements ([SCOPE](../SCOPE.md#xdev-vision-statements)) are easy
 to state in brief, but harder to state in detail.  I will try to describe what I
 see as the vision of the future of scientific workflows, based on the Pangeo
 ecosystem.
@@ -100,7 +100,7 @@ that actually impact their analysis.  Data format or location should not be
 completely *hidden* from the user, but they should not need to know anything
 about that to perform analysis.
 
-Ideally, a user would simply "select a dataset" (see [Search & Discovery](#1-search-discovery))
+Ideally, a user would simply "select a dataset" (see [Search & Discovery](#1-search--discovery))
 and be provided with a queriable object, such as an "intermediate" catalog object
 or an Xarray Dataset.  The user should be able to search and slice this object
 using terminology that is understood by the *users of the data*, not the developers
