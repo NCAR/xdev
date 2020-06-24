@@ -47,66 +47,139 @@ ecosystem.
 ### 1. Search & Discovery
 
 The *Search & Discovery* phase in scientific workflows describes a user
-looking for a starting point for their analysis.  This includes searching for,
-and discovering, a particular dataset or datasets, but it also includes searching
-for, and discovering, a particular *existing* workflow that a user either
-(1) modifies to create a new workflow or (2) extends to add to the workflow.
-Thus, users need to be able to search for both data that they can ingest into
+looking for an entry point for their analysis.  This includes searching for
+and discovering a particular dataset or datasets, but it also includes searching
+for and discovering a particular *existing* workflow that a user either
+(1) modifies to create a new workflow or (2) extends by adding to the workflow.
+Thus, users need to be able to search for *both* data that they can ingest into
 their Notebooks *and other* Notebooks that they can modify or extend.
+I will refer to these three kinds of workflow entry points as *Data Access*,
+*Workflow Modification*, and *Workflow Extension*.
 
-When searching for *data*, it makes sense for the entry point for the workflow
-be *either* from within JupyterLab (e.g., a "Data Search" tab provided by a
-JupyterLab extension that hooks into a service like DASH) *or* from an external
-website (e.g., [the DASH repository](https://www2.cisl.ucar.edu/dash)).  Ideally,
-datasets selected from a search from *within* JupyterLab would provide data to the
-user in a form that is *ready for analysis* (e.g., an Xarray Dataset).  Ideally,
-datasets selected from an external website would automatically take the user to a
-JupyterLab session with the data "pre-loaded" in an analysis-ready format (e.g.,
-an Xarray Dataset).
+Regardless of the kind of entry point to a new workflow, the user should be able
+to start a new workflow *either* from within JupyterLab *or* from an external
+website or service.  For example, a *Data Access* entry point could be a "Data Search"
+tab in JupyterLab, provided by a JupyterLab extension that connects to a
+data search service like NCAR's [DASH](https://www2.cisl.ucar.edu/dash).  Or,
+you could imagine a *Data Access* entry point coming directly from the DASH
+website, itself, such as a button on a selected dataset's information page that
+directs the user to a JupyterHub or Binder next to the selected dataset.  Similarly,
+a *Workflow Modification* or *Extension* entry point could be a "Workflow Search"
+tab in JupyterLab, again provided by a JupyterLab extension that connects to a
+Notebook sharing service (i.e., similar to
+[nbgallery](https://github.com/nbgallery/nbgallery)).
+Alternatively, *Workflow Modification* or *Extension* entry point could be from
+an external website that allows the user to search for and select existing (shared)
+workflows (i.e., Notebooks).
 
-When searching for *workflows* to modify or extend, like the *data* searches,
-it makes sense for the entry point for the *new* workflow be *either* from within
-JupyterLab or from an external website.  Ideally, workflows selected for modification
-would load the selected Notebook into JupyterLab in a *usable state* (i.e., with
-the kernel required to run the Notebook).  Ideally, workflows selected for
-extension should make available a "public API" of elements from the *original*
-workflow that can be used in the *new* workflow, without the user needing to
-manually *run* the original workflow Notebook.  In either case, the result is
-a running JupyterLab session with the new Notebook loaded.
+Ideally, the *Data Access* entry point would automatically provide to the user
+a semantically queriable (i.e., searchable using language the user knows, rather
+than new terminology created by the developer) object that can let the user more
+deeply inspect and subselect the parts of the dataset desired.  That is, the
+*Data Access* entry point should yield to the user a queriable
+*Intake catalog object*.  Ideally, this object should be autoconstructed for the
+user in the user's Notebook (e.g., by inserting a cell with minimal code that
+"loads" the Intake catalog object).  That is, the user selects a dataset to
+analyze, and by clicking an "Analyze" button next to the dataset search return,
+a new cell is added to the user's active Notebook with code that returns or
+constructs an Intake catalog object.
+
+Ideally, the *Workflow Modification* entry point would launch the selected
+Notebook running in the user's personal space.  This requires that the Notebook
+kernel be copied into or constructed in (or similar) the user's space.  Ideally,
+this process will take just a few seconds from "clicking" on the selected
+Notebook and the Notebook loading with a working kernel in a user's JuptyerLab
+session (excluding possible authentication if this entry point starts on an
+external website).
+
+The *Workflow Extension* entry point should provide the user with an "API"
+that the user can access from a new Notebook in their JupyterLab session.  This
+would require that certain data objects constructed in the selected Notebook be
+"exposed for import" into another Notebook.  To avoid unnecessarily running a
+time-consuming Notebook, "exposed" elements of the Notebook should be cached
+somewhere so they can be easily and quickly retrieved.  Ideally, this would
+consist of the user simply needing to do something similar to:
+
+```python
+from shared_notebook_service.some_notebook import computed_object
+```
+
+In any of these entry points, if the entry point is from an external website,
+then the entry point should take them to a JupyterHub, which may require
+authentication and spawning selections, and then launch a new Notebook with
+the desired return objects.
 
 #### Possible Projects
 
-- A JupyterLab extension that provides a service connected to the DASH respository
-  that can "inject" `intake` code into your running Notebook (or launch a new
-  Notebook) by appending a new cell.
-- A JupyterLab extension that connects to a service where Notebooks can be "added"
-  or "retrieved" from a shared "repository."
-  - A further expansion of this service that can "import" elements from the selected
-    Notebook without the need to run the selected Notebook (see [Check-point](#4-check-point))
-- A searchable website of "shared" Notebooks that launches selected Notebooks in
-  a JupyterLab session, copying the Notebook into the user's personal space.  ...This
-  would be like a Notebook Gallery with Binder links from each Notebook, if each
-  Binder session could persist.
-  - Make elements inside each Notebook in the Gallery "importable" into other Notebooks.
+- A JupyterLab extension that connects to the DASH respository and can "inject"
+  `intake` code into your running/active Notebook (or launch a new Notebook) by
+  appending a new cell.
+- A Notebook sharing service that can provide a Notebook and the kernel needed
+  to run the notebook.  This could be
+  [nbgallery](https://github.com/nbgallery/nbgallery), or it could be something
+  completely different.
+- A JupyterLab extension that connects to a Notebook sharing service.
+- A Binder-like capability that maintains a persistent user space so that the
+  user can modify an existing Notebook and return to that Notebook later...and
+  possibly share *it* via the same service.
+- A service that informs the user of all of their scattered persistent Binder
+  projects and can take them "back" to their persistent Binder with a single
+  click.
+- A caching service for selected objects in a shared Notebook, allowing users to
+  share *parts* of their Notebook in a way that can be directly used in other
+  Notebooks.  For example, a user could decide to share their Notebook via the
+  above service, at which point the user is prompted to fill out a form that
+  provides a basic description of the Notebook *and* asks the user to (optionally)
+  select objects in the Notebook they would like to share as part of the Notebook's
+  "public API".
+- ...Ideally, all of the above projects could be implemented and integrated with
+  each other.
 
 ### 2. Ingestion
 
 The *Ingestion* phase describes the step in a scientific workflow when the
-user loads the data they want into an analysis-ready format.  This phase should
-abstract away concepts that the user should not need to know about the data itself,
-such as the format of the data and where the data is located.  Ideally, the user
-should only need to understand the semantics describing the aspects of the data
-that actually impact their analysis.  Data format or location should not be
-completely *hidden* from the user, but they should not need to know anything
-about that to perform analysis.
+user loads the data they want into an analysis-ready format, such as an Xarray
+Dataset.  This phase should abstract away concepts that the user should not need
+to know about the data itself, such as the format of the data and where the data
+is located.  Ideally, the user should only need to understand the semantics
+describing the scientific aspects of the data that actually impact their analysis.
+Data format or location should not be completely *hidden* from the user, but they
+should not need to know anything about that to perform analysis.
 
-Ideally, a user would simply "select a dataset" (see [Search & Discovery](#1-search--discovery))
-and be provided with a queriable object, such as an "intermediate" catalog object
-or an Xarray Dataset.  The user should be able to search and slice this object
-using terminology that is understood by the *users of the data*, not the developers
-of the software.
+Ideally, a user would simply "select a dataset"
+(see [Search & Discovery](#1-search--discovery))
+and be provided with a queriable object, such as an Intake catalog object.  The
+user should be able to search and subselect this object using terminology that is
+understood by the *users of the data*, not the developers of the software.
+Ideally, the queriable catalog object should provide the user with the
+information they need to understand what the data *is*, rather than needing the
+user to look up information on an external website.  Ideally, once the queriable
+object has been queried (possibly multiple times) to subselet the data desired
+for the user's analysis, it should be trivial to return the subselected dataset
+in an analysis-ready data format, such as an Xarray Dataset.
+
+Much of this is already provided by `intake` and its plugins, but a critical
+aspect of this step is making it easy for data *providers* or *managers* (i.e.,
+the people who make the data available for others to analyze) to create catalogs
+with the proper semantic translations.  If this step (catalog generation) is
+difficult, then catalogs will not be created *at all*, making all the effort of
+[Phase 1](#1-search--discovery) pointless.  Ideally, catalogs should be generated
+automatically when data is generated, or they should be easily generated
+semi-automatically with a simple command-line utility.
 
 #### Possible Projects
+
+- Automatic catalog generation for model data (i.e., catalog generated automatically
+  with model run)
+- A "master catalog" service, that provides a "master" catalog for all datasets
+  stored at the same location.  (It makes no sense to aggregate catalogs for datasets
+  stored at scattered locations unless the download cost is extremely low.)  This
+  would make it possible for a master "config file" be created for `intake` so that
+  an individual catalog need never actually be loaded (i.e., the master catalog is
+  loaded automatically).  This could also make it possible to search and discover
+  datasets directly from within the Notebook, which might eliminate the need for a
+  JupyterLab extension or external website service for search and discovery.
+- Automatic catalog generation for dataset (choose your dataset here)
 
 ### 3. Analysis
 
