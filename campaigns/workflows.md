@@ -183,9 +183,58 @@ semi-automatically with a simple command-line utility.
 
 ### 3. Analysis
 
+Data analysis is the process of turning computational data into knowledge.  This
+is done primarily by computing one or many *reductions* of the original data and
+visualizing these reductions.  Sometimes the visualizations are tabular (i.e.,
+just numbers in a table), and sometimes the visualizations are graphical (i.e.,
+generating plots).  Reductions can be *slices* of the original dataset, or they
+can be wholely new computed artifacts.  Reductions are almost always computed
+because the original data usually has more then 2 or 3 dimensions.  Three-dimensional
+rendering of data is certainly possible on 2D screens, but this is only possible
+if the platform allows dynamic interaction with the visualization.  If the
+third dimension is time, then the data can be visualized with a movie, but the
+practicality of that depends on how long the movie would be to watch the entire
+time history.  Normally, a subset of the data is selected, even for 3D rendering
+or animation.
+
+Xarray provides an excellent interface for slicing, subsetting, and quickly
+visualizing 1D or 2D data.  It also provides an excellent interface for basic
+operations on the data to compute new data artifacts (e.g., climatologies,
+anomalies, etc.).  Some artifacts, however, are complicated to produce, and
+may require an Xarray-aware package to provide the new operation.  We refer
+to such abstractions as *Operators*.  At NCAR, new Operators should be placed
+in the GeoCAT package.
+
+Visualization can also be complex, and canned visualization routines for specific
+kinds of plots should be placed in the GeoCAT-viz package.
+
+With the success of Xarray and visualization packages like Matplotlib and
+Cartopy, much of what is needed for analysis already exists, but there are
+analysis operations that are routinely done that are needlessly complex.  These
+operations should be functionalized and packaged.
+
 #### Possible Projects
 
+- Encoding a complete coverage of the CF conventions is too great of a task
+  for a single project, but adding functionality to
+  [CF-Xarray](https://github.com/xarray-contrib/cf-xarray) would make things
+  much easier for users.
+- Better calendar capabilities would be much appreciated.  Traditional
+  timestamps used in Pandas and Xarray are fine but they don't necessarily
+  work with non-standard calendars.  Any time a *time difference* must be
+  computed (i.e., a duration), knowledge of the calendar is critical.  The
+  Pandas and Xarray and Numpy calendar is assumed to be the proleptic
+  Gregorian calendar.  Being able to properly compute durations in other
+  calendars as well as convert between calendars would be very helpful.
+- Regridding datasets so that they can be directly compared on the same
+  grid would be very helpful.  I have always believed that a representation
+  of a gridded data object (i.e., grid + data + coordinates) should be
+  abstracted away so that the user need not know anything about the grid.
+  I call that a *field*.
+
 ### 4. Check-point
+
+
 
 #### Possible Projects
 
@@ -226,6 +275,8 @@ semi-automatically with a simple command-line utility.
 - What's the best way of sharing environments/kernels *with* the Notebooks?
 - How can we make published Notebooks easily *discoverable*?
 - How can we easily re-use Notebook content (code or generated data) in other Notebooks?
+
+------------
 
 ### Search & Discovery (S&E)
 
