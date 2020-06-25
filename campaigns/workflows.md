@@ -234,9 +234,36 @@ operations should be functionalized and packaged.
 
 ### 4. Check-point
 
+The term *check-pointing* here refers to saving a computed artifact from
+the *Analysis* phase for later access.  Check-pointing is typically done
+specifically for long and/or expensive computations that you do not wish
+to reproduce unless the computation producing the artifact needs to
+change.  The easiest way to check-point is to simply apply an operation
+such as `to_netcdf` or `to_zarr` on an Xarray Dataset.  However, unless
+other operations in the same workflow are aware of the check-point data,
+re-running the workflow will simply recompute the artifact and re-save
+it to disk.
 
+From a user's point of view, ideally, check-pointing should be automatic.
+That is, if a an object is computed in the notebook, it is cached on a
+persistent storage platform so that it can be retrieved from disk instead
+of recomputed.  This requires knowing the *history* of the artifact data
+and knowing if any element in the artifact's history has been modified
+(e.g., a modification to a function computing an intermediate product).
+If any element in the artifact's history has changed, then it must be
+re-computed "when accessed."
+
+To limit the amount of data stored on disk, it makes sense to only
+cache selected thing in the Notebook.  These items might correspond to
+the "public API" that a user designates for a notebook in the
+*Workflow Extension* model of [Search & Discovery](#1-search--discovery).
 
 #### Possible Projects
+
+- An automatic caching mechanism for the data objects in the "public API"
+  of a Notebook.  Could be similar to Xpersist, but could also be more
+  generic.  This is the same as the project suggesting in
+  [Section 1](#1-search--discovery).
 
 ### 5. Publication
 
