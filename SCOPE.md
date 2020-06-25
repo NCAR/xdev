@@ -1,4 +1,4 @@
-# Xdev Strategic Plan
+# Xdev Mission & Vision
 
 This document is meant to outline the current vision of the future of
 scientific data analysis in the geosciences, and it is meant to lay out
