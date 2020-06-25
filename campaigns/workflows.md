@@ -39,12 +39,12 @@ Notebook with the expectation that their Notebook can be found during the
 
 ## Vision
 
-The Xdev Vision Statements ([SCOPE](../SCOPE.md#xdev-vision-statements)) are easy
+The [Xdev Vision Statements](../SCOPE.md#xdev-vision-statements) are easy
 to state in brief, but harder to state in detail.  I will try to describe what I
 see as the vision of the future of scientific workflows, based on the Pangeo
 ecosystem.
 
-### 1. Search & Discovery
+### Search & Discovery
 
 The *Search & Discovery* phase in scientific workflows describes a user
 looking for an entry point for their analysis.  This includes searching for
@@ -135,7 +135,7 @@ the desired return objects.
 - ...Ideally, all of the above projects could be implemented and integrated with
   each other.
 
-### 2. Ingestion
+### Ingestion
 
 The *Ingestion* phase describes the step in a scientific workflow when the
 user loads the data they want into an analysis-ready format, such as an Xarray
@@ -147,7 +147,7 @@ Data format or location should not be completely *hidden* from the user, but the
 should not need to know anything about that to perform analysis.
 
 Ideally, a user would simply "select a dataset"
-(see [Search & Discovery](#1-search--discovery))
+(see [Search & Discovery](#search--discovery))
 and be provided with a queriable object, such as an Intake catalog object.  The
 user should be able to search and subselect this object using terminology that is
 understood by the *users of the data*, not the developers of the software.
@@ -163,7 +163,7 @@ aspect of this step is making it easy for data *providers* or *managers* (i.e.,
 the people who make the data available for others to analyze) to create catalogs
 with the proper semantic translations.  If this step (catalog generation) is
 difficult, then catalogs will not be created *at all*, making all the effort of
-[Phase 1](#1-search--discovery) pointless.  Ideally, catalogs should be generated
+[Phase 1](#search--discovery) pointless.  Ideally, catalogs should be generated
 automatically when data is generated, or they should be easily generated
 semi-automatically with a simple command-line utility.
 
@@ -181,7 +181,7 @@ semi-automatically with a simple command-line utility.
   JupyterLab extension or external website service for search and discovery.
 - Automatic catalog generation for dataset (choose your dataset here)
 
-### 3. Analysis
+### Analysis
 
 Data analysis is the process of turning computational data into knowledge.  This
 is done primarily by computing one or many *reductions* of the original data and
@@ -235,7 +235,7 @@ operations should be functionalized and packaged.
   data.  May need utilities to deal with cyclic coordinates with unstructured
   data.
 
-### 4. Check-point
+### Check-point
 
 The term *check-pointing* here refers to saving a computed artifact from
 the *Analysis* phase for later access.  Check-pointing is typically done
@@ -259,20 +259,20 @@ re-computed "when accessed."
 To limit the amount of data stored on disk, it makes sense to only
 cache selected thing in the Notebook.  These items might correspond to
 the "public API" that a user designates for a notebook in the
-*Workflow Extension* model of [Search & Discovery](#1-search--discovery).
+*Workflow Extension* model of [Search & Discovery](#search--discovery).
 
 #### Possible Projects
 
 - An automatic caching mechanism for the data objects in the "public API"
   of a Notebook.  Could be similar to Xpersist, but could also be more
   generic.  This is the same as the project suggestion in
-  [Section 1](#1-search--discovery).
+  [Section 1](#search--discovery).
 
-### 5. Publication
+### Publication
 
 The publication phase of a workflow is when the final workflow is
 *published* for other users to use.  This is the same as the process
-suggested in the [Search & Discovery](#1-search--discovery) section,
+suggested in the [Search & Discovery](#search--discovery) section,
 above.  This phase involves submitting the Notebook to a "repository"
 so that other users can "download" the Notebook for modification or
 import elements of the Notebook's "public API" into their own Notebook.
