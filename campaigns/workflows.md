@@ -39,7 +39,7 @@ Notebook with the expectation that their Notebook can be found during the
 
 ## Vision
 
-The [Xdev Vision Statements](../SCOPE.md#xdev-vision-statements) are easy
+The [Xdev Vision Statements](../PURPOSE.md#xdev-vision-statements) are easy
 to state in brief, but harder to state in detail.  I will try to describe what I
 see as the vision of the future of scientific workflows, based on the Pangeo
 ecosystem.

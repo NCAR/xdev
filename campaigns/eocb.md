@@ -23,7 +23,7 @@ through regular open community meetings.
 
 ## Vision
 
-As described in the [Xdev Vision Statements](../SCOPE.md#xdev-vision-statements),
+As described in the [Xdev Vision Statements](../PURPOSE.md#xdev-vision-statements),
 the main goal of the EOCB Campaign is to build a community of more than just
 *users* of the Pangeo software stack and platform.  The goal is to build a
 community of "contributors" who feel welcome to contribute at any level they
