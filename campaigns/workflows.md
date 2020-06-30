@@ -19,7 +19,7 @@ the same platform be used for each step.*  In fact, multiple platforms *could*
 be used in a single step.  For example, during the *Search & Discovery* phase,
 the scientist might use a combination of web searching to find the larger
 dataset or collection, and then move to a Jupyter Notebook to make queries of
-the larger dataset to produce subsets).  It is not critical that a *single
+the larger dataset to produce subsets.  It is not critical that a *single
 platform* be emphasized or prioritized, but making it easier and more
 productive for the scientist is critical.  That could mean reducing the number
 of platforms the scientist must use, but it could also mean making multiple
@@ -44,7 +44,7 @@ to state in brief, but harder to state in detail.  We will try to describe what 
 see as the vision of the future of scientific workflows, based on the Pangeo
 ecosystem.
 
-### Search & Discovery
+### Phase 1: Search & Discovery
 
 The *Search & Discovery* phase in scientific workflows describes a user
 looking for an entry point for their analysis.  This includes searching for
@@ -135,7 +135,7 @@ the desired return objects.
 - ...Ideally, all of the above projects could be implemented and integrated with
   each other.
 
-### Ingestion
+### Phase 2: Ingestion
 
 The *Ingestion* phase describes the step in a scientific workflow when the
 user loads the data they want into an analysis-ready format, such as an Xarray
@@ -147,7 +147,7 @@ Data format or location should not be completely *hidden* from the user, but the
 should not need to know anything about that to perform analysis.
 
 Ideally, a user would simply "select a dataset"
-(see [Search & Discovery](#search--discovery))
+(see [Search & Discovery](#phase-1-search--discovery))
 and be provided with a queriable object, such as an Intake catalog object.  The
 user should be able to search and subselect this object using terminology that is
 understood by the *users of the data*, not the developers of the software.
@@ -163,7 +163,7 @@ aspect of this step is making it easy for data *providers* or *managers* (i.e.,
 the people who make the data available for others to analyze) to create catalogs
 with the proper semantic translations.  If this step (catalog generation) is
 difficult, then catalogs will not be created *at all*, making all the effort of
-[Phase 1](#search--discovery) pointless.  Ideally, catalogs should be generated
+[Phase 1](#phase-1-search--discovery) pointless.  Ideally, catalogs should be generated
 automatically when data is generated, or they should be easily generated
 semi-automatically with a simple command-line utility.
 
@@ -181,7 +181,7 @@ semi-automatically with a simple command-line utility.
   JupyterLab extension or external website service for search and discovery.
 - Automatic catalog generation for dataset (choose your dataset here)
 
-### Analysis
+### Phase 3: Analysis
 
 Data analysis is the process of turning computational data into knowledge.  This
 is done primarily by computing one or many *reductions* of the original data and
@@ -241,7 +241,7 @@ operations should be functionalized and packaged.
   data.  May need utilities to deal with cyclic coordinates with unstructured
   data.
 
-### Check-point
+### Phase 4: Check-point
 
 The term *check-pointing* here refers to saving a computed artifact from
 the *Analysis* phase for later access.  Check-pointing is typically done
@@ -265,20 +265,20 @@ re-computed "when accessed."
 To limit the amount of data stored on disk, it makes sense to only
 cache selected thing in the Notebook.  These items might correspond to
 the "public API" that a user designates for a notebook in the
-*Workflow Extension* model of [Search & Discovery](#search--discovery).
+*Workflow Extension* model of [Search & Discovery](#phase-1-search--discovery).
 
 #### Possible Projects
 
 - An automatic caching mechanism for the data objects in the "public API"
   of a Notebook.  A good candedate for the base functionality (or possibly
   the entire solution) might be [provenance](https://github.com/bmabey/provenance).
-  *NOTE:* This is the same as the project suggestion in [Section 1](#search--discovery).
+  *NOTE:* This is the same as the project suggestion in [Section 1](#phase-1-search--discovery).
 
-### Publication
+### Phase 5: Publication
 
 The publication phase of a workflow is when the final workflow is
 *published* for other users to use.  This is the same as the process
-suggested in the [Search & Discovery](#search--discovery) section,
+suggested in the [Search & Discovery](#phase-1-search--discovery) section,
 above.  This phase involves submitting the Notebook to a "repository"
 so that other users can "download" the Notebook for modification or
 import elements of the Notebook's "public API" into their own Notebook.
