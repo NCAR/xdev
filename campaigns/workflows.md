@@ -226,6 +226,12 @@ operations should be functionalized and packaged.
   Pandas and Xarray and Numpy calendar is assumed to be the proleptic
   Gregorian calendar.  Being able to properly compute durations in other
   calendars as well as convert between calendars would be very helpful.
+  *NOTE:* The `cftime` package might be able to properly compute temporal
+  durations properly, but it is uncertain if it can convert calendars.
+  One simple way to convert calendars is to have a *baseline* calendar
+  (e.g., Julian) and to conert calendars by going *through* the baseline
+  calendar.  Thus, every calendar needs to know how to convert its datetimes
+  to and from the baseline calendar.
 - Regridding datasets so that they can be directly compared on the same
   grid would be very helpful.  I have always believed that a representation
   of a gridded data object (i.e., grid + data + coordinates) should be
@@ -264,9 +270,9 @@ the "public API" that a user designates for a notebook in the
 #### Possible Projects
 
 - An automatic caching mechanism for the data objects in the "public API"
-  of a Notebook.  Could be similar to Xpersist, but could also be more
-  generic.  This is the same as the project suggestion in
-  [Section 1](#search--discovery).
+  of a Notebook.  A good candedate for the base functionality (or possibly
+  the entire solution) might be [provenance](https://github.com/bmabey/provenance).
+  *NOTE:* This is the same as the project suggestion in [Section 1](#search--discovery).
 
 ### Publication
 
@@ -329,9 +335,10 @@ possible.
 - Dask clusters that span different cloud and HPC environments.  This
   would allow users to analyze datasets located at different locations
   from the same Notebook.  And if only reductions were directly
-  compared, it would facility the computation of the reductions on the
+  compared, it would facilitate the computation of the reductions on the
   "server side" (i.e., next to the data) and then transport only the
   reduced dataset.
+- Experimental Dask-Gateway deployment on Cheyenne+Casper
 - Environments and Notebooks, if the data itself is portable, be "portable"
   as much as possible.  That is, if the data accessed by the Notebook
   can be downloaded easily, the Environment and the Notebook should easily
