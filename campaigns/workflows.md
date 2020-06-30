@@ -282,6 +282,9 @@ suggested in the [Search & Discovery](#phase-1-search--discovery) section,
 above.  This phase involves submitting the Notebook to a "repository"
 so that other users can "download" the Notebook for modification or
 import elements of the Notebook's "public API" into their own Notebook.
+The publication phase should also be handled in a way that conforms to
+the needs of publication services, such as requests by journals to
+publish Notebooks for citation.
 
 Ideally, published Notebooks will be tested for regression as new
 versions of the software stack change, so that owners of the Notebook
