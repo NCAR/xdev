@@ -306,6 +306,11 @@ who has used which "public API" elements of the Notebook, how many
 times has the Notebook been "downloaded" and how many times has each
 "public API" element been accessed.
 
+Ideally, a published Notebook should be citable, such as via a DOI or
+similar.  This imposes a requirement on the publication service being
+stable and persistant so that published Notebooks can remain accessible
+long into the future.
+
 #### Possible Projects
 
 - A Continuous Integration service to test Notebooks on HPC (and/or in
