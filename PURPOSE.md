@@ -4,9 +4,9 @@ This document is meant to outline the current vision of the future of
 scientific data analysis in the geosciences, and it is meant to lay out
 the goals and necessary plans to achieve this vision.  This vision
 should be seen as a *forecast* from the Team's perspective, so everyone's
-input is welcome.  As the Engineering Lead for the Xdev Team, I do not
+input is welcome.  As the Engineering Lead for the Xdev Team, we do not
 see a *single, unified* vision of the future as being possible nor
-necessary.  As much as possible, I encourage the team to explore multiple
+necessary.  As much as possible, we encourage the team to explore multiple
 paths forward on any issue when clear, distinct paths can be developed.
 
 ## Xdev Mission Statement

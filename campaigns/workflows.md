@@ -40,7 +40,7 @@ Notebook with the expectation that their Notebook can be found during the
 ## Vision
 
 The [Xdev Vision Statements](../PURPOSE.md#xdev-vision-statements) are easy
-to state in brief, but harder to state in detail.  I will try to describe what I
+to state in brief, but harder to state in detail.  We will try to describe what I
 see as the vision of the future of scientific workflows, based on the Pangeo
 ecosystem.
 
@@ -53,7 +53,7 @@ for and discovering a particular *existing* workflow that a user either
 (1) modifies to create a new workflow or (2) extends by adding to the workflow.
 Thus, users need to be able to search for *both* data that they can ingest into
 their Notebooks *and other* Notebooks that they can modify or extend.
-I will refer to these three kinds of workflow entry points as *Data Access*,
+We will refer to these three kinds of workflow entry points as *Data Access*,
 *Workflow Modification*, and *Workflow Extension*.
 
 Regardless of the kind of entry point to a new workflow, the user should be able
@@ -233,10 +233,10 @@ operations should be functionalized and packaged.
   calendar.  Thus, every calendar needs to know how to convert its datetimes
   to and from the baseline calendar.
 - Regridding datasets so that they can be directly compared on the same
-  grid would be very helpful.  I have always believed that a representation
-  of a gridded data object (i.e., grid + data + coordinates) should be
-  abstracted away so that the user need not know anything about the grid.
-  I call that a *field*.
+  grid would be very helpful.  A representation of a gridded data object
+  (i.e., grid + data + coordinates) could be abstracted away so that the
+  user need not know anything about the grid.  Such an object could be
+  called a *field*.
 - Make it easier to plot data on unstructured grids with Python, such as MPAS
   data.  May need utilities to deal with cyclic coordinates with unstructured
   data.
