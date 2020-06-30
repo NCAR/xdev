@@ -48,7 +48,7 @@ tutorials, and demonstration Notebooks.
 Learning how to contribute to open source has a broad meaning, ranging
 from just simply reporting bugs in a GitHub issue tracker to learning how
 to write a pull request to a software package to becoming a core software
-package maintainer (including knowing how to prioretize issues, perform
+package maintainer (including knowing how to prioritize issues, perform
 code reviews, etc.).  Users of the software should be encouraged to
 give back to the software they use in any way they feel comfortable, and
 education should be given to help users get *more* comfortable with
