@@ -42,6 +42,9 @@ tutorials, and demonstration Notebooks.
 - Create video tutorials and/or demos
 - Live tutorials
 - Online, self-paced educational material
+- Tools to gather statistics of all online educational material,
+  to gather things like how many people viewed which material, how long
+  they spent on the material, and to provide feedback
 
 ### Education in Open Source Development
 
@@ -50,9 +53,12 @@ from just simply reporting bugs in a GitHub issue tracker to learning how
 to write a pull request to a software package to becoming a core software
 package maintainer (including knowing how to prioritize issues, perform
 code reviews, etc.).  Users of the software should be encouraged to
-give back to the software they use in any way they feel comfortable, and
-education should be given to help users get *more* comfortable with
+give back to the software that they use in any way they feel comfortable,
+and education should be given to help users get *more* comfortable with
 contributing even more.
+
+Ideally, the education in software usage and open source development
+will be integrated into one set of resources.
 
 #### Possible Projects
 
@@ -61,6 +67,7 @@ contributing even more.
 - Organizing hackathons
 - Internship mentoring
 - Pair programming exercises
+- Statistics and feedback tools
 
 ### Diversity and Inclusion
 
