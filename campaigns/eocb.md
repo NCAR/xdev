@@ -39,9 +39,9 @@ tutorials, and demonstration Notebooks.
 #### Possible Projects
 
 - Add to the [Pangeo Notebook Gallery](https://gallery.pangeo.io)
-- Create video tutorials and/or demos
-- Live tutorials
-- Online, self-paced educational material
+- Create video tutorials and/or demos (including advanced material)
+- Live tutorials (including advanced material)
+- Online, self-paced educational material (including advanced material)
 - Tools to gather statistics of all online educational material,
   to gather things like how many people viewed which material, how long
   they spent on the material, and to provide feedback
@@ -62,8 +62,8 @@ will be integrated into one set of resources.
 
 #### Possible Projects
 
-- Live tutorials
-- Online, self-paced educational material
+- Live tutorials (including advanced material)
+- Online, self-paced educational material (including advanced material)
 - Organizing hackathons
 - Internship mentoring
 - Pair programming exercises
