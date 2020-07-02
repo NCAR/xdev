@@ -4,10 +4,10 @@ This document is meant to outline the current vision of the future of
 scientific data analysis in the geosciences, and it is meant to lay out
 the goals and necessary plans to achieve this vision.  This vision
 should be seen as a *forecast* from the Team's perspective, so everyone's
-input is welcome.  As the Engineering Lead for the Xdev Team, we do not
-see a *single, unified* vision of the future as being possible nor
-necessary.  As much as possible, we encourage the team to explore multiple
-paths forward on any issue when clear, distinct paths can be developed.
+input is welcome.  We do not see a *single, unified* vision of the future
+as being possible nor necessary.  As much as possible, we encourage the
+team to explore multiple paths forward on any issue when clear, distinct
+paths can be developed.
 
 ## Xdev Mission Statement
 
@@ -17,8 +17,7 @@ develop that technology.
 
 ## Xdev Vision Statements
 
-We see two unique aspects of the future, described by two complimentary
-vision statements, with each vision of the future pertaining to one of the
+We see two unique aspects of the future, each pertaining to one of the
 two elements in the Xdev Mission Statement:
 
 1. We envision a future where scientists can interactively analyze datasets of

@@ -40,8 +40,8 @@ Notebook with the expectation that their Notebook can be found during the
 ## Vision
 
 The [Xdev Vision Statements](../MISSION.md#xdev-vision-statements) are easy
-to state in brief, but harder to state in detail.  We will try to describe what I
-see as the vision of the future of scientific workflows, based on the Pangeo
+to state in brief, but harder to state in detail.  We will try to describe what
+we see as the vision of the future of scientific workflows, based on the Pangeo
 ecosystem.
 
 ### Phase 1: Search & Discovery
