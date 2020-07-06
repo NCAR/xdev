@@ -15,11 +15,14 @@ know about the mission, vision and strategic plans for the Xdev Team, start with
 
 Dashboard: https://ncar.github.io/xdev/pages/status/
 
-The main configuration of the dashboard is done via the [dashboard.yml](status-dashboard/dashboard.yml) file, which can contain several sections with a list of packages, and a list of services for each section.
+The main configuration of the dashboard is done via the
+[dashboard.yml](status-dashboard/dashboard.yml) file, which can contain several sections with
+a list of packages, and a list of services for each section.
 
 **Note:**
 
-To update the dashboard with a new package or a new service, one needs to run the `make_status` script (after updating `status-dashboard/dashboard.yml`) from the root directory:
+To update the dashboard with a new package or a new service, one needs to run the `make_status`
+script (after updating `status-dashboard/dashboard.yml`) from the root directory:
 
 ```bash
 python ./status-dashboard/make_status.py
@@ -27,9 +30,10 @@ python ./status-dashboard/make_status.py
 
 ## Xdev Blog
 
-The Xdev blog site is deployed using GitHub Pages from this repository. It uses [Nikola](https://getnikola.com)
-to generate static web pages, the content of which are contained in files in the `site` directory of this
-repository. To write a new blog post, you should follow this procedure:
+The Xdev blog site is deployed using GitHub Pages from this repository. It uses
+[Nikola](https://getnikola.com) to generate static web pages, the content of which are
+contained in files in the `site` directory of this repository. To write a new blog post,
+you should follow this procedure:
 
 1. Make sure you have Nikola installed on your machine (`pip install nikola[extras]`) in a
    separate conda environment (e.g., I call my conda environment `xdev` to match the repo.).
