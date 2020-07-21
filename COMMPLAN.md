@@ -177,6 +177,17 @@ Just to reply to other people who use the `xdev@ucar.edu` address.
 
 Pretty much everything.
 
+### Other Channels
+
+There are many other communication channels for other (albeit similar)
+communities, even ones that we might consider ourselves members.  The
+most notable case is Pangeo Community, which has its own communication
+channels, as described in the [Pangeo Guide](PANGEO.md).  If directly
+interacting with an external community, such as Pangeo, use the communication
+channels *used by that community.*  Note that this could me, regretfully,
+re-posting or double-posting announcements or questions in multiple
+channels because of different community expectations.
+
 ## Summary Chart
 
 Below attempts to summarize the above content into a table describing *with
@@ -189,5 +200,5 @@ whom* each communication channel is ideally suited for communication and
 | Zulip `Xdev` Stream | The Xdev Team | Questions, General Comments, Soliciting Feedback, Jokes, *etc.* |
 | Zulip Public Streams | NCAR Python Users | Announcements, Questions/Answers, Development Problems, Soliciting Feedback, *etc.* |
 | Xdev Blog | General Public | Announcements, Technical Examples, Howtos, *etc.* |
-| Twitter `@NCARXdev` | General Public | Announcements of Blog Posts |
+| Twitter (`@NCARXdev`) | General Public | Announcements of Blog Posts |
 | Email (`xdev@ucar.edu`) | General Public | Incoming questions from outside entities |
