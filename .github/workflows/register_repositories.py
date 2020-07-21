@@ -53,10 +53,6 @@ def configure(config_file='config.yaml'):
     with open(os.environ['GITHUB_EVENT_PATH'], 'r') as f:
         event_payload = json.load(f)
     comment = event_payload['issue']['body']
-    # comment = """
-    # Foo\n/add-repo repo:NCAR/integral campaign:analysis\n/add-repo repo:NCAR/test campaign:core\nbar\n/remove-repo repo:NCAR/xdevbot-testing campaign:core\n/add-repo repo:NCAR/xdev-bot-testing campaign:core\n
-    # \n/remove-repo repo:NCAR/jupyterlab-pbs campaign:platform
-    # """
     comment = comment.splitlines()
     config = copy.deepcopy(original_config)
     for line in comment:
@@ -171,6 +167,10 @@ async def install_repo_webhook(
                 logging.error('Could not retrieve repository metadata.')
 
 
+def format_repo_url(repo):
+    return f'[{repo}](https://github.com/{repo})'
+
+
 if __name__ == '__main__':
 
     config_file = 'config.yaml'
@@ -197,20 +197,20 @@ if __name__ == '__main__':
         if added_successes:
             print('\n**Webhook was successfully installed on:**\n', file=f)
             for repo in added_successes:
-                print(f'- {repo}', file=f)
+                print(f'- {format_repo_url(repo)}', file=f)
 
         if added_failures:
             print('\n**Unable to install the webhook on:**\n', file=f)
             for repo in added_failures:
-                print(f'- {repo}', file=f)
+                print(f'- {format_repo_url(repo)}', file=f)
 
         print('\n#### 2. Deletions', file=f)
         if removed_successes:
             print('\n**Webhook was successfully removed on:**\n', file=f)
             for repo in removed_successes:
-                print(f'- {repo}', file=f)
+                print(f'- {format_repo_url(repo)}', file=f)
 
         if removed_failures:
             print('\n**Unable to uninstall the webhook on:**\n', file=f)
             for repo in removed_failures:
-                print(f'- {repo}', file=f)
+                print(f'- {format_repo_url(repo)}', file=f)
