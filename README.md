@@ -4,6 +4,12 @@ This repository is for the internal developments of the NCAR Experimental Develo
 This repository contains information about the team, links to team products (such as the `xdev-bot`
 and the `xdev-status-dashboard`) and the team blog hosted on GitHub Pages.
 
+If you are an Xdev Team Member, or you want to contribute to Xdev activities, we recommend that
+you take a look at the [GUIDE](GUIDE.md).  In this document, we detail the communication and
+development practices that we recommend as a team.  More details about our communication plan
+(i.e., what communication channels do we use and when should we use them) can be found in the
+[COMMPLAN](COMMPLAN.md).
+
 ## Team Scope & Strategy
 
 The scope of work performed by the Xdev Team is described in the [MISSION](MISSION.md) document.
