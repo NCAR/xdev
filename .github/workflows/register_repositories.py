@@ -193,25 +193,31 @@ if __name__ == '__main__':
     removed_successes = set(removed_hooks.keys())
     removed_failures = set(repos['remove']) - removed_successes
 
-    with open('hooks_log.txt', 'w') as f:
+    with open('hooks_log.md', 'w') as f:
         print('\n#### 1. Additions', file=f)
         if added_successes:
-            print('\n**Webhook was successfully installed on:**\n', file=f)
+            print(
+                '\n**The webhook was successfully installed on the following repositories:**\n',
+                file=f,
+            )
             for repo in added_successes:
                 print(f'- {format_repo_url(repo)}', file=f)
 
         if added_failures:
-            print('\n**Unable to install the webhook on:**\n', file=f)
+            print('\n**Unable to install the webhook on the following repositories:**\n', file=f)
             for repo in added_failures:
                 print(f'- {format_repo_url(repo)}', file=f)
 
         print('\n#### 2. Deletions', file=f)
         if removed_successes:
-            print('\n**Webhook was successfully removed on:**\n', file=f)
+            print(
+                '\n**The webhook was successfully removed on the following repositories:**\n',
+                file=f,
+            )
             for repo in removed_successes:
                 print(f'- {format_repo_url(repo)}', file=f)
 
         if removed_failures:
-            print('\n**Unable to uninstall the webhook on:**\n', file=f)
+            print('\n**Unable to uninstall the webhook on the following repositories:**\n', file=f)
             for repo in removed_failures:
                 print(f'- {format_repo_url(repo)}', file=f)
