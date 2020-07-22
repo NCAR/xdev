@@ -17,13 +17,12 @@ XDEVBOT_MAIN_ENDPOINT = 'http://xdevbot.herokuapp.com/'
 
 def parse_line(line, original_config, repos={'remove': [], 'add': []}):
     config = copy.deepcopy(original_config)
-    valid_line = line.startswith('/add-repo') or line.startswith('/remove-repo')
+    add_cmd = '/add-repo'
+    remove_cmd = '/remove-repo'
+    valid_line = add_cmd in line or remove_cmd in line
     if valid_line:
-        if line.startswith('/add-repo'):
-            split_on = '/add-repo'
-        else:
-            split_on = '/remove-repo'
-        parsed_info = line.split(split_on)[-1].strip().split()
+        split_on = add_cmd if add_cmd in line else remove_cmd
+        parsed_info = line.split(split_on)[-1].strip().split()[:2]
         info = {}
         for item in parsed_info:
             x = item.strip().split(':')
