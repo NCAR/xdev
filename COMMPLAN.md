@@ -5,6 +5,23 @@ there are a number of different communication platforms and options
 available.  In this document, we primarily detail which communication
 channels we use, why we use them, and what we use them for.
 
+## TL;DR: Summary
+
+The table below attempts to summarize the content described in much
+greater detail in the rest of this document.  The table describes *with
+whom* each communication channel is ideally suited and *for what kind*
+of communication it is best suited.
+
+| Channel | With Whom? | What Kind? |
+|---------|------------|------------|
+| GitHub  | Developers | Bug Reports, Feature Requests, Code Reviews, Design Discussions |
+| Zulip `Xdev` Stream | The Xdev Team | Questions, General Comments, Soliciting Feedback, Jokes, *etc.* |
+| Zulip Public Streams | NCAR Python Users | Announcements, Questions/Answers, Development Problems, Soliciting Feedback, *etc.* |
+| Xdev Blog | General Public | Announcements, Technical Examples, Howtos, *etc.* |
+| Twitter (`@NCARXdev`) | General Public | Announcements of Blog Posts |
+| Email (`xdev@ucar.edu`) | General Public | Incoming questions from outside entities |
+
+
 ## Communication Channels
 
 ### GitHub
@@ -188,18 +205,3 @@ interacting with an external community, such as Pangeo, use the communication
 channels *used by that community.*  Note that this could me, regretfully,
 re-posting or double-posting announcements or questions in multiple
 channels because of different community expectations.
-
-## Summary Chart
-
-Below attempts to summarize the above content into a table describing *with
-whom* each communication channel is ideally suited for communication and
-*for what kind* of communication it is best suited.
-
-| Channel | With Whom? | What Kind? |
-|---------|------------|------------|
-| GitHub  | Developers | Bug Reports, Feature Requests, Code Reviews, Design Discussions |
-| Zulip `Xdev` Stream | The Xdev Team | Questions, General Comments, Soliciting Feedback, Jokes, *etc.* |
-| Zulip Public Streams | NCAR Python Users | Announcements, Questions/Answers, Development Problems, Soliciting Feedback, *etc.* |
-| Xdev Blog | General Public | Announcements, Technical Examples, Howtos, *etc.* |
-| Twitter (`@NCARXdev`) | General Public | Announcements of Blog Posts |
-| Email (`xdev@ucar.edu`) | General Public | Incoming questions from outside entities |
