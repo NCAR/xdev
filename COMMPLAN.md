@@ -128,7 +128,7 @@ achievements.
 Don't use the blog for rants or making complaints about anything.  The
 blog should only be used for *constructive* communication.
 
-### Twitter (@NCARXdev)
+### Twitter ([@NCARXdev](https://twitter.com/NCARXDev))
 
 #### Why we should use it?
 
@@ -141,18 +141,19 @@ work).
 
 #### What should we use it for?
 
-The Xdev Twitter account should be for making *announcements* to the
-general public, such as making an announcement of a new blog post.
-In general, Twitter *could* be used for any announcement, but because
-of the limitations of the platform (i.e., limiting the length of the
-tweet) it is best to tie the tweet to *another* communication platform,
-such as a blog post.
+[The Xdev Twitter account](https://twitter.com/NCARXDev) should be for
+making *announcements* to the general public, such as making an
+announcement of a new blog post. In general, Twitter *could* be used
+for any announcement, but because of the limitations of the platform
+(i.e., limiting the length of the tweet) it is best to tie the tweet
+to *another* communication platform, such as a blog post.
 
 #### What should we *not* use it for?
 
-The Xdev Twitter account should *not* be used for personal use.  Currently,
-only Kevin has the "keys" to the Twitter account.  If you want to make a
-broad announcement, contact Kevin via Zulip.
+[The Xdev Twitter account](https://twitter.com/NCARXDev) should *not* be
+used for personal use.  Currently, only Kevin has the "keys" to the
+Twitter account.  If you want to make a broad announcement, contact Kevin
+via Zulip.
 
 ### Email
 
