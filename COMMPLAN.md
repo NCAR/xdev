@@ -165,7 +165,7 @@ of us, unless people explicitly reach out to us.  That is, I think email
 should be a way for people *outside* of NCAR to directly communicate with
 *us*.
 
-At NCAR, email is used substantially for inter-NCAR communication or for
+At NCAR, email is used substantially for intra-NCAR communication or for
 communication with specific extra-NCAR entities (like the NSF).  The amount
 of email that any one of us can easily receive is enough that it is easy to
 get lost, and so I recommend *not* using email for Team communication.
