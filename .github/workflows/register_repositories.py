@@ -182,10 +182,12 @@ if __name__ == '__main__':
     added_hooks = {}
     removed_hooks = {}
     loop = asyncio.get_event_loop()
-    tasks = [loop.create_task(install_repo_webhook(repo, added_hooks)) for repo in repos['add']] + [
+    add_tasks = [loop.create_task(install_repo_webhook(repo, added_hooks)) for repo in repos['add']]
+    remove_tasks = [
         loop.create_task(delete_repo_webhook(repo, removed_hooks)) for repo in repos['remove']
     ]
-    loop.run_until_complete(asyncio.gather(*tasks))
+    loop.run_until_complete(asyncio.gather(*add_tasks))
+    loop.run_until_complete(asyncio.gather(*remove_tasks))
 
     added_successes = set(added_hooks.keys())
     added_failures = set(repos['add']) - added_successes
