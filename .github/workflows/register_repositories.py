@@ -33,7 +33,7 @@ def validate_repo_campaign_info(info, config):
     else:
         valid = False
         error_messages.append(
-            f'\n  - Found unexpected keys `({", ".join(info.keys())})` in the parsed command. Expected keys are `{", ".join(expected_keys)}`.'
+            f'\n  - Found unexpected keys `({", ".join(info.keys())})` in the parsed command. Expected keys are `({", ".join(expected_keys)})`.'
         )
 
     return valid, error_messages
