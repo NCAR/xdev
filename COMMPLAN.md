@@ -201,6 +201,32 @@ Google Calendar event cancelations, etc.
 Avoid using the Xdev email address for internal communication.  Use Zulip
 or GitHub for collaboration within the team.
 
+### Google Calendar
+
+#### Why should we use it?
+
+Google Calendar is really the best way of coordinating times for meetings and
+any timed activities that we engage in as a team.  Together with the Xdev
+email address, it is the best way of reaching out to the entire team to see
+if they are available to meet at a specific time, on a specific day.
+
+#### What should we use it for?
+
+Use Google Calendar for scheduling all meetings.  Note that it can be difficult
+to find time for all people on the team to meet.  To accommodate this potential
+need, we have 2 standing "slots" on the UCAR Google Calendar called "Team Time".
+These slots are for *ad hoc* meetings with the entire time.  Having these
+regular meetings on the calendar, even if they are not used every week, lets
+everyone on the team know to try their best to keep those times free.  Then we
+have the best chance of everyone being available for any *ad hoc* meetings we
+might need to have.
+
+#### What should we *not* use it for?
+
+As usual, don't use the Google Calendar for person things.  Otherwise, use
+Google Calendar for what it was intended: to schedule meetings and events.  It
+is hard to use Google Calendar for something it was not intended.
+
 ### Other Channels
 
 There are many other communication channels for other (albeit similar)
