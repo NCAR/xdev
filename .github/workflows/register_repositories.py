@@ -22,7 +22,7 @@ def validate_repo_campaign_info(info, config):
     if set(info.keys()) == expected_keys:
         if info['campaign'] not in config:
             error_messages.append(
-                f"\n  - Unknown campaign `{info['campaign']}`. Valid campaigns include `{', '.join(config.keys())}`."
+                f"  - Unknown campaign `{info['campaign']}`. Valid campaigns include `{', '.join(config.keys())}`."
             )
             valid = False
 
@@ -33,7 +33,7 @@ def validate_repo_campaign_info(info, config):
     else:
         valid = False
         error_messages.append(
-            f'\n  - Found unexpected keys `({", ".join(info.keys())})` in the parsed command. Expected keys are `({", ".join(expected_keys)})`.'
+            f'  - Found unexpected keys `{", ".join(info.keys())}` in the parsed command. Expected keys are `{", ".join(expected_keys)}`.'
         )
 
     return valid, error_messages
@@ -66,7 +66,7 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
                     config[info['campaign']]['repos'].remove(info['repo'])
                 except ValueError:
                     error_messages.append(
-                        f"\n  - Unable to remove the repo `{info['repo']}` because it doesn't exist in the list of repos `({', '.join(config[info['campaign']]['repos'])})` of the `{info['campaign']}` campaign."
+                        f"  - Unable to remove the repo `{info['repo']}` because it doesn't exist in the list of repos `{', '.join(config[info['campaign']]['repos'])}` of the `{info['campaign']}` campaign."
                     )
                 finally:
                     repos['remove'].append(info['repo'])
