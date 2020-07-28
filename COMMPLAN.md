@@ -15,11 +15,12 @@ of communication it is best suited.
 | Channel | With Whom? | What Kind? |
 |---------|------------|------------|
 | GitHub  | Developers | Bug Reports, Feature Requests, Code Reviews, Design Discussions |
-| Zulip `Xdev` Stream | The Xdev Team | Questions, General Comments, Soliciting Feedback, Jokes, *etc.* |
-| Zulip Public Streams | NCAR Python Users | Announcements, Questions/Answers, Development Problems, Soliciting Feedback, *etc.* |
+| Zulip `Xdev` stream | The Xdev Team | Questions, General Comments, Soliciting Feedback, Jokes, *etc.* |
+| Zulip public streams | NCAR Python Users | Announcements, Questions/Answers, Development Problems, Soliciting Feedback, *etc.* |
 | Xdev Blog | General Public | Announcements, Technical Examples, Howtos, *etc.* |
 | Twitter (`@NCARXdev`) | General Public | Announcements of Blog Posts |
 | Email (`xdev@ucar.edu`) | General Public | Incoming questions from outside entities |
+| Google Calendar | Anyone who can be added to a Calendar Event | Event coordination and timing |
 
 
 ## Communication Channels
@@ -65,9 +66,9 @@ highlighting, which makes it perfect for instant messaging about
 software issues, general software use questions, or other technical
 discussions.
 
-Zulip has multiple *Streams* which are designed to topically target
-certain messages.  You can create *Topics* within each of these
-Streams, much like subject headings in email.
+Zulip has multiple *streams* which are designed to topically target
+certain messages.  You can create *topics* within each of these
+streams, much like subject headings in email.
 
 #### What should we use it for?
 
@@ -86,23 +87,23 @@ which is another reason why they may ask their questions on Zulip first.
 In general, Zulip is the first line of question/answer for staff here
 at NCAR on Python topics.
 
-Public Streams (i.e., those labeled with a `#` symbol) can be "joined"
+Public streams (i.e., those labeled with a `#` symbol) can be "joined"
 by *anyone* on Zulip.  Hence, they should be used to ask, or answer,
-questions, or make comments of public interest, related to the Public
-Stream subject.  For example, the `dask` Stream should be used for any
-Dask-specific issues or questions. The `jupyter` Stream should be used
+questions, or make comments of public interest, related to the public
+stream subject.  For example, the `dask` stream should be used for any
+Dask-specific issues or questions. The `jupyter` stream should be used
 for any Jupyter (Lab or Hub) issues or questions.  The `python-dev` and
-`python-questions` Public Streams are *catch-all* streams for any
+`python-questions` public streams are *catch-all* streams for any
 Python-related discussion that doesn't fall into the more specific
 public streams (e.g., `jupyter`, `dask`).  NCAR-wide *announcements*
-should be made to the `announce` Public Stream.  In general, the name
-of the Public Stream defines the *subject* of its discussions.
+should be made to the `announce` public stream.  In general, the name
+of the public stream defines the *subject* of its discussions.
 
-Private Streams (i.e., those labeled with a lock symbol) should be used
+Private streams (i.e., those labeled with a lock symbol) should be used
 for *internal* communications between people who have been invited to
-the Private Stream.  For example, the `Xdev` Private Stream is meant
+the private stream.  For example, the `Xdev` private stream is meant
 for internal communication within the Xdev Team.  In general, the
-name of the Private Stream defines the *group of people* included in
+name of the private stream defines the *group of people* included in
 the discussions.
 
 Zulip is also excellent for instant messaging *in general*, so if you
