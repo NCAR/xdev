@@ -121,7 +121,7 @@ described in the [PANGEO Guide](PANGEO.md).
 
 #### Why should we use it?
 
-Our blog (https://ncar.github.io/xdev) is an excellent way for us to
+[Our blog](https://ncar.github.io/xdev) is an excellent way for us to
 communicate complex ideas, or to make announcements, to the *broader*
 community (i.e., beyond NCAR) in an easy-to-access form.  Blogs persist
 and are designed to be referenceable at a later date, which makes them
