@@ -177,24 +177,29 @@ via Zulip.
 
 #### Why should we use it?
 
-Not sure.  I'm open to discussion on this, but I am beginning to feel like
-email (especially the `xdev@ucar.edu` address) should not be used by any
-of us, unless people explicitly reach out to us.  That is, I think email
-should be a way for people *outside* of NCAR to directly communicate with
-*us*.
-
-At NCAR, email is used substantially for intra-NCAR communication or for
-communication with specific extra-NCAR entities (like the NSF).  The amount
-of email that any one of us can easily receive is enough that it is easy to
-get lost, and so I recommend *not* using email for Team communication.
+The Xdev email address (`xdev@ucar.edu`) should be used only sparingly by
+any of us on the Xdev Team.  As a general rule, having the Xdev email address
+is useful for communication from *outside* of NCAR (or just *outside* of
+our Team) with the entire team.  It is also useful for creating Google
+Calendar meetings, as it allows the entire team to be invited to a meeting
+(and nobody is forgotten).
 
 #### What should we use it for?
 
-Just to reply to other people who use the `xdev@ucar.edu` address.
+The Xdev email address should be used for sharing with outside entities or
+individuals as a means of reaching out to the entire team.  For example,
+we might want to share this email address with participants of our tutorials,
+or with users of our websites.  It should be used as the main point of
+contact with us for people who are *external to NCAR*.
+
+It is also incredibly handy to use the Xdev email address for inviting
+the entire team to Google Calendar events (see below), or for announcing
+Google Calendar event cancelations, etc.
 
 #### What should we *not* use it for?
 
-Pretty much everything.
+Avoid using the Xdev email address for internal communication.  Use Zulip
+or GitHub for collaboration within the team.
 
 ### Other Channels
 
