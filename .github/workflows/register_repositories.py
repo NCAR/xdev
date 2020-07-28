@@ -72,7 +72,7 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
                     repos['remove'].append(info['repo'])
 
     if error_messages:
-        error_messages = f"{line}\n{' '.join(error_messages)}"
+        error_messages = f"{line}\n{' '.join(error_messages)}\n"
     else:
         error_messages = ''
     return config, error_messages
