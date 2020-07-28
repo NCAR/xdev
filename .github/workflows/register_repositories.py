@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 
 API_BASE_URL = 'https://api.github.com'
 
-XDEVBOT_MAIN_ENDPOINT = 'http://xdevbot.herokuapp.com/'
+XDEVBOT_MAIN_ENDPOINT = 'http://xdevbot.herokuapp.com/hooks/github/'
 
 
 def parse_line(line, original_config, repos={'remove': [], 'add': []}):
