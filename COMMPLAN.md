@@ -215,7 +215,7 @@ if they are available to meet at a specific time, on a specific day.
 Use Google Calendar for scheduling all meetings.  Note that it can be difficult
 to find time for all people on the team to meet.  To accommodate this potential
 need, we have 2 standing "slots" on the UCAR Google Calendar called "Team Time".
-These slots are for *ad hoc* meetings with the entire time.  Having these
+These slots are for *ad hoc* meetings with the entire team.  Having these
 regular meetings on the calendar, even if they are not used every week, lets
 everyone on the team know to try their best to keep those times free.  Then we
 have the best chance of everyone being available for any *ad hoc* meetings we
@@ -223,7 +223,7 @@ might need to have.
 
 #### What should we *not* use it for?
 
-As usual, don't use the Google Calendar for person things.  Otherwise, use
+As usual, don't use Google Calendar for personal things.  Otherwise, use
 Google Calendar for what it was intended: to schedule meetings and events.  It
 is hard to use Google Calendar for something it was not intended.
 
