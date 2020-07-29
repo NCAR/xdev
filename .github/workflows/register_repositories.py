@@ -15,8 +15,33 @@ API_BASE_URL = 'https://api.github.com'
 XDEVBOT_MAIN_ENDPOINT = 'http://xdevbot.herokuapp.com/hooks/github/'
 
 
+def validate_repo_campaign_info(info, config):
+    error_messages = []
+    valid = True
+    expected_keys = {'campaign', 'repo'}
+    if set(info.keys()) == expected_keys:
+        if info['campaign'] not in config:
+            error_messages.append(
+                f"  - Unknown campaign: `{info['campaign']}`. Valid campaigns include {', '.join(f'`{key}`' for key in config.keys())}."
+            )
+            valid = False
+
+        if not info['repo']:
+            valid = False
+            error_messages.append('\n  - No specified repository')
+
+    else:
+        valid = False
+        error_messages.append(
+            f'  - Found unexpected keys {", ".join(f"`{key}`" for key in info.keys())} in the parsed command. Expected keys are {", ".join(f"`{key}``" for key in expected_keys)}.'
+        )
+
+    return valid, error_messages
+
+
 def parse_line(line, original_config, repos={'remove': [], 'add': []}):
     config = copy.deepcopy(original_config)
+    error_messages = []
     add_cmd = '/add-repo'
     remove_cmd = '/remove-repo'
     valid_line = add_cmd in line or remove_cmd in line
@@ -28,23 +53,33 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
             x = item.strip().split(':')
             info[x[0]] = x[1]
 
-        if split_on == '/add-repo':
-            if info['repo'] not in set(config[info['campaign']]['repos']):
-                config[info['campaign']]['repos'].append(info['repo'])
-                repos['add'].append(info['repo'])
+        valid, error_messages = validate_repo_campaign_info(info, config)
 
-        else:
-            try:
-                config[info['campaign']]['repos'].remove(info['repo'])
-            except ValueError:
-                pass
-            finally:
-                repos['remove'].append(info['repo'])
+        if valid:
+            if split_on == add_cmd:
+                if info['repo'] not in set(config[info['campaign']]['repos']):
+                    config[info['campaign']]['repos'].append(info['repo'])
+                    repos['add'].append(info['repo'])
 
-    return config
+            else:
+                try:
+                    config[info['campaign']]['repos'].remove(info['repo'])
+                except ValueError:
+                    error_messages.append(
+                        f"  - Unable to remove the repo `{info['repo']}` because it doesn't exist in the list of repos {', '.join(f'`{r}`' for r in config[info['campaign']]['repos'])} of the `{info['campaign']}` campaign."
+                    )
+                finally:
+                    repos['remove'].append(info['repo'])
+
+    if error_messages:
+        error_messages = f"{line}\n{' '.join(error_messages)}\n"
+    else:
+        error_messages = ''
+    return config, error_messages
 
 
 def configure(config_file='xdevbot.yaml'):
+    error_messages_to_report = []
     repos = {'remove': [], 'add': []}
     with open(config_file) as resp:
         original_config = yaml.safe_load(resp)
@@ -53,10 +88,14 @@ def configure(config_file='xdevbot.yaml'):
         event_payload = json.load(f)
     comment = event_payload['issue']['body']
     comment = comment.splitlines()
+
     config = copy.deepcopy(original_config)
     for line in comment:
-        config = parse_line(line, config, repos)
-    return config, original_config, repos
+        config, error_messages = parse_line(line, config, repos)
+        if error_messages:
+            error_messages_to_report.append(error_messages)
+
+    return config, original_config, repos, error_messages_to_report
 
 
 async def delete_repo_webhook(
@@ -173,7 +212,7 @@ def format_repo_url(repo):
 if __name__ == '__main__':
 
     config_file = 'xdevbot.yaml'
-    new_config, old_config, repos = configure(config_file)
+    new_config, old_config, repos, error_messages_to_report = configure(config_file)
     if new_config != old_config:
         with open(config_file, 'w') as file_obj:
             yaml.round_trip_dump(new_config, file_obj, indent=2, block_seq_indent=2)
@@ -194,7 +233,12 @@ if __name__ == '__main__':
     removed_failures = set(repos['remove']) - removed_successes
 
     with open('hooks_log.md', 'w') as f:
-        print('\n#### 1. Additions', file=f)
+        if error_messages_to_report:
+            print('\n#### 1. Errors comming from the provided commands', file=f)
+            for error in error_messages_to_report:
+                print(f'\n{error}', file=f)
+
+        print('\n#### 2. Additions', file=f)
         if added_successes:
             print(
                 '\n**The webhook was successfully installed on the following repositories:**\n',
@@ -204,11 +248,13 @@ if __name__ == '__main__':
                 print(f'- {format_repo_url(repo)}', file=f)
 
         if added_failures:
-            print('\n**Unable to install the webhook on the following repositories:**\n', file=f)
+            print(
+                '\n**Unable to install the webhook on the following repositories:**\n', file=f,
+            )
             for repo in added_failures:
                 print(f'- {format_repo_url(repo)}', file=f)
 
-        print('\n#### 2. Deletions', file=f)
+        print('\n#### 3. Deletions', file=f)
         if removed_successes:
             print(
                 '\n**The webhook was successfully removed on the following repositories:**\n',
@@ -218,6 +264,8 @@ if __name__ == '__main__':
                 print(f'- {format_repo_url(repo)}', file=f)
 
         if removed_failures:
-            print('\n**Unable to uninstall the webhook on the following repositories:**\n', file=f)
+            print(
+                '\n**Unable to uninstall the webhook on the following repositories:**\n', file=f,
+            )
             for repo in removed_failures:
                 print(f'- {format_repo_url(repo)}', file=f)
