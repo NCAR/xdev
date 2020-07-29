@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 
 API_BASE_URL = 'https://api.github.com'
 
-XDEVBOT_MAIN_ENDPOINT = 'http://xdevbot.herokuapp.com/'
+XDEVBOT_MAIN_ENDPOINT = 'http://xdevbot.herokuapp.com/hooks/github/'
 
 
 def validate_repo_campaign_info(info, config):
@@ -78,7 +78,7 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
     return config, error_messages
 
 
-def configure(config_file='config.yaml'):
+def configure(config_file='xdevbot.yaml'):
     error_messages_to_report = []
     repos = {'remove': [], 'add': []}
     with open(config_file) as resp:
@@ -211,7 +211,7 @@ def format_repo_url(repo):
 
 if __name__ == '__main__':
 
-    config_file = 'config.yaml'
+    config_file = 'xdevbot.yaml'
     new_config, old_config, repos, error_messages_to_report = configure(config_file)
     if new_config != old_config:
         with open(config_file, 'w') as file_obj:
