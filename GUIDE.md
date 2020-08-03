@@ -6,9 +6,11 @@ for our process to this document as described below.
 
 ## 1. Communication Processes
 
-Other than in-person communications, we use 3 platforms for our _team_
-communications.  Preference should be given to GitHub, then Zulip, and
-lastly email.
+Other than in-person communications, we use 3 platforms for our _internal
+team_ communications.  These communication platforms are GitHub, Zulip, and
+email.  Preference should be given to GitHub, then Zulip, and
+lastly email.  More details on all of our Communication options can
+be found in the [COMMPLAN](COMMPLAN.md).
 
 Please keep in mind that _other_ developer communities might use other
 platforms for communication.  It is important that you follow and use those
