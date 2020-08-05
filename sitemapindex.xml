@@ -7,62 +7,62 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://ncar.github.io/xdev/authors/anderson-banihirwe.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/authors/julia-kent.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/authors/kevin-paul.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/categories/cat_data-catalog.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/rss.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/sitemap.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/dask.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/intake.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/jinja2.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/netcdf.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/open-development.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/open-source.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/templating.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/tooling.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ncar.github.io/xdev/tags/xarray.xml</loc>
-  <lastmod>2020-08-05T21:33:00Z</lastmod>
+  <lastmod>2020-08-05T21:44:00Z</lastmod>
  </sitemap>
 </sitemapindex>
