@@ -6,7 +6,7 @@ checkpoint:
   url: https://github.com/NCAR/xdev/projects/7
 core:
   repos:
-    - NCAR/xdevbot-testing
+    - NCAR/xdev
   url: https://github.com/NCAR/xdev/projects/2
 eocb:
   repos:
