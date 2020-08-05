@@ -57,7 +57,7 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
 
         if valid:
             if split_on == add_cmd:
-                if info['repo'] not in set(config[info['campaign']]['repos']):
+                if config[info['campaign']]['repos'] is None or info['repo'] not in set(config[info['campaign']]['repos']):
                     config[info['campaign']]['repos'].append(info['repo'])
                     repos['add'].append(info['repo'])
 
