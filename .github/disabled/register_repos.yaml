@@ -34,7 +34,7 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add xdevbot.yaml && git commit -m "[skip ci] Update configuration file."
-          git push -f --set-upstream origin master
+          git push -f --set-upstream origin xdevbot
 
       - name: Send a reply message to the issue
         uses: actions/github-script@0.9.0
