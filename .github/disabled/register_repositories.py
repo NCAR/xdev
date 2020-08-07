@@ -66,7 +66,8 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
 
             else:
                 try:
-                    config[info['campaign']]['repos'].remove(info['repo'])
+                    if config[info['campaign']]['repos'] is not None:
+                        config[info['campaign']]['repos'].remove(info['repo'])
                 except ValueError:
                     error_messages.append(
                         f"  - Unable to remove the repo `{info['repo']}` because it doesn't exist in the list of repos {', '.join(f'`{r}`' for r in config[info['campaign']]['repos'])} of the `{info['campaign']}` campaign."
