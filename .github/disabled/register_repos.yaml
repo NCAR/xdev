@@ -15,6 +15,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Create Clean Branch
+        run: |
+          git checkout --orphan xdevbot
+          git rm --cached -r .
+
       - name: Register new repository
         env:
           GH_USERNAME: ${{ secrets.GH_USERNAME }}
@@ -29,12 +34,18 @@ jobs:
         run: |
           git diff xdevbot.yaml > xdevbot.diff
 
-      - name: Pushing up-to-date config file
+      - name: Commit up-to-date config file
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add xdevbot.yaml && git commit -m "[skip ci] Update configuration file."
-          git push -f --set-upstream origin xdevbot
+
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: xdevbot
+          force: true
 
       - name: Send a reply message to the issue
         uses: actions/github-script@0.9.0
@@ -44,7 +55,7 @@ jobs:
             const fs = require('fs')
             const diff = fs.readFileSync('xdevbot.diff', 'utf8')
             const logs = fs.readFileSync('hooks_log.md', 'utf8')
-            const issue_reply = "👋 the following changes were made:\n\n" + "```bash\n" + `${diff}` + "```\n" + `${logs}`+ "\n\n***Check the master branch for latest changes.***"
+            const issue_reply = "👋 the following changes were made:\n\n" + "```bash\n" + `${diff}` + "```\n" + `${logs}`+ "\n\n***Check the [xdevbot branch](https://github.com/NCAR/xdev/blob/xdevbot/xdevbot.yaml) for latest changes.***"
             // Send a reply message to the issue
             github.issues.createComment({
               issue_number: context.issue.number,
