@@ -15,6 +15,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Checkout clean xdevbot Branch
+        run: |
+          git checkout --orphan xdevbot
+          git rm --cached -r .
+
       - name: Register new repository
         env:
           GH_USERNAME: ${{ secrets.GH_USERNAME }}
@@ -43,7 +48,7 @@ jobs:
           script: |
             const fs = require('fs')
             const logs = fs.readFileSync('hooks_log.md', 'utf8')
-            const issue_reply = "👋 the following changes were made:\n\n" + `${logs}`+ "\n\n***Check the [xdevbot branch](https://github.com/NCAR/xdev/blob/xdevbot/xdevbot.yaml) for latest changes.***"
+            const issue_reply = "👋 The following changes were made:\n\n" + `${logs}`+ "\n\n***Check the [xdevbot branch](https://github.com/NCAR/xdev/blob/xdevbot/xdevbot.yaml) for latest changes.***"
             // Send a reply message to the issue
             github.issues.createComment({
               issue_number: context.issue.number,
