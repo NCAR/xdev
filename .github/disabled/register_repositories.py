@@ -3,6 +3,7 @@ import copy
 import json
 import logging
 import os
+import urllib
 from datetime import datetime
 
 import aiohttp
@@ -65,7 +66,8 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
 
             else:
                 try:
-                    config[info['campaign']]['repos'].remove(info['repo'])
+                    if config[info['campaign']]['repos'] is not None:
+                        config[info['campaign']]['repos'].remove(info['repo'])
                 except ValueError:
                     error_messages.append(
                         f"  - Unable to remove the repo `{info['repo']}` because it doesn't exist in the list of repos {', '.join(f'`{r}`' for r in config[info['campaign']]['repos'])} of the `{info['campaign']}` campaign."
@@ -80,12 +82,9 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
     return config, error_messages
 
 
-def configure(config_file='xdevbot.yaml'):
+def configure(original_config):
     error_messages_to_report = []
     repos = {'remove': [], 'add': []}
-    with open(config_file) as resp:
-        original_config = yaml.safe_load(resp)
-
     with open(os.environ['GITHUB_EVENT_PATH'], 'r') as f:
         event_payload = json.load(f)
     comment = event_payload['issue']['body']
@@ -213,8 +212,11 @@ def format_repo_url(repo):
 
 if __name__ == '__main__':
 
+    remote_config_file = 'https://raw.githubusercontent.com/NCAR/xdev/xdevbot/xdevbot.yaml'
     config_file = 'xdevbot.yaml'
-    new_config, old_config, repos, error_messages_to_report = configure(config_file)
+    resp = urllib.request.urlopen(remote_config_file)
+    original_config = yaml.safe_load(resp)
+    new_config, old_config, repos, error_messages_to_report = configure(original_config)
     if new_config != old_config:
         with open(config_file, 'w') as file_obj:
             yaml.round_trip_dump(new_config, file_obj, indent=2, block_seq_indent=2)
