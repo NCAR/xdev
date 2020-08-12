@@ -24,17 +24,17 @@ document.  A template for this document exists in the `projects/development/` di
 
 ## Contents
 
-- **`projects/`**: This directory contains all project-related specifications and
+- **[`projects/`](projects)**: This directory contains all project-related specifications and
   templates.
 
-  - **`projects/active/`**: All project specification documents for on-going (active)
+  - **[`projects/active/`](projects/active)**: All project specification documents for on-going (active)
     projects should be placed here.
-  - **`projects/complete/`**: All project specification documents for completed
+  - **[`projects/complete/`](projects/complete)**: All project specification documents for completed
     projects should be placed here.
-  - **`projects/development/`**: All project specification documents for projects
+  - **[`projects/development/`](projects/development)**: All project specification documents for projects
     that are still being constructed/specified should be placed here.  This includes
     projects that are waiting to start (and, therefore, don't have milestone dates
     defined, yet).
-  - **`projects/development/projspec_template.md`**: A template for *Project Specification*
+  - **[`projects/development/projspec_template.md`](projects/development/projspec_template.md)**: A template for *Project Specification*
     documents.  When a new project is defined/specified, it should be named
     `projspec_{codename}` where `{codename}` is replaced by the project codename.
