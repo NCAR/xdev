@@ -15,7 +15,9 @@ development practices that we recommend as a team.  More details about our commu
 The scope of work performed by the Xdev Team is described in the [MISSION](MISSION.md) document.
 That document also links to documents in the [campaigns](campaigns) directory.  If you want to
 know about the mission, vision and strategic plans for the Xdev Team, start with the
-[Xdev MISSION](MISSION.md).
+[Xdev MISSION](MISSION.md).  If you want to know about what we are currently working on,
+look in the [projects](projects) directory, or at the [PROJECTS](PROJECTS.md) document, for
+more details.
 
 ## Project Status Dashboard
 
