@@ -17,7 +17,7 @@ jobs:
           key: deps1-{{ .Branch }}-{{ checksum "site/conf.py" }}
       - run:
           name: Install Nikola
-          command: sudo pip install nikola[extras]
+          command: sudo pip install nikola[extras] nbconvert==5.6.1
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "site/conf.py" }}
           paths:
