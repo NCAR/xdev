@@ -21,7 +21,12 @@ def validate_repo_campaign_info(info, config):
     valid = True
     expected_keys = {'campaign', 'repo'}
     if set(info.keys()) == expected_keys:
-        if info['campaign'] not in config:
+        if info['campaign'] == 'main':
+            error_messages.append(
+                f"  - Cannot directly add repositories to the main project board.  Add this repo to a valid campaign: {', '.join(f'`{key}`' for key in config.keys())}."
+            )
+            valid = False
+        elif info['campaign'] not in config:
             error_messages.append(
                 f"  - Unknown campaign: `{info['campaign']}`. Valid campaigns include {', '.join(f'`{key}`' for key in config.keys())}."
             )
@@ -62,12 +67,14 @@ def parse_line(line, original_config, repos={'remove': [], 'add': []}):
                     config[info['campaign']]['repos'] = []
                 if info['repo'] not in set(config[info['campaign']]['repos']):
                     config[info['campaign']]['repos'].append(info['repo'])
+                    config['main']['repos'].append(info['repo'])
                     repos['add'].append(info['repo'])
 
             else:
                 try:
                     if config[info['campaign']]['repos'] is not None:
                         config[info['campaign']]['repos'].remove(info['repo'])
+                        config['main']['repos'].remove(info['repo'])
                 except ValueError:
                     error_messages.append(
                         f"  - Unable to remove the repo `{info['repo']}` because it doesn't exist in the list of repos {', '.join(f'`{r}`' for r in config[info['campaign']]['repos'])} of the `{info['campaign']}` campaign."
