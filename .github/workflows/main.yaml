@@ -1,4 +1,4 @@
-name: build-site
+name: build
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch: # allows you to trigger manually
 
 jobs:
-  build-and-deploy:
+  build:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     defaults:
@@ -28,3 +28,8 @@ jobs:
         run: |
          cd site
          nikola build
+
+      - name: Deploy to GitHub pages
+        run: |
+         cd site
+         ls -ltrh
