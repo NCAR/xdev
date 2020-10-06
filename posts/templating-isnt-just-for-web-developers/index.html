@@ -82,8 +82,8 @@ with frontend design.  It didn't take me long to realize that my
 explanation was convoluted and confusing, not that I stopped talking,
 mind you.  Attribute that to being unprepared, or sleep deprived (i.e.,
 child <em>still</em> not sleeping through the night!), or just a bad teacher.
-<!-- TEASER_END -->
-Regardless, I decided to point them to a tutorial online that
+<!-- TEASER_END --></p>
+<p>Regardless, I decided to point them to a tutorial online that
 <em>certainly must exist</em>, but after a brief Google search (which you
 should read as, "I didn't find anything in the first page of search
 results!"), all I could find were tutorials for frontend developers.
@@ -108,14 +108,12 @@ widespread in the Python developer community, and it has very good
 documentation... except for the fact that all of their documentation
 is almost entirely geared toward frontend designers.</p>
 <p>You can install Jinja2 with <code>pip</code> or <code>conda</code> as follows:</p>
-<pre class="code literal-block"><span></span><code>$ pip install Jinja2
-</code></pre>
-
+<div class="bash codehilite"><pre><span></span><code>$ pip install Jinja2
+</code></pre></div>
 
 <p>or</p>
-<pre class="code literal-block"><span></span><code>$ conda install jinja2
-</code></pre>
-
+<div class="bash codehilite"><pre><span></span><code>$ conda install jinja2
+</code></pre></div>
 
 <p>That's it.  You should now be set up with an environment that
 has (at least) python3 and jinja2 installed in it.</p>
@@ -140,7 +138,7 @@ common scenario motivating your need to learn templating.</p>
 <h3>The Letter</h3>
 <p>Fortunately, you already have a "template" for a formal <em>written</em> business
 letter sitting around on your hard drive.  It looks like this:</p>
-<pre class="code literal-block"><span></span><code>[Your Address]
+<div class="text codehilite"><pre><span></span><code>[Your Address]
 
 [Date]
 
@@ -157,8 +155,7 @@ letter sitting around on your hard drive.  It looks like this:</p>
 
 [Your Name]
 [Your Title]
-</code></pre>
-
+</code></pre></div>
 
 <p>Each element in this "template" that is enclosed in <code>[]</code>-brackets is
 just a placeholder for some other text.  Some of that text is short,
@@ -173,7 +170,7 @@ just string substitution...but with a touch more sophistication.</p>
 Jinja2 template.  To do so, the easiest first step would be to just
 replace every <code>[]</code>-bracketted item with a Jinja2 <em>expressions</em>,
 which are represented with <code>{{}}</code>-brackets:</p>
-<pre class="code literal-block"><span></span><code><span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
+<div class="jinja codehilite"><pre><span></span><code><span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
 
 <span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
 
@@ -190,8 +187,7 @@ which are represented with <code>{{}}</code>-brackets:</p>
 
 <span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span><span class="x"></span>
-</code></pre>
-
+</code></pre></div>
 
 <p>Also, notice that I have converted the text labels inside the
 <code>[]</code>-brackets into valid Python variable names.  Let's assume
@@ -201,7 +197,7 @@ care what extension the file actually has).</p>
 <p>We can now "write" this letter using Python variables from a
 Python script.  First, let's start writing a Python script that
 can "render" this Jinja2 template:</p>
-<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
 
 <span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="s1">'./'</span><span class="p">))</span>
 <span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">'letter.j2'</span><span class="p">)</span>
@@ -209,19 +205,17 @@ can "render" this Jinja2 template:</p>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">))</span>
-</code></pre>
-
+</code></pre></div>
 
 <p>If you were to run this script as it current exists, you would
 get a lot of blank lines, and some "floating" punctuation.
 Something like this:</p>
-<pre class="code literal-block"><span></span><code> :
+<div class="text codehilite"><pre><span></span><code> :
 
 
 
 ,
-</code></pre>
-
+</code></pre></div>
 
 <p>This is because the <code>data</code> variable is empty.  In other words,
 all of those <code>{{ var_name }}</code> template variables <em>never got defined!</em>
@@ -229,7 +223,7 @@ Jinja2 assumes that anything that isn't defined is an empty string.</p>
 <p>So, if we were to fill in the <code>data</code> dictionary with some data
 with keys matching the template variables, we should see something
 different.</p>
-<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'your_name'</span><span class="p">:</span> <span class="s2">"Jane Smith"</span><span class="p">,</span>
@@ -245,11 +239,10 @@ different.</p>
     <span class="s1">'greeting'</span><span class="p">:</span> <span class="s1">'Dear'</span><span class="p">,</span>
     <span class="s1">'closing'</span><span class="p">:</span> <span class="s1">'Sincerely'</span><span class="p">,</span>
 <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 
 <p>And with that change, the output should now look like:</p>
-<pre class="code literal-block"><span></span><code>1234 Somewhere Street
+<div class="text codehilite"><pre><span></span><code>1234 Somewhere Street
 Atown, XY  12345
 
 2020 May 11
@@ -268,8 +261,7 @@ Sincerely,
 
 Jane Smith
 Attorney at Law
-</code></pre>
-
+</code></pre></div>
 
 <p>Does it make sense?  Let's explain what's going on here.</p>
 <p>In our Python code, we are creating some data (literally <code>data</code>)
@@ -299,7 +291,7 @@ specifying if the document we are writing is a letter or an
 email.  We'll label this variable <code>is_letter</code>, and we'll
 insert it into our template document with some <code>if</code> <em>statements</em>,
 like so:</p>
-<pre class="code literal-block"><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_letter</span> <span class="cp">%}</span><span class="x"></span>
+<div class="jinja codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_letter</span> <span class="cp">%}</span><span class="x"></span>
 <span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
 
 <span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
@@ -318,8 +310,7 @@ like so:</p>
 
 <span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span><span class="x"></span>
-</code></pre>
-
+</code></pre></div>
 
 <p>By default, if we don't specify <code>is_letter</code> in the
 <code>data</code> variable in our Python script, it will default
@@ -346,7 +337,7 @@ inherits from the original.</p>
 <p>To do this, we will first change the <code>letter_body</code> from
 a template <em>variable</em> to a template <em>block</em> in our
 <code>letter.j2</code> template file, like so:</p>
-<pre class="code literal-block"><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_letter</span> <span class="cp">%}</span><span class="x"></span>
+<div class="jinja2 codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_letter</span> <span class="cp">%}</span><span class="x"></span>
 <span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
 
 <span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
@@ -366,24 +357,22 @@ a template <em>variable</em> to a template <em>block</em> in our
 
 <span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span><span class="x"></span>
 <span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span><span class="x"></span>
-</code></pre>
-
+</code></pre></div>
 
 <p>And then we will write a second template file
 (called, for example, <code>scam.j2</code>), that looks like this:</p>
-<pre class="code literal-block"><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"letter.j2"</span> <span class="cp">%}</span><span class="x"></span>
+<div class="jinja2 codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"letter.j2"</span> <span class="cp">%}</span><span class="x"></span>
 
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">letter_body</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">(...contents of my letter...)</span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
-</code></pre>
-
+</code></pre></div>
 
 <p>Now, change our script to render the <code>scam.j2</code>
 template instead of the <code>letter.j2</code> template and
 see what it outputs.  You should get something like
 this:</p>
-<pre class="code literal-block"><span></span><code>Dear Joe Smith:
+<div class="text codehilite"><pre><span></span><code>Dear Joe Smith:
 
 
 ...contents of my letter...
@@ -393,14 +382,13 @@ Sincerely,
 
 Jane Smith
 Attorney at Law
-</code></pre>
-
+</code></pre></div>
 
 <p>and if you want to remove those extraneous blank
 lines, you might want to set <code>trim_blocks=True</code> in
 the <code>Environment</code> declaration.  Then, you should
 see something like this:</p>
-<pre class="code literal-block"><span></span><code>Dear Joe Smith:
+<div class="text codehilite"><pre><span></span><code>Dear Joe Smith:
 
 ...contents of my letter...
 
@@ -408,8 +396,7 @@ Sincerely,
 
 Jane Smith
 Attorney at Law
-</code></pre>
-
+</code></pre></div>
 
 <p>And that's it!  Now, you are an expert in templating
 with Jinja2!  Feel free to attempt your own Spanish
