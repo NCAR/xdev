@@ -28,19 +28,17 @@ jobs:
         run: |
          cd site
          nikola build
-      # - name: Check links
-      #   run: |
-      #    cd site
-      #    nikola check --check-links --check-files --find-sources --remote --verbose
 
-      - name: Deploy to GitHub pages
+      - name: Check links
         run: |
-          set -e
-          cd site
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          deploy= "$(python -c 'import conf; print(conf.GITHUB_DEPLOY_BRANCH)')"
-          remote= "$(python -c 'import conf; print(conf.GITHUB_REMOTE_NAME)')"
-          echo $deploy
-          echo $remote
-          #ghp-import -n -m "[ci skip] Nikola auto deploy." -r remote -b deploy site/output
+         cd site
+         nikola check --check-links --check-files --find-sources --remote --verbose
+      - name: Deploy to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site/output
+          enable_jekyll: false
+          user_name: 'GitHub Action[bot]'
+          user_email: 'action@github.com'
+          commit_message: '[ci skip] Nikola auto deploy.'
