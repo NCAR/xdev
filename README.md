@@ -1,4 +1,5 @@
 # Experimental Development Team
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NCAR/xdev/build?logo=github&style=for-the-badge)](https://github.com/NCAR/xdev/actions?query=workflow%3Abuild)
 
 This repository is for the internal developments of the NCAR Experimental Development Team (Xdev).
 This repository contains information about the team, links to team products (such as the `xdev-bot`
