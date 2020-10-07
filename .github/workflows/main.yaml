@@ -28,13 +28,15 @@ jobs:
         run: |
          cd site
          nikola build
-      - name: Check links
-        run: |
-         cd site
-         nikola check --check-links --check-files --find-sources --remote --verbose
+      # - name: Check links
+      #   run: |
+      #    cd site
+      #    nikola check --check-links --check-files --find-sources --remote --verbose
 
       - name: Deploy to GitHub pages
         run: |
+          set -e
+          cd site
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           deploy= "$(python -c 'import conf; print(conf.GITHUB_DEPLOY_BRANCH)')"
