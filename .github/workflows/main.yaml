@@ -42,4 +42,4 @@ jobs:
           enable_jekyll: false
           user_name: 'GitHub Action[bot]'
           user_email: 'action@github.com'
-          commit_message: '[ci skip] Nikola auto deploy.'
+          commit_message: '[skip ci] Nikola auto deploy.'
