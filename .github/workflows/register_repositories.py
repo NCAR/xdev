@@ -245,11 +245,11 @@ if __name__ == '__main__':
 
     with open('hooks_log.md', 'w') as f:
         if error_messages_to_report:
-            print('\n#### 1. Errors comming from the provided commands', file=f)
+            print('\n### Errors comming from the provided commands', file=f)
             for error in error_messages_to_report:
                 print(f'\n{error}', file=f)
 
-        print('\n#### 2. Additions', file=f)
+        print('\n### Additions', file=f)
         if added_successes:
             print(
                 '\n**The webhook was successfully installed on the following repositories:**\n',
@@ -265,7 +265,7 @@ if __name__ == '__main__':
             for repo in added_failures:
                 print(f'- {format_repo_url(repo)}', file=f)
 
-        print('\n#### 3. Deletions', file=f)
+        print('\n### Deletions', file=f)
         if removed_successes:
             print(
                 '\n**The webhook was successfully removed on the following repositories:**\n',
