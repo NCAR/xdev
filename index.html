@@ -26,7 +26,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://ncar.github.io/xdev/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/tutorial-seminar-series/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python-tutorial-faq/" type="text/html">
 </head>
 <body>
   <div class="site-wrapper">
@@ -69,6 +69,44 @@
     
 <div class="post-feed">
     <article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
+        <a class="post-card-content-link" href="posts/python-tutorial-faq/">
+          <header class="post-card-header"><h2 class="post-card-title">Python Tutorial FAQ</h2>
+            <section class="post-meta"><time class="post-meta-date" datetime="2020-10-20T16:03:54-06:00">
+                2020 October 20
+              </time><span class="post-meta-divider">|</span>
+              <a href="authors/julia-kent/">Julia Kent</a>
+            </section></header><section class="post-card-excerpt"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong>  I am having issues running the command:
+<code>curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt</code>.
+What should I do?</p>
+<p><strong>A.</strong> If that was your case, try running the above command without the “-kO” option, or try using “wget” instead:
+<code>wget --no-check-certificate https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt</code>.</p>
+<p>If you are on Windows and have curl, try:
+<code>curl https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt -OutFile wxobs20170821.txt</code>.</p>
+<hr>
+<p class="more"><a href="posts/python-tutorial-faq/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+          </section></a>
+      </div>
+    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
         <a class="post-card-content-link" href="posts/tutorial-seminar-series/">
           <header class="post-card-header"><h2 class="post-card-title">Tutorial Seminar Series</h2>
             <section class="post-meta"><time class="post-meta-date" datetime="2020-09-18T12:41:28-06:00">

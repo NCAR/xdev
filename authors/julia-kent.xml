@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev (Posts by Julia Kent)</title><link>https://ncar.github.io/xdev/</link><description></description><atom:link href="https://ncar.github.io/xdev/authors/julia-kent.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 UCAR Apache 2.0</copyright><lastBuildDate>Wed, 21 Oct 2020 00:20:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial Seminar Series</title><link>https://ncar.github.io/xdev/posts/tutorial-seminar-series/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev (Posts by Julia Kent)</title><link>https://ncar.github.io/xdev/</link><description></description><atom:link href="https://ncar.github.io/xdev/authors/julia-kent.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 UCAR Apache 2.0</copyright><lastBuildDate>Wed, 21 Oct 2020 19:17:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python Tutorial FAQ</title><link>https://ncar.github.io/xdev/posts/python-tutorial-faq/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt;  I am having issues running the command:
+&lt;code&gt;curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt&lt;/code&gt;.
+What should I do?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A.&lt;/strong&gt; If that was your case, try running the above command without the “-kO” option, or try using “wget” instead:
+&lt;code&gt;wget --no-check-certificate https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you are on Windows and have curl, try:
+&lt;code&gt;curl https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt -OutFile wxobs20170821.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/python-tutorial-faq/"&gt;Read more…&lt;/a&gt; (5 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/python-tutorial-faq/</guid><pubDate>Tue, 20 Oct 2020 22:03:54 GMT</pubDate></item><item><title>Tutorial Seminar Series</title><link>https://ncar.github.io/xdev/posts/tutorial-seminar-series/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Because we are unable to host an in-person tutorial for this fall season, the Xdev team has decided to switch to a virtual seminar series. We will be hosting one hour tutorial sessions scheduled for the 2nd and 4th Wednesdays of each month at 1 PM Mountain starting in October. The first tutorial session, covering how to create your first Python script, will be on October 14th. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.

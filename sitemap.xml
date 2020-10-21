@@ -7,138 +7,146 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://ncar.github.io/xdev/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2019/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2019/08/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2019/12/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2020/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2020/03/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2020/05/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2020/06/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/archives/2020/09/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ncar.github.io/xdev/archives/2020/10/</loc>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/authors/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/authors/anderson-banihirwe/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/authors/julia-kent/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/authors/kevin-paul/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/categories/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/categories/cat_data-catalog/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/pages/about/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/pages/status/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/posts/intake-esm-2020316/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ncar.github.io/xdev/posts/python-tutorial-faq/</loc>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/posts/templating-isnt-just-for-web-developers/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/posts/time/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/posts/tutorial-seminar-series/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/posts/we-are-xdev/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/dask/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/intake/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/jinja2/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/netcdf/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/open-development/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/open-source/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/templating/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/tooling/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://ncar.github.io/xdev/tags/xarray/</loc>
-  <lastmod>2020-10-21T00:20:00Z</lastmod>
+  <lastmod>2020-10-21T19:16:00Z</lastmod>
  </url>
 </urlset>

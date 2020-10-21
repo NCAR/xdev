@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-158200162-1"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-158200162-1');
+    </script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Python Tutorial FAQ | Xdev</title>
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/icons.css">
+<link href="https://fonts.googleapis.com/css?family=Audiowide%7CCrimson+Pro%7CMerriweather%7CSaira+Stencil+One&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+<link rel="manifest" href="../../assets/site.webmanifest">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#1A658F">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/python-tutorial-faq/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
+<link rel="prev" href="../tutorial-seminar-series/" title="Tutorial Seminar Series" type="text/html">
+<meta property="og:site_name" content="Xdev">
+<meta property="og:title" content="Python Tutorial FAQ">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/python-tutorial-faq/">
+<meta property="og:description" content="Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.
+
+
+
+
+
+
+
+
+Q.  ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-10-20T16:03:54-06:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@NCARXdev">
+</head>
+<body>
+  <div class="site-wrapper" style="background: #FFF">
+
+    
+    <header class="site-header outer"><div class="inner">
+        
+    <nav class="site-nav" style="top: 0;"><div class="site-nav-menu">
+        <ul class="nav" role="menu">
+<li class="nav-item" role="menuitem"><a class="nav-logo" href="../../"><img src="../../assets/img/xdev_logo.png" alt="Xdev"></a></li>
+          
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../pages/about/">About</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../rss.xml">RSS</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../pages/status/">Dashboard</a></li>
+
+          
+
+        </ul>
+</div>
+      <div class="site-nav-social">
+        <a href="https://github.com/NCAR/xdev" class="social-link" target="_blank"><span class="icon-github"></span></a>
+        <a href="https://twitter.com/NCARXdev" class="social-link" target="_blank"><span class="icon-twitter"></span></a>
+      </div>
+    </nav>
+</div>
+    </header><main class="site-main outer" role="main"><div class="inner">
+        
+
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Python Tutorial FAQ</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2020-10-20T16:03:54-06:00">
+            2020 October 20
+          </time><span class="post-meta-divider">|</span>
+          <a href="../../authors/julia-kent/">Julia Kent</a>
+        </section></header><section class="post-full-content"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong>  I am having issues running the command:
+<code>curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt</code>.
+What should I do?</p>
+<p><strong>A.</strong> If that was your case, try running the above command without the “-kO” option, or try using “wget” instead:
+<code>wget --no-check-certificate https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt</code>.</p>
+<p>If you are on Windows and have curl, try:
+<code>curl https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt -OutFile wxobs20170821.txt</code>.</p>
+<hr>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Can you explain the advantages of each method we just went through?</p>
+<p><strong>A.</strong>  In the tutorial part 1 “Opening a .txt File,” we covered 3 different methods of reading in the datafile. 
+The first used the Python function <code>readline()</code> this function only reads a single line from the function and each time you use it, the next line is read. The advantage of this method is that you get to quickly see just the header of the function which is useful for determining how the data is organized. 
+The second method was to use the Python <code>read()</code> function, this reads the entire datafile at once, this is preferred over using method 1 for every single line of the file if you in fact want to read in the entire datafile.. 
+And the third method was the same as the second but using the <code>with</code> context manager. The advantage of the third method is that when the with-block is completed the file is automatically closed, making for easier clean up and memory usage throughout the script.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Q. When I create the environment, it downloads lots of packages.  Are those “python”, or extra things?</p>
+<p>A: Yes these are built in packages necessary for Python.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> <code>git init .</code> does not work on windows computers. What to do if I neeed to open a git prompt?</p>
+<p><strong>A.</strong> Go inside the YourProject folder, right click and choose Git Bash Here.
+On the command line write <code>git init</code></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> I had an error at the activate: about initializing my shell, the init command suggested failed as I don't have sudo, what should I do?</p>
+<p><strong>A.</strong> Run <code>conda init</code>, Conda will detect the type of shell and write init scripts into the shell’s configuration file. If that doesn't work try <code>activate env_name</code> or run from Anaconda command prompt.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> <code>conda activate python_tutorial</code> does not work. I get the following error:</p>
+
+<pre><code>     CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+     To initialize your shell, run
+      $ conda init &lt;SHELL_NAME&gt;
+      Currently supported shells are:
+      - bash
+      - fish</code></pre>
+<p>What should I do?</p>
+<p><strong>A.</strong> Run <code>activate env_name</code> instead of <code>conda activate env_name</code></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> <code>source /Users/hmw/anaconda3/bin/activate</code> produces the following error:</p>
+
+<pre><code>    _CONDA_ROOT=/Users/hmw/anaconda3: Command not found.
+    _CONDA_ROOT: Undefined variable.</code></pre>
+<p>What should I do?</p>
+<p><strong>A.</strong> Run <code>source activate</code> instead.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> <code>git status</code> produces the following error:</p>
+
+<pre><code>        fatal: Not a git repository (or any parent up to mount point /home)
+        Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).</code></pre>
+<p>What should I do?</p>
+<p><strong>A.</strong> You need to run <code>git init .</code> before you can run <code>git status</code></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> I see the following message:</p>
+
+<pre><code>        *** Please tell me who you are.
+         Run
+         git config --global user.email "you@example.com"
+         git config --global user.name "Your Name"
+
+         to set your account's default identity.
+         Omit --global to set the identity only in this repository.</code></pre>
+<p>What should I do?</p>
+<p><strong>A.</strong> This message typically appears the first time you use <code>git</code> on a computer. When you make changes in the repository, <code>git</code> will track those changes as well as who made them - and to do that, it needs to know your name and email address. Run the two lines mentioned in the error, replacing <code>you@example.com</code> with your actual email address and <code>Your Name</code> with your name:</p>
+
+<pre><code>        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"</code></pre>
+<p>And then re-run the <code>git</code> command that returned the error.</p>
+<p>If this is your first time using <code>git</code>, we recommend reading the first two chapters of <a href="https://git-scm.com/book/en/v2">Pro Git</a> to learn more about it. <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Chapter 1.6</a> covers this first-time setup step.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> How did you save and exit an editor?</p>
+<p><strong>A.</strong> In vim, it will be <code>:wq</code>. In nano it is <code>Ctrl X</code></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Could you explain the logic behind where <code>()</code>’s go? We used <code>datafile = open(filename)</code> and later <code>datafile.close()</code> as opposed to <code>close(datafile)</code>.  What is the meaning of the <code>()</code> after <code>datafile.close</code>?</p>
+<p><strong>A.</strong> <code>open</code> acts like a built in function in Python. <code>()</code> always follow functions. The left hand side <code>datafile</code> is defined as a new Python object. Python objects have methods associated with them. One of the functions associated with this object is <code>close</code>. So we are accessing the function <code>close()</code> from the object <code>datafile</code>.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Are there any good guidelines on when to make something a function vs an object method?</p>
+<p><strong>A.</strong> If you have a collection of functions and those functions all take the mostly same arguments, it is good practice to create an object that holds those shared arguments. We will cover more of this moving forward.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Can you talk more about how python manages memory when we read data files or create variables within a function?</p>
+<p><strong>A.</strong> Memory management is done through a “garbage collection system” and “instance counting” in Python. The first time you create something in Python, memory is allocated for that thing. Every time you access that variable, it counts how many times there are pointers to that object. Once something is no longer pointed to, Python deletes it from memory.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> In zsh, after running <code>conda init</code>, I get an error saying conda is not found...even if I start new zsh shell.  What should I do?</p>
+<p><strong>A.</strong> You should be able to get conda to work in zsh directly, if you are comfortable with zsh.  It turns out that to do this all you need to do is look inside your "~/.bash_profile" file for a section of code that starts with the line:
+<code># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</code></p>
+<p>and ends with the line:
+<code># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</code></p>
+<p>If you copy these lines and paste them into a file called "~/.zshrc", then conda will work with zsh.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Some other tips for success:</strong></p>
+<ul>
+<li>For non mac users, git and conda have 2 different shell environment</li>
+<li>You need to use a text editor - for example nano, vim, or nedit. If you are unfamiliar with text editors pick one </li>
+<li>If the commands at the bottom of the screen are hidden by your Zoom toolbar or meeting controls, you need to change the Zoom settings on your display.</li>
+<li>Here is a video about installing miniconda on windows 10: <a href="https://www.youtube.com/watch?v=tXgPY4lc6fo">Install Miniconda and Python 3.7 on Windows 10</a>
+</li>
+<li>Here is a video about installing anaconda on windows 10: <a href="https://www.youtube.com/watch?v=5mDYijMfSzs">Install Anaconda Python, Jupyter Notebook And Spyder on Windows 10</a>
+</li>
+<li>Here is a video about installing git and configure git and github on windows: <a href="https://www.youtube.com/watch?v=J_Clau1bYco">How to Install and Configure Git and GitHub on Windows</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>
+        <script src="https://utteranc.es/client.js" repo="NCAR/xdev-blog-comments" issue-term="title" theme="github-light" crossorigin="anonymous" async>
+        </script></section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></footer>
+</div>
+    </main><footer class="site-footer outer"><div class="site-footer-content inner">
+        <div class="site-footer-image" style="width: 409px; height: 40px;">
+          <a href="https://www2.cisl.ucar.edu/"><img src="../../assets/img/CISL-contemp-logo-white.svg" alt="CISL"></a>
+        </div>
+        <div class="site-footer-section">
+          <section><a href="https://www.ucar.edu/">University Corporation for Atmospheric Research</a> © 2020<br>Proudly published with <a href="https://getnikola.com/">Nikola</a> &amp; <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a><br>Apache 2.0</section>
+</div>
+      </div>
+      <div class="site-footer-content inner" style="border: 0; padding: 0; flex-wrap: nowrap;">
+        <div class="site-footer-image" style="width: 60px; height: 60px;">
+          <a href="https://nsf.gov/"><img src="../../assets/img/footer-logo-nsf.png" alt="NSF"></a>
+        </div>
+        <div class="site-footer-section" style="width: 100%;">
+          <section>This material is based upon work supported by the National Center for Atmospheric Research, a major facility sponsored by the National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</section>
+</div>
+      </div>
+    </footer>
+</div>
+  
+    <script type="text/javascript" src="../../assets/js/jquery.js"></script><script type="text/javascript" src="../../assets/js/jquery.fitvids.js"></script><script type="text/javascript" src="../../assets/js/index.js"></script>
+</body>
+</html>
