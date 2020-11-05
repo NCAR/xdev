@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-158200162-1"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-158200162-1');
+    </script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Python Tutorial FAQ - Part 2 | Xdev</title>
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/icons.css">
+<link href="https://fonts.googleapis.com/css?family=Audiowide%7CCrimson+Pro%7CMerriweather%7CSaira+Stencil+One&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+<link rel="manifest" href="../../assets/site.webmanifest">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#1A658F">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-2/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
+<link rel="prev" href="../python-tutorial-faq/" title="Python Tutorial FAQ" type="text/html">
+<meta property="og:site_name" content="Xdev">
+<meta property="og:title" content="Python Tutorial FAQ - Part 2">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-2/">
+<meta property="og:description" content="Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sectio">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-11-05T11:19:51-07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@NCARXdev">
+</head>
+<body>
+  <div class="site-wrapper" style="background: #FFF">
+
+    
+    <header class="site-header outer"><div class="inner">
+        
+    <nav class="site-nav" style="top: 0;"><div class="site-nav-menu">
+        <ul class="nav" role="menu">
+<li class="nav-item" role="menuitem"><a class="nav-logo" href="../../"><img src="../../assets/img/xdev_logo.png" alt="Xdev"></a></li>
+          
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../pages/about/">About</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../rss.xml">RSS</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../pages/status/">Dashboard</a></li>
+
+          
+
+        </ul>
+</div>
+      <div class="site-nav-social">
+        <a href="https://github.com/NCAR/xdev" class="social-link" target="_blank"><span class="icon-github"></span></a>
+        <a href="https://twitter.com/NCARXdev" class="social-link" target="_blank"><span class="icon-twitter"></span></a>
+      </div>
+    </nav>
+</div>
+    </header><main class="site-main outer" role="main"><div class="inner">
+        
+
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Python Tutorial FAQ - Part 2</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2020-11-05T11:19:51-07:00">
+            2020 November 5
+          </time><span class="post-meta-divider">|</span>
+          <a href="../../authors/julia-kent/">Julia Kent</a>
+        </section></header><section class="post-full-content"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the <a href="https://ncar.github.io/python-tutorial/">Xdev tutorial website</a></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Why is <code>list[0:10]</code> the first 10 elements, not 11?</p>
+<p><strong>A.</strong> In Python, "list slicing" uses square brackets with the syntax <code>[start:stop:step]</code>.  The <code>start</code> is <em>inclusive</em>, while the <code>step</code> is <em>exclusive</em>.  So, you read up to (but excluding) the <code>stop</code> index.</p>
+<hr>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Why do we not say <code>list[1,10]</code> to return the first 10 elements?</p>
+<p><strong>A.</strong> Python is 0-indexed, so index of 1 actually refers to the second element. Say our list was <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</code>, then <code>list[1,10]</code> would return <code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code> (which is missing the first element) and <code>list[0,10]</code> returns the desired <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code> (Also, see the answer to the previous question).</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> So <code>list[0:1]</code> is just one value, same as <code>list[0]</code>?</p>
+<p><strong>A.</strong> Actually not. <code>list[0:1]</code> returns a list, due to the slice indexing, with a value of <code>[0]</code>, whereas <code>list[0]</code> returns the 0th element, and has a value of <code>0</code>. Notice the square brackets or their absence!</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> How do you read only the 1st, 4rd, 7th, 10th, . . . rows of a data?</p>
+<p><strong>A.</strong> Using <code>list[::3]</code></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Could you clarify how this part works again:</p>
+
+<pre><code># Read the first three lines (header)
+for _ in range(3):
+    datafile.readline()</code></pre>
+<p><strong>A.</strong> <code>range(3)</code> is an iterator; it is equivalent to using the list <code>[0,1,2]</code>.  Here we’re iterating over that 3-element list and using the value for each iteration as the value of the variable <code>_</code>.  (We need to define the variable <code>_</code> in order to iterate through the for-loop, but we never use it, which is why we just call it <code>_</code>.).  In every iteration, we call <code>datafile.readline()</code> which means we read 3 lines of text from the file <em>in total</em>, but since we aren’t saving those lines of text anywhere (i.e., in any variable) we are only reading and discarding them. (Note, anything that begins with an underscore is generally considered "discardable" by common practice, but there is no rule in Python about that.) This for-loop sets us up so the next <code>readline()</code> call is where the data values begin.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Why is there no <code>end for</code> in a Python for-loop?\n",</p>
+<p><strong>A.</strong> Python is sensitive to white space. Anything indented after the <code>for</code> statement is part of the for-block, everything else after that is after the for-loop has completed. There is no extra information that an <code>end for</code> line would be needed to convey.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Why do we initialize data as an empty list with <code>data = []</code>?</p>
+<p><strong>A.</strong> If we want to use the <code>append</code> function to add elements to our list, the object to which we’re adding elements to has to be an <em>existing</em> (i.e., initialized) list.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Why do you refer to the data dictionary elements using <code>[]</code> when it is not a list?</p>
+<p><strong>A.</strong> Square brackets, <code>[]</code>, are used in Python to <em>declare a list</em> and to <em>get an item</em>.  In the "get item" usage, the square brackets must be preceded by the name of the variable from which the item is being retrieved.  In the list declaration usage, the square brackets must exist <em>alone</em> (i.e., no variable name preceding it).  For example, <code>x[0]</code> means "get element <code>0</code> from <code>x</code>" and <code>[0]</code> (i.e., without the <code>x</code> in front) means "create a list containing the element <code>0</code>".  The "declare a list" syntax is obviously <em>only</em> for creating a list, but the "get item" syntax can be used with <em>any container</em> (i.e., lists, dictionaries, sets, etc.).  (<strong>NOTE:</strong> Slice notation, namely <code>x[start:stop:step]</code>, only works on lists, and it does not work with dictionaries or sets!)</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> How do you print a single element from a variable, like <code>tempout</code>, from the data dictionary?</p>
+<p><strong>A.</strong> <code>data['tempout'][9]</code></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Could you explain more about function pointers?</p>
+<p><strong>A.</strong> Everything in Python is an object. You may be used to passing around variables by reference or value. In Python you can also pass around a function without calling it. In this session we passed in <code>float</code> which is a class of objects - and can also be used like a function. We stored the name of the function in the types dictionary so that we could use the function later on in the code.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+</div></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>
+        <script src="https://utteranc.es/client.js" repo="NCAR/xdev-blog-comments" issue-term="title" theme="github-light" crossorigin="anonymous" async>
+        </script></section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></footer>
+</div>
+    </main><footer class="site-footer outer"><div class="site-footer-content inner">
+        <div class="site-footer-image" style="width: 409px; height: 40px;">
+          <a href="https://www2.cisl.ucar.edu/"><img src="../../assets/img/CISL-contemp-logo-white.svg" alt="CISL"></a>
+        </div>
+        <div class="site-footer-section">
+          <section><a href="https://www.ucar.edu/">University Corporation for Atmospheric Research</a> © 2020<br>Proudly published with <a href="https://getnikola.com/">Nikola</a> &amp; <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a><br>Apache 2.0</section>
+</div>
+      </div>
+      <div class="site-footer-content inner" style="border: 0; padding: 0; flex-wrap: nowrap;">
+        <div class="site-footer-image" style="width: 60px; height: 60px;">
+          <a href="https://nsf.gov/"><img src="../../assets/img/footer-logo-nsf.png" alt="NSF"></a>
+        </div>
+        <div class="site-footer-section" style="width: 100%;">
+          <section>This material is based upon work supported by the National Center for Atmospheric Research, a major facility sponsored by the National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</section>
+</div>
+      </div>
+    </footer>
+</div>
+  
+    <script type="text/javascript" src="../../assets/js/jquery.js"></script><script type="text/javascript" src="../../assets/js/jquery.fitvids.js"></script><script type="text/javascript" src="../../assets/js/index.js"></script>
+</body>
+</html>
