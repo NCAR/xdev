@@ -8,7 +8,7 @@
       gtag('config', 'UA-158200162-1');
     </script><meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Python Tutorial FAQ - Part 2 | Xdev</title>
+<title>Python Tutorial FAQ - Part 3 | Xdev</title>
 <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
@@ -24,16 +24,24 @@
 <meta name="theme-color" content="#1A658F">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-2/">
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
-<link rel="prev" href="../python-tutorial-faq/" title="Python Tutorial FAQ" type="text/html">
-<link rel="next" href="../python-tutorial-faq-part-3/" title="Python Tutorial FAQ - Part 3" type="text/html">
+<link rel="prev" href="../python-tutorial-faq-part-2/" title="Python Tutorial FAQ - Part 2" type="text/html">
 <meta property="og:site_name" content="Xdev">
-<meta property="og:title" content="Python Tutorial FAQ - Part 2">
-<meta property="og:url" content="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-2/">
-<meta property="og:description" content="Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sectio">
+<meta property="og:title" content="Python Tutorial FAQ - Part 3">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/">
+<meta property="og:description" content="Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.
+
+
+
+
+
+
+
+
+Q. Seeing how 2/2 returns 1.0 in">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-11-05T11:19:51-07:00">
+<meta property="article:published_time" content="2020-11-18T15:17:45-07:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@NCARXdev">
 </head>
@@ -64,9 +72,9 @@
     </header><main class="site-main outer" role="main"><div class="inner">
         
 
-    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Python Tutorial FAQ - Part 2</h1>
-        <section class="post-meta"><time class="post-meta-date" datetime="2020-11-05T11:19:51-07:00">
-            2020 November 5
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Python Tutorial FAQ - Part 3</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2020-11-18T15:17:45-07:00">
+            2020 November 18
           </time><span class="post-meta-divider">|</span>
           <a href="../../authors/julia-kent/">Julia Kent</a>
         </section></header><section class="post-full-content"><div>
@@ -75,7 +83,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the <a href="https://ncar.github.io/python-tutorial/">Xdev tutorial website</a></p>
+<p>Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.</p>
 <hr>
 </div>
 </div>
@@ -85,8 +93,9 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Why is <code>list[0:10]</code> the first 10 elements, not 11?</p>
-<p><strong>A.</strong> In Python, "list slicing" uses square brackets with the syntax <code>[start:stop:step]</code>.  The <code>start</code> is <em>inclusive</em>, while the <code>step</code> is <em>exclusive</em>.  So, you read up to (but excluding) the <code>stop</code> index.</p>
+<p><strong>Q.</strong> Seeing how <code>2/2</code> returns <code>1.0</code> instead of <code>1</code>, is the numeric type automatically determined from the inputs or do you have to force it?</p>
+<p><strong>A.</strong> The numeric type is inferred. <code>/</code> always returns a float for numeric types. <code>//</code> always returns an integer.</p>
+<p>One should note that Python 2 does not behave this way.  In Python 2, the <code>//</code> operator does not exist and the <code>/</code> operator behaves like it does in other languages (i.e., division of two integers yields an integer and division with a float yields a float).</p>
 <hr>
 <!-- TEASER_END -->
 </div>
@@ -97,8 +106,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Why do we not say <code>list[1,10]</code> to return the first 10 elements?</p>
-<p><strong>A.</strong> Python is 0-indexed, so index of 1 actually refers to the second element. Say our list was <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</code>, then <code>list[1,10]</code> would return <code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code> (which is missing the first element) and <code>list[0,10]</code> returns the desired <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code> (Also, see the answer to the previous question).</p>
+<p><strong>Q.</strong> Are the spaces necessary around operators or after commas?</p>
+<p><strong>A.</strong> No it is not necessary, but it is best practice.</p>
 <hr>
 </div>
 </div>
@@ -108,8 +117,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> So <code>list[0:1]</code> is just one value, same as <code>list[0]</code>?</p>
-<p><strong>A.</strong> Actually not. <code>list[0:1]</code> returns a list, due to the slice indexing, with a value of <code>[0]</code>, whereas <code>list[0]</code> returns the 0th element, and has a value of <code>0</code>. Notice the square brackets or their absence!</p>
+<p><strong>Q.</strong> What happens if you don’t explicitly specify a return value?</p>
+<p><strong>A.</strong> If you don’t want to return anything you don’t need to have a <code>return</code> statement at the end of your function. By default, that means the function will return <code>None</code>.</p>
 <hr>
 </div>
 </div>
@@ -119,8 +128,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> How do you read only the 1st, 4rd, 7th, 10th, . . . rows of a data?</p>
-<p><strong>A.</strong> Using <code>list[::3]</code></p>
+<p><strong>Q.</strong> Do functions have a specific location in the file?</p>
+<p><strong>A.</strong> Functions can be defined in any order. If you have a function above that calls a function defined below, it will work. But if you just call the function above its definition, it will fail. We recommend having a separate file that contains all the functions or helper functions - we will cover this in the “Your First Python Package” section.</p>
 <hr>
 </div>
 </div>
@@ -130,77 +139,93 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Could you clarify how this part works again:</p>
+<p><strong>Q.</strong> Do I have to worry about name clashing in global vs function scope?  Would there be a problem if we used <code>t</code> and <code>v</code> for the names of our iterator variables in the for loop as well as the time and windspeed variables within the function?</p>
+<p><strong>A.</strong> In general, yes.  If you create a variable in your function scope that has the same name as a variable in global scope, you will not be able to access the global scope variable from within the function. But everything would be fine in global scope.
+In your example, however, it would be fine.  The <code>t</code> and <code>v</code> variables in function scope will not overwrite the <code>t</code> and <code>v</code> (in your example) that are in global scope within the <code>for</code> loop.
+You can access global scope variables from within a function.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Will all the variables being created within a function still occupy the memory after the function was finished?</p>
+<p><strong>A.</strong> Python uses garbage collection for memory management. That means that those variables will no longer be referenced anywhere, so they will be cleaned up whenever garbage collection happens which is not necessarily after the function return or during the execution of your script as long as there is no reason to clear memory. Essentially garbage collection is complicated, and controlling memory with Python is a hard thing to do.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> In the <code>f-string</code> formatting (i.e., <code>f'string'</code>) is <code>f</code> a function?</p>
+<p><strong>A.</strong> No, it’s a special symbol before the string saying that it is an <code>f-string</code>. If you just had <code>‘’</code>, everything within the apostrophes would would be a regular string. <code>f’’</code> is an <code>f-string</code>. <code>f-strings</code> in Python let you do nice string formatting.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> The <code>wc_data</code> and <code>wc_comp</code> are not defined. How does python know 
+what they refer to?</p>
+<p><strong>A.</strong> They are defined in the <code>for</code> loop and are returned from the <code>zip</code> function when it is iterated over.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Can the loop <code>for wc_data, wc_comp in X</code> cause a memory leak?</p>
+<p><strong>A.</strong> It’s hard to create a memory leak with pure Python. <code>wc_data</code> is re-assigned every loop, overwriting the previous value and taking up the same amount of memory.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Is there a difference between <code>‘</code> and <code>“</code> in strings?</p>
+<p><strong>A.</strong> No. You can use either, but you must be consistent within a given string in how you start and end it. This allows you to use the <code>’</code> character within your string, for example: <code>string = “I’m a string”</code></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> What is the meaning of <code>&gt;6</code> in the time <code>f-string</code> formatting?</p>
+<p><strong>A.</strong> It means 6 characters in length, right justified.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> I’m getting this error when trying to push to GitHub:</p>
 
-<pre><code># Read the first three lines (header)
-for _ in range(3):
-    datafile.readline()</code></pre>
-<p><strong>A.</strong> <code>range(3)</code> is an iterator; it is equivalent to using the list <code>[0,1,2]</code>.  Here we’re iterating over that 3-element list and using the value for each iteration as the value of the variable <code>_</code>.  (We need to define the variable <code>_</code> in order to iterate through the for-loop, but we never use it, which is why we just call it <code>_</code>.).  In every iteration, we call <code>datafile.readline()</code> which means we read 3 lines of text from the file <em>in total</em>, but since we aren’t saving those lines of text anywhere (i.e., in any variable) we are only reading and discarding them. (Note, anything that begins with an underscore is generally considered "discardable" by common practice, but there is no rule in Python about that.) This for-loop sets us up so the next <code>readline()</code> call is where the data values begin.</p>
+<pre><code> “Permission denied (publickey).
+fatal: Could not read from remote repository.”</code></pre>
+<p>How do I fix this?</p>
+<p><strong>A.</strong> That error comes from trying to use the ssh interface (git@github.com) without the proper SSH keys. Try switching to https:// and it will prompt you for a password.</p>
 <hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Why is there no <code>end for</code> in a Python for-loop?\n",</p>
-<p><strong>A.</strong> Python is sensitive to white space. Anything indented after the <code>for</code> statement is part of the for-block, everything else after that is after the for-loop has completed. There is no extra information that an <code>end for</code> line would be needed to convey.</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Why do we initialize data as an empty list with <code>data = []</code>?</p>
-<p><strong>A.</strong> If we want to use the <code>append</code> function to add elements to our list, the object to which we’re adding elements to has to be an <em>existing</em> (i.e., initialized) list.</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Why do you refer to the data dictionary elements using <code>[]</code> when it is not a list?</p>
-<p><strong>A.</strong> Square brackets, <code>[]</code>, are used in Python to <em>declare a list</em> and to <em>get an item</em>.  In the "get item" usage, the square brackets must be preceded by the name of the variable from which the item is being retrieved.  In the list declaration usage, the square brackets must exist <em>alone</em> (i.e., no variable name preceding it).  For example, <code>x[0]</code> means "get element <code>0</code> from <code>x</code>" and <code>[0]</code> (i.e., without the <code>x</code> in front) means "create a list containing the element <code>0</code>".  The "declare a list" syntax is obviously <em>only</em> for creating a list, but the "get item" syntax can be used with <em>any container</em> (i.e., lists, dictionaries, sets, etc.).  (<strong>NOTE:</strong> Slice notation, namely <code>x[start:stop:step]</code>, only works on lists, and it does not work with dictionaries or sets!)</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> How do you print a single element from a variable, like <code>tempout</code>, from the data dictionary?</p>
-<p><strong>A.</strong> <code>data['tempout'][9]</code></p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Could you explain more about function pointers?</p>
-<p><strong>A.</strong> Everything in Python is an object. You may be used to passing around variables by reference or value. In Python you can also pass around a function without calling it. In this session we passed in <code>float</code> which is a class of objects - and can also be used like a function. We stored the name of the function in the types dictionary so that we could use the function later on in the code.</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-
 </div>
 </div>
 </div>
