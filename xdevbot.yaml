@@ -1,0 +1,87 @@
+analysis:
+  repos:
+    - NCAR/pop-tools
+    - NCAR/hackutils
+    - marbl-ecosys/HiRes-CESM-analysis
+    - NCAR/wrfhydro-pangeo
+  url: https://github.com/NCAR/xdev/projects/6
+checkpoint:
+  repos:
+    - NCAR/xpersist
+  url: https://github.com/NCAR/xdev/projects/7
+core:
+  repos:
+    - NCAR/xdev
+    - NCAR/xdev-docker-images
+    - NCAR/xdevbot
+    - NCAR/pypackage-template
+  url: https://github.com/NCAR/xdev/projects/2
+eocb:
+  repos:
+    - NCAR/ncar-python-tutorial
+    - NCAR/python-tutorial
+    - NCAR/notebook-gallery
+    - NCAR/cesm-lens-aws
+    - ProjectPythia/projectpythia.github.io
+  url: https://github.com/NCAR/xdev/projects/3
+ingestion:
+  repos:
+    - intake/intake-esm
+    - NCAR/ecgtools
+    - NCAR/intake-esm-datastore
+    - NCAR/esm-collection-spec
+    - NCAR/cesm-catalog
+    - NCAR/intake-thredds
+  url: https://github.com/NCAR/xdev/projects/5
+main:
+  repos:
+    - andersy005/repo2singularity
+    - intake/intake-esm
+    - marbl-ecosys/HiRes-CESM-analysis
+    - pangeo-data/benchmarking
+    - NCAR/benchmarking
+    - NCAR/ecgtools
+    - NCAR/esm-collection-spec
+    - NCAR/hackutils
+    - NCAR/intake-esm-datastore
+    - NCAR/jupyter-forward
+    - NCAR/jupyterhub-deploy
+    - NCAR/mpirical
+    - NCAR/ncar-aws-binder
+    - NCAR/ncar-jobqueue
+    - NCAR/ncar-python-tutorial
+    - NCAR/notebook-gallery
+    - NCAR/pop-tools
+    - NCAR/pypackage-template
+    - NCAR/python-tutorial
+    - NCAR/wrfhydro-pangeo
+    - NCAR/xdev
+    - NCAR/xdev-docker-images
+    - NCAR/xdevbot
+    - NCAR/cesm-lens-aws
+    - NCAR/cesm-catalog
+    - NCAR/intake-thredds
+    - andersy005/panelify
+    - NCAR/xpersist
+    - ProjectPythia/projectpythia.github.io
+  url: https://github.com/NCAR/xdev/projects/10
+platform:
+  repos:
+    - NCAR/jupyter-forward
+    - NCAR/jupyterhub-deploy
+    - NCAR/ncar-aws-binder
+    - NCAR/ncar-jobqueue
+    - NCAR/mpirical
+    - NCAR/benchmarking
+    - pangeo-data/benchmarking
+  url: https://github.com/NCAR/xdev/projects/9
+publication:
+  repos:
+    - NCAR/ncar-aws-binder
+    - NCAR/jupyterhub-deploy
+    - andersy005/repo2singularity
+    - andersy005/panelify
+  url: https://github.com/NCAR/xdev/projects/8
+search:
+  repos:
+  url: https://github.com/NCAR/xdev/projects/4
