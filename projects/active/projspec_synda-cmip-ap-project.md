@@ -13,7 +13,7 @@ The goal of this project is to increase the efficiency of building and maintaini
 
 [Synda Code Repository](https://github.com/Prodiguer/synda)
 
-[Intake-esm Catalog Builder Scripts](https://github.com/NCAR/intake-esm-datastore/tree/master/builders)
+[Intake-esm Catalog Builder Scripts](https://github.com/NCAR/intake-esm-datastore/tree/main/builders)
 
 ## Skills & Knowledge
 
@@ -34,7 +34,7 @@ The goal of this project is to increase the efficiency of building and maintaini
 
 ## Milestones & Timeline
 
-Milestones are in draft below. 
+Milestones are in draft below.
 
 | Milestone     | Deadline  | Done    |
 |:--------------|:---------:|:-------:|

@@ -113,8 +113,8 @@ Whenever development happens, we strongly encourage you to do everything
 in a _fork_, instead of directly pushing changes into the main repository.
 We still encourage the use of _descriptive branch names_ in your fork,
 describing the feature/fix that is being implemented, so that GitHub
-history graphs can be more descriptive than just "master was merged into
-master".  Even if you have rights to directly push into a repository,
+history graphs can be more descriptive than just "main was merged into
+main".  Even if you have rights to directly push into a repository,
 we recommend doing everything through forks and pull requests.
 
 Also, keep in might that the Git best practice of "commit early and
@@ -255,8 +255,8 @@ so they should be used whenever possible.
 I recommend setting your CI up to run _tests_ (including _linting_ tests)
 whenever a Pull Request is _created_ (and when edits/changes are made to an
 existing PR).  You can either use GitHub to block commits directly into the
-master branch (i.e., force all commits to go through PRs), or you can also
-run CI on changes made directly to your master branch.  I recommend setting
+main branch (i.e., force all commits to go through PRs), or you can also
+run CI on changes made directly to your main branch.  I recommend setting
 up your CI to _build (and publish) documentation_ only when a PR is _merged_
 (i.e., only after it has been tested and approved).
 

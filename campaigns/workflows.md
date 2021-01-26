@@ -171,11 +171,11 @@ semi-automatically with a simple command-line utility.
 
 - Automatic catalog generation for model data (i.e., catalog generated automatically
   with model run)
-- A "master catalog" service, that provides a "master" catalog for all datasets
+- A "main catalog" service, that provides a "main" catalog for all datasets
   stored at the same location.  (It makes no sense to aggregate catalogs for datasets
   stored at scattered locations unless the download cost is extremely low.)  This
-  would make it possible for a master "config file" be created for `intake` so that
-  an individual catalog need never actually be loaded (i.e., the master catalog is
+  would make it possible for a main "config file" be created for `intake` so that
+  an individual catalog need never actually be loaded (i.e., the main catalog is
   loaded automatically).  This could also make it possible to search and discover
   datasets directly from within the Notebook, which might eliminate the need for a
   JupyterLab extension or external website service for search and discovery.

@@ -50,7 +50,7 @@
         {% if 'travis' in project.badges %}
         <td align="left">
           <a href="https://travis-ci.org/{{ project.travis_project }}">
-            <!-- <img src="https://travis-ci.org/{{ project.travis_project }}.svg?branch=master&logo=travis"> -->
+            <!-- <img src="https://travis-ci.org/{{ project.travis_project }}.svg?branch=main&logo=travis"> -->
             <img src="https://img.shields.io/travis/{{ project.travis_project }}?&logo=travis" />
           </a>
         </td>
@@ -77,14 +77,14 @@
         {% endif %}
         <!-- {% if 'coveralls' in project.badges %}
         <td align='left'>
-          <a href="https://coveralls.io/r/{{ project.repo }}?branch=master">
-            <img src="https://coveralls.io/repos/{{ project.repo }}/badge.svg?branch=master">
+          <a href="https://coveralls.io/r/{{ project.repo }}?branch=main">
+            <img src="https://coveralls.io/repos/{{ project.repo }}/badge.svg?branch=main">
           </a>
         </td>
         {% elif 'codecov' in project.badges %}
         <td align='left'>
-          <a href="https://codecov.io/gh/{{ project.repo }}?branch=master">
-            <img src="https://codecov.io/gh/{{ project.repo }}/branch/master/graph/badge.svg">
+          <a href="https://codecov.io/gh/{{ project.repo }}?branch=main">
+            <img src="https://codecov.io/gh/{{ project.repo }}/branch/main/graph/badge.svg">
           </a>
         </td>
         {% else %}
