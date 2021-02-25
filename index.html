@@ -31,7 +31,8 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://ncar.github.io/xdev/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python-tutorial-seminar-series-spring-2021/" type="text/html">
+<link rel="next" href="index-1.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/your-first-package-python-tutorial-faq/" type="text/html">
 </head>
 <body>
   <div class="site-wrapper">
@@ -74,6 +75,40 @@
     
 <div class="post-feed">
     <article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
+        <a class="post-card-content-link" href="posts/your-first-package-python-tutorial-faq/">
+          <header class="post-card-header"><h2 class="post-card-title">Your First Package Python Tutorial FAQ</h2>
+            <section class="post-meta"><time class="post-meta-date" datetime="2021-02-19T16:59:27-07:00">
+                2021 February 19
+              </time><span class="post-meta-divider">|</span>
+              <a href="authors/julia-kent/">Julia Kent</a>
+            </section></header><section class="post-card-excerpt"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions from the fourth and fifth sessions (<a href="https://ncar.github.io/python-tutorial/tutorials/yourfirst.html#first-python-package">"Your First Package"</a>) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (<code>math</code>), and how to publish your package</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Should we add <code>__init__.py</code> to <code>.gitignore</code>?</p>
+<p><strong>A.</strong> We do not advise that. <code>__init__.py</code> is a special file that needs to be in that directory for Python to know to treat that directory like a Python package. So you need it even though it is, in this case, an empty file.</p>
+<p>Whenever you do an import of a module, that module is executed. So if you’ve defined variables or run code in that file - at import time, that code will be executed. Modules tend to only contain function definitions or the construction of data or classes, so that at import time these definitions are available to us without. <code>__init__.py</code> works much the same way. Whenever you import something from a package its <code>__init__.py</code> will be executed. Since we don’t need anything done, in our situation, it is empty.</p>
+<hr>
+<p class="more"><a href="posts/your-first-package-python-tutorial-faq/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+          </section></a>
+      </div>
+    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
         <a class="post-card-content-link" href="posts/python-tutorial-seminar-series-spring-2021/">
           <header class="post-card-header"><h2 class="post-card-title">Python Tutorial Seminar Series - Spring 2021</h2>
             <section class="post-meta"><time class="post-meta-date" datetime="2021-02-16T13:56:01-07:00">
@@ -324,54 +359,14 @@ geoscience community toward a better future.</p>
 </div>
           </section></a>
       </div>
-    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
-        <a class="post-card-content-link" href="posts/time/">
-          <header class="post-card-header"><h2 class="post-card-title">Time</h2>
-            <section class="post-meta"><time class="post-meta-date" datetime="2019-08-28T13:45:45-06:00">
-                2019 August 28
-              </time><span class="post-meta-divider">|</span>
-              <a href="authors/julia-kent/">Julia Kent</a>
-            </section></header><section class="post-card-excerpt"><div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Significance-of-Time">The Significance of Time<a class="anchor-link" href="posts/time/#The-Significance-of-Time">¶</a>
-</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Time is relative, as my coworker Anderson likes to remind me every time manipulating this coordinate proves to be relatively difficult.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This post is to be the first in a series of my struggles coming from an atmospheric science background and transitioning into software. My hope is that if I detail pain points and headaches I encounter along my journey, you won’t have to.</p>
-<p class="more"><a href="posts/time/">Read more…</a></p>
-</div>
-</div>
-</div>
-</div>
-          </section></a>
-      </div>
     </article>
 </div>
 
-
-
-        
-       <script>var disqus_shortname="ncar-xdev-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        <nav class="postindexpager"><ul class="pager">
+<li class="next">
+                <a href="index-1.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="ncar-xdev-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"] ],

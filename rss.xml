@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev</title><link>https://ncar.github.io/xdev/</link><description>Experimenting. Prototyping.</description><atom:link href="https://ncar.github.io/xdev/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Fri, 19 Feb 2021 00:17:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python Tutorial Seminar Series - Spring 2021</title><link>https://ncar.github.io/xdev/posts/python-tutorial-seminar-series-spring-2021/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev</title><link>https://ncar.github.io/xdev/</link><description>Experimenting. Prototyping.</description><atom:link href="https://ncar.github.io/xdev/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Thu, 25 Feb 2021 21:50:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Your First Package Python Tutorial FAQ</title><link>https://ncar.github.io/xdev/posts/your-first-package-python-tutorial-faq/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Here is a compilation of questions from the fourth and fifth sessions (&lt;a href="https://ncar.github.io/python-tutorial/tutorials/yourfirst.html#first-python-package"&gt;"Your First Package"&lt;/a&gt;) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (&lt;code&gt;math&lt;/code&gt;), and how to publish your package&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Should we add &lt;code&gt;__init__.py&lt;/code&gt; to &lt;code&gt;.gitignore&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A.&lt;/strong&gt; We do not advise that. &lt;code&gt;__init__.py&lt;/code&gt; is a special file that needs to be in that directory for Python to know to treat that directory like a Python package. So you need it even though it is, in this case, an empty file.&lt;/p&gt;
+&lt;p&gt;Whenever you do an import of a module, that module is executed. So if you’ve defined variables or run code in that file - at import time, that code will be executed. Modules tend to only contain function definitions or the construction of data or classes, so that at import time these definitions are available to us without. &lt;code&gt;__init__.py&lt;/code&gt; works much the same way. Whenever you import something from a package its &lt;code&gt;__init__.py&lt;/code&gt; will be executed. Since we don’t need anything done, in our situation, it is empty.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/your-first-package-python-tutorial-faq/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/your-first-package-python-tutorial-faq/</guid><pubDate>Fri, 19 Feb 2021 23:59:27 GMT</pubDate></item><item><title>Python Tutorial Seminar Series - Spring 2021</title><link>https://ncar.github.io/xdev/posts/python-tutorial-seminar-series-spring-2021/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The "Your First" Python Tutorial Series is over, but the tutorial seminar series continues.&lt;/p&gt;
@@ -94,23 +110,4 @@ enormous success with Open Source development when coupled with modern software
 best practices, and we started to develop a plan of how to help shift, albeit
 slowly, both NCAR and---though collaboration with the Pangeo community---the
 geoscience community toward a better future.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/we-are-xdev/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>open development</category><category>open source</category><guid>https://ncar.github.io/xdev/posts/we-are-xdev/</guid><pubDate>Mon, 09 Dec 2019 18:00:00 GMT</pubDate></item><item><title>Time</title><link>https://ncar.github.io/xdev/posts/time/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="The-Significance-of-Time"&gt;The Significance of Time&lt;a class="anchor-link" href="https://ncar.github.io/xdev/posts/time/#The-Significance-of-Time"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Time is relative, as my coworker Anderson likes to remind me every time manipulating this coordinate proves to be relatively difficult.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This post is to be the first in a series of my struggles coming from an atmospheric science background and transitioning into software. My hope is that if I detail pain points and headaches I encounter along my journey, you won’t have to.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/time/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/time/</guid><pubDate>Wed, 28 Aug 2019 19:45:45 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/we-are-xdev/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>open development</category><category>open source</category><guid>https://ncar.github.io/xdev/posts/we-are-xdev/</guid><pubDate>Mon, 09 Dec 2019 18:00:00 GMT</pubDate></item></channel></rss>
