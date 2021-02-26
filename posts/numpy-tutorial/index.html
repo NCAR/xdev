@@ -12,9 +12,8 @@
       gtag('js', new Date());
       gtag('config', 'G-50ST3W7ZN6');
     </script><meta charset="utf-8">
-<meta name="description" content="Experimenting. Prototyping.">
 <meta name="viewport" content="width=device-width">
-<title>Posts for year 2021 | Xdev</title>
+<title>Numpy Tutorial | Xdev</title>
 <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
@@ -30,8 +29,18 @@
 <meta name="theme-color" content="#1A658F">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://ncar.github.io/xdev/archives/2021/">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/numpy-tutorial/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
+<link rel="prev" href="../your-first-package-python-tutorial-faq/" title="Your First Package Python Tutorial FAQ" type="text/html">
+<meta property="og:site_name" content="Xdev">
+<meta property="og:title" content="Numpy Tutorial">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/numpy-tutorial/">
+<meta property="og:description" content="The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package numpy on Wednesday, March 10th at 1 PM Mountain. This session will be led by Austin Kootz.
+Pre">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-02-26T08:21:56-07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@NCARXdev">
 </head>
 <body>
   <div class="site-wrapper" style="background: #FFF">
@@ -59,11 +68,51 @@
 </div>
     </header><main class="site-main outer" role="main"><div class="inner">
         
-<article class="listpage"><header><h1>Posts for year 2021</h1>
-    </header><ul class="postlist"><li>
-<a href="02/">February</a>
-            (3)
-    </li></ul></article>
+
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Numpy Tutorial</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2021-02-26T08:21:56-07:00">
+            2021 February 26
+          </time><span class="post-meta-divider">|</span>
+          <a href="../../authors/julia-kent/">Julia Kent</a>
+        </section></header><section class="post-full-content"><div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package <code>numpy</code> on <strong>Wednesday, March 10th at 1 PM Mountain</strong>. This session will be led by Austin Kootz.</p>
+<h3 id="Preparation">Preparation<a class="anchor-link" href="#Preparation">¶</a>
+</h3>
+<ol>
+<li>Check your conda install if this is the first tutorial in the series you are joining us for with <code>conda --version</code> and if necessary <a href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>
+</li>
+<li>Activate your tutorial environment from the last session on Jupyter notebooks with <code>conda activate jupyter_tutorial</code>
+</li>
+<li>Install <code>numpy</code> and <code>matplotlib</code> with <code>conda install numpy matplotlib</code>
+</li>
+</ol>
+<p>If you did not have a <code>jupyter_tutorial</code> environment (i.e. you did not attend the previous tutorial on Jupyter Notebooks), create one with all of the necessary packages for the session on <code>numpy</code> with <code>conda create --name jupyter_tutorial jupyterlab numpy matplotlib</code></p>
+<p>You can watch the recording from the live tutorial on Jupyter Notebooks <a href="https://youtu.be/xSzXvwzFsDU">here</a>.</p>
+<h3 id="Sign-Up">Sign Up<a class="anchor-link" href="#Sign-Up">¶</a>
+</h3>
+<p>If you would like join the <em>learnpython@ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking "Join Group" next to the group name.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+</div></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>
+        <script src="https://utteranc.es/client.js" repo="NCAR/xdev-blog-comments" issue-term="title" theme="github-light" crossorigin="anonymous" async>
+        </script></section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></footer>
 </div>
     </main><footer class="site-footer outer"><div class="site-footer-content inner">
         <div class="site-footer-image" style="width: 409px; height: 40px;">
