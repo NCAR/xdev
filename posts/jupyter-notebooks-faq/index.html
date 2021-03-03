@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-158200162-1"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-158200162-1');
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-50ST3W7ZN6"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-50ST3W7ZN6');
+    </script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Jupyter Notebooks FAQ | Xdev</title>
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/icons.css">
+<link href="https://fonts.googleapis.com/css?family=Audiowide%7CCrimson+Pro%7CMerriweather%7CSaira+Stencil+One&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+<link rel="manifest" href="../../assets/site.webmanifest">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#1A658F">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/jupyter-notebooks-faq/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
+<link rel="prev" href="../numpy-tutorial/" title="Numpy Tutorial" type="text/html">
+<meta property="og:site_name" content="Xdev">
+<meta property="og:title" content="Jupyter Notebooks FAQ">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/jupyter-notebooks-faq/">
+<meta property="og:description" content="Here is a compilation of questions and issues that arose during the Jupyter Notebooks session of the Python Tutorial Seminar Series.
+
+
+
+
+
+
+
+
+Q. I installed Miniconda but it doesn’t seem to be working.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-03-03T12:46:28-07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@NCARXdev">
+</head>
+<body>
+  <div class="site-wrapper" style="background: #FFF">
+
+    
+    <header class="site-header outer"><div class="inner">
+        
+    <nav class="site-nav" style="top: 0;"><div class="site-nav-menu">
+        <ul class="nav" role="menu">
+<li class="nav-item" role="menuitem"><a class="nav-logo" href="../../"><img src="../../assets/img/xdev_logo.png" alt="Xdev"></a></li>
+          
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../pages/about/">About</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../rss.xml">RSS</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="../../pages/status/">Dashboard</a></li>
+
+          
+
+        </ul>
+</div>
+      <div class="site-nav-social">
+        <a href="https://github.com/NCAR/xdev" class="social-link" target="_blank"><span class="icon-github"></span></a>
+        <a href="https://twitter.com/NCARXdev" class="social-link" target="_blank"><span class="icon-twitter"></span></a>
+      </div>
+    </nav>
+</div>
+    </header><main class="site-main outer" role="main"><div class="inner">
+        
+
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Jupyter Notebooks FAQ</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2021-03-03T12:46:28-07:00">
+            2021 March 3
+          </time><span class="post-meta-divider">|</span>
+          <a href="../../authors/julia-kent/">Julia Kent</a>
+        </section></header><section class="post-full-content"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions and issues that arose during the <a href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> session of the Python Tutorial Seminar Series.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> I installed Miniconda but it doesn’t seem to be working. <code>conda</code> is not a recognized command. What should I do?</p>
+<p><strong>A.</strong> This is possible if Miniconda is not visible from your workspace, according to the <a href="https://docs.anaconda.com/anaconda/user-guide/troubleshooting/#cannot-get-conda-to-run-after-installing">Conda trouble shooting site</a> this happens if you answered “NO” instead of “YES” when asked if you’d like to prepend the conda prompt to your path.  You have two options:</p>
+<ol>
+<li>
+<p>Manually edit your (hidden) <code>.baschrc</code> file to include the line:</p>
+
+<pre><code> export PATH=/Users/your-username/anaconda3/bin:$PATH</code></pre>
+</li>
+<li>Try uninstalling and re-installing Conda, making sure to answer “YES” this time,</li>
+</ol>
+<hr>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> I executed <code>jupyter lab</code> and received the message, “Could not determine jupyterlab build status without nodejs”. Do I need to exit somehow and or fix something?</p>
+<p><strong>A.</strong> This is only a warning, not an error message. No fix is necessary.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> How do you specify what browser Jupyter opens with?</p>
+<p><strong>A.</strong> If you don’t want to use your default browser (which Jupyter will automatically open), you can specify a different one with <code>jupyter lab —browser=chrome</code> (e.g., for Chrome)</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Jupyter opens to my base environment, not the environment I launched <code>jupyter lab</code> from. Is this an error?</p>
+<p><strong>A.</strong> This is the expected behavior. You can double check your environment by typing <code>conda env list</code> from your Jupyter terminal to see all of your environments. The one with the asterisks next to it is your activated environment.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> The Jupyter workspace autocompletion of quotation marks and parenthesis is causing errors. Is there a way to disable this?</p>
+<p><strong>A.</strong> Yes according to this this <a href="https://stackoverflow.com/questions/44216326/how-to-disable-auto-quotes-and-auto-brackets-in-jupyter-5-0#:~:text=2%20Answers&amp;text=After%20executing%20the%20Python%20command,auto%2Dclosing%20quotes%20and%20brackets">stack overflow post</a>, in any code cell type:</p>
+
+<pre><code>from notebook.services.config import ConfigManager
+c = ConfigManager()
+c.update('notebook', {"CodeCell": {"cm_config": {"autoCloseBrackets": False}}})</code></pre>
+<p>You may have to restart the Jupyter session for the changes to take effect.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Is converting a cell from code to raw a good way to basically “comment out” an entire cell?  Is that good practice or bad practice?</p>
+<p><strong>A.</strong> This is the easiest way to "comment out" a cell.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> How do I use Jupyter with an R kernel (instead of Python)?</p>
+<p><strong>A.</strong> You would need to create a new Conda environment with R and <code>jupyter</code> installed.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Does Jupyter Lab care about being shut down gracefully?  If I you just <code>ctrl-C</code> it from the command-line, does that do anything bad?</p>
+<p><strong>A.</strong> As long as your notebook is saved, <code>ctrl-C</code> is fine. Otherwise, you will lose the contents of your notebooks that weren’t saved before the shutdown.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> How do different environments affect resource usage in virtual environments?</p>
+<p><strong>A.</strong> Running code uses resources, different environments use disc space. It is possible to have a ton of duplication (e.g., every single user of the virtual environment has installed <code>numpy</code>) but this gives you a lot of control over your own software versioning. You can prune unused virtual environments to save disc space with the command <code>conda env remove —name my_env</code>, or try <code>conda clean -a</code> to clean up any cached downloaded packages.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Where are the packages physically installed in a virtual environment?</p>
+<p><strong>A.</strong> In the directory where miniconda was installed, you will see a directory called <code>envs</code>, and every single named environment will be put into that directory.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Why do we install Miniconda instead of Anaconda?</p>
+<p><strong>A.</strong> Miniconda is much more lightweight than Anaconda. It contains fewer packages and takes up less disc space.</p>
+<hr>
+</div>
+</div>
+</div>
+</div></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>
+        <script src="https://utteranc.es/client.js" repo="NCAR/xdev-blog-comments" issue-term="title" theme="github-light" crossorigin="anonymous" async>
+        </script></section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></footer>
+</div>
+    </main><footer class="site-footer outer"><div class="site-footer-content inner">
+        <div class="site-footer-image" style="width: 409px; height: 40px;">
+          <a href="https://www2.cisl.ucar.edu/"><img src="../../assets/img/CISL-contemp-logo-white.svg" alt="CISL"></a>
+        </div>
+        <div class="site-footer-section">
+          <section><a href="https://www.ucar.edu/">University Corporation for Atmospheric Research</a> © 2021<br>Proudly published with <a href="https://getnikola.com/">Nikola</a> &amp; <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a><br>Apache 2.0</section>
+</div>
+      </div>
+      <div class="site-footer-content inner" style="border: 0; padding: 0; flex-wrap: nowrap;">
+        <div class="site-footer-image" style="width: 60px; height: 60px;">
+          <a href="https://nsf.gov/"><img src="../../assets/img/footer-logo-nsf.png" alt="NSF"></a>
+        </div>
+        <div class="site-footer-section" style="width: 100%;">
+          <section>This material is based upon work supported by the National Center for Atmospheric Research, a major facility sponsored by the National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</section>
+</div>
+      </div>
+    </footer>
+</div>
+  
+    <script type="text/javascript" src="../../assets/js/jquery.js"></script><script type="text/javascript" src="../../assets/js/jquery.fitvids.js"></script><script type="text/javascript" src="../../assets/js/index.js"></script>
+</body>
+</html>

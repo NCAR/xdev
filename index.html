@@ -32,7 +32,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://ncar.github.io/xdev/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/numpy-tutorial/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/jupyter-notebooks-faq/" type="text/html">
 </head>
 <body>
   <div class="site-wrapper">
@@ -75,6 +75,47 @@
     
 <div class="post-feed">
     <article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
+        <a class="post-card-content-link" href="posts/jupyter-notebooks-faq/">
+          <header class="post-card-header"><h2 class="post-card-title">Jupyter Notebooks FAQ</h2>
+            <section class="post-meta"><time class="post-meta-date" datetime="2021-03-03T12:46:28-07:00">
+                2021 March 3
+              </time><span class="post-meta-divider">|</span>
+              <a href="authors/julia-kent/">Julia Kent</a>
+            </section></header><section class="post-card-excerpt"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions and issues that arose during the <a href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> session of the Python Tutorial Seminar Series.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> I installed Miniconda but it doesn’t seem to be working. <code>conda</code> is not a recognized command. What should I do?</p>
+<p><strong>A.</strong> This is possible if Miniconda is not visible from your workspace, according to the <a href="https://docs.anaconda.com/anaconda/user-guide/troubleshooting/#cannot-get-conda-to-run-after-installing">Conda trouble shooting site</a> this happens if you answered “NO” instead of “YES” when asked if you’d like to prepend the conda prompt to your path.  You have two options:</p>
+<ol>
+<li>
+<p>Manually edit your (hidden) <code>.baschrc</code> file to include the line:</p>
+
+<pre><code> export PATH=/Users/your-username/anaconda3/bin:$PATH</code></pre>
+</li>
+<li>Try uninstalling and re-installing Conda, making sure to answer “YES” this time,</li>
+</ol>
+<hr>
+<p class="more"><a href="posts/jupyter-notebooks-faq/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+          </section></a>
+      </div>
+    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
         <a class="post-card-content-link" href="posts/numpy-tutorial/">
           <header class="post-card-header"><h2 class="post-card-title">Numpy Tutorial</h2>
             <section class="post-meta"><time class="post-meta-date" datetime="2021-02-26T08:21:56-07:00">
@@ -334,30 +375,6 @@ explanation was convoluted and confusing, not that I stopped talking,
 mind you.  Attribute that to being unprepared, or sleep deprived (i.e.,
 child <em>still</em> not sleeping through the night!), or just a bad teacher.</p>
 <p class="more"><a href="posts/templating-isnt-just-for-web-developers/">Read more…</a></p>
-</div>
-          </section></a>
-      </div>
-    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
-        <a class="post-card-content-link" href="posts/intake-esm-2020316/">
-          <header class="post-card-header"><h2 class="post-card-title">Intake-esm Release 2020.3.16</h2>
-            <section class="post-meta"><time class="post-meta-date" datetime="2020-03-18T09:00:00-06:00">
-                2020 March 18
-              </time><span class="post-meta-divider">|</span>
-              <a href="authors/anderson-banihirwe/">Anderson Banihirwe</a>
-              <span class="post-meta-divider">|</span>
-              <a href="tags/intake/">intake</a>, 
-              <a href="tags/tooling/">tooling</a>
-            </section></header><section class="post-card-excerpt"><div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I'm pleased to announce the release of <code>intake-esm</code> version 2020.3.16. This is a new release with bug fixes and new features. Everyone is invited to give it a try, and make their thoughts, suggestions, feedback known! This blogpost outlines these changes. Full changelog is available <a href="https://intake-esm.readthedocs.io/en/latest/changelog.html#intake-esm-v2020-03-16">here</a>.</p>
-<p>On GitHub: <a href="https://github.com/NCAR/intake-esm">https://github.com/NCAR/intake-esm</a></p>
-<p>Documentation: <a href="https://intake-esm.readthedocs.io/">https://intake-esm.readthedocs.io/</a></p>
-<p class="more"><a href="posts/intake-esm-2020316/">Read more…</a></p>
-</div>
-</div>
 </div>
           </section></a>
       </div>

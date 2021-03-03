@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev (Posts by Julia Kent)</title><link>https://ncar.github.io/xdev/</link><description></description><atom:link href="https://ncar.github.io/xdev/authors/julia-kent.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Fri, 26 Feb 2021 23:15:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Numpy Tutorial</title><link>https://ncar.github.io/xdev/posts/numpy-tutorial/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev (Posts by Julia Kent)</title><link>https://ncar.github.io/xdev/</link><description></description><atom:link href="https://ncar.github.io/xdev/authors/julia-kent.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Wed, 03 Mar 2021 23:51:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jupyter Notebooks FAQ</title><link>https://ncar.github.io/xdev/posts/jupyter-notebooks-faq/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a href="https://youtu.be/xSzXvwzFsDU"&gt;Jupyter Notebooks&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; I installed Miniconda but it doesn’t seem to be working. &lt;code&gt;conda&lt;/code&gt; is not a recognized command. What should I do?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A.&lt;/strong&gt; This is possible if Miniconda is not visible from your workspace, according to the &lt;a href="https://docs.anaconda.com/anaconda/user-guide/troubleshooting/#cannot-get-conda-to-run-after-installing"&gt;Conda trouble shooting site&lt;/a&gt; this happens if you answered “NO” instead of “YES” when asked if you’d like to prepend the conda prompt to your path.  You have two options:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Manually edit your (hidden) &lt;code&gt;.baschrc&lt;/code&gt; file to include the line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; export PATH=/Users/your-username/anaconda3/bin:$PATH&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Try uninstalling and re-installing Conda, making sure to answer “YES” this time,&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/jupyter-notebooks-faq/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/jupyter-notebooks-faq/</guid><pubDate>Wed, 03 Mar 2021 19:46:28 GMT</pubDate></item><item><title>Numpy Tutorial</title><link>https://ncar.github.io/xdev/posts/numpy-tutorial/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code&gt;numpy&lt;/code&gt; on &lt;strong&gt;Wednesday, March 10th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Austin Kootz.&lt;/p&gt;
