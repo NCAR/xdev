@@ -17,7 +17,7 @@
 
 ## Overview
 
-The current spec requires that the `catalog_file` point to a `csv file`. In some cases, it would be useful to embed the catalog "table" in the catalog itself. A so called single-file-catalog. STAC has an extension that does this (see [here](https://github.com/radiantearth/stac-spec/tree/master/extensions/single-file-stac)).
+The current spec requires that the `catalog_file` point to a `csv file`. In some cases, it would be useful to embed the catalog "table" in the catalog itself. A so called single-file-catalog. STAC has an extension that does this (see [here](https://github.com/radiantearth/stac-spec/tree/main/extensions/single-file-stac)).
 
 ## Repositories
 

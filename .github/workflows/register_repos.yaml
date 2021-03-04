@@ -36,7 +36,7 @@ jobs:
           git add xdevbot.yaml && git commit -m "[skip ci] Update configuration file."
 
       - name: Push commit
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: xdevbot

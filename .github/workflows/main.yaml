@@ -2,10 +2,10 @@ name: build
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   workflow_dispatch: # allows you to trigger manually
 
 jobs:
@@ -34,7 +34,7 @@ jobs:
          cd site
          nikola check --check-links --check-files --find-sources --remote --verbose
       - name: Deploy to GitHub pages
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
