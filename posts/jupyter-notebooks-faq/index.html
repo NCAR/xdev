@@ -191,6 +191,7 @@ c.update('notebook', {"CodeCell": {"cm_config": {"autoCloseBrackets": False}}})<
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Q.</strong> Does Jupyter Lab care about being shut down gracefully?  If I you just <code>ctrl-C</code> it from the command-line, does that do anything bad?</p>
 <p><strong>A.</strong> As long as your notebook is saved, <code>ctrl-C</code> is fine. Otherwise, you will lose the contents of your notebooks that weren’t saved before the shutdown.</p>
+<p>On a Mac you can double check that your Jupyter Notebook isn't still running in the background, type <code>jupyter notebook list</code> in the terminal to list all active sessions.</p>
 <hr>
 </div>
 </div>
