@@ -13,7 +13,7 @@
       gtag('config', 'G-50ST3W7ZN6');
     </script><meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Matplotlib Tutorial | Xdev</title>
+<title>Numpy FAQ | Xdev</title>
 <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
@@ -29,16 +29,25 @@
 <meta name="theme-color" content="#1A658F">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://ncar.github.io/xdev/posts/matplotlib-tutorial/">
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/numpy-faq/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
-<link rel="prev" href="../jupyter-notebooks-faq/" title="Jupyter Notebooks FAQ" type="text/html">
-<link rel="next" href="../numpy-faq/" title="Numpy FAQ" type="text/html">
+<link rel="prev" href="../matplotlib-tutorial/" title="Matplotlib Tutorial" type="text/html">
 <meta property="og:site_name" content="Xdev">
-<meta property="og:title" content="Matplotlib Tutorial">
-<meta property="og:url" content="https://ncar.github.io/xdev/posts/matplotlib-tutorial/">
-<meta property="og:description" content="The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package matplotlib on Wednesday, March 24th at 1 PM Mountain. This session will be led by Anissa Zacha">
+<meta property="og:title" content="Numpy FAQ">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/numpy-faq/">
+<meta property="og:description" content="Here is a compilation of questions and issues that arose during the Numpy session of the Python Tutorial Seminar Series.
+The live video recording of this content can be found here.
+
+
+
+
+
+
+
+
+Q. Is it po">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-03-19T08:21:56-07:00">
+<meta property="article:published_time" content="2021-03-19T14:23:39-06:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@NCARXdev">
 </head>
@@ -69,36 +78,66 @@
     </header><main class="site-main outer" role="main"><div class="inner">
         
 
-    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Matplotlib Tutorial</h1>
-        <section class="post-meta"><time class="post-meta-date" datetime="2021-03-19T08:21:56-07:00">
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Numpy FAQ</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2021-03-19T14:23:39-06:00">
             2021 March 19
           </time><span class="post-meta-divider">|</span>
           <a href="../../authors/julia-kent/">Julia Kent</a>
-        </section></header><section class="post-full-content"><div class="cell border-box-sizing text_cell rendered">
+        </section></header><section class="post-full-content"><div>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package <code>matplotlib</code> on <strong>Wednesday, March 24th at 1 PM Mountain</strong>. This session will be led by Anissa Zacharias.</p>
-<p>The content for this tutorial is hosted on Anissa's <a href="https://github.com/anissa111/matplotlib-tutorial">matplotlib-tutorial GitHub repository</a>. Primarily direct your attention to the <code>matplotlib-tutorial.ipynb</code>.</p>
-<h3 id="Preparation">Preparation<a class="anchor-link" href="#Preparation">¶</a>
-</h3>
-<ul>
-<li>Check your conda install if this is the first tutorial in the series you are joining us for with <code>conda --version</code> and if necessary <a href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</li>
-</ul>
-<!-- TEASER_END --><ul>
-<li>
-<p>If you already have Jupyter working correctly in an environment (perhaps called <code>jupyter_tutorial</code>) from your personal use or a past tutorial in this seminar series, activate it with <code>conda activate ENVNAME</code>. Then check that you have <code>numpy</code> and <code>matplotlib</code> installed with <code>conda list</code>. If installation is necessary, type <code>conda install matplotlib numpy</code>.</p>
-</li>
-<li>
-<p>If you do not have a Jupyter-ready tutorial (i.e. you did not attend the previous tutorials), create one with all of the necessary packages for the session on <code>matplotlib</code> with <code>conda create --name matplotlib_tutorial jupyterlab numpy matplotlib</code>.</p>
-</li>
-</ul>
-<p>If you did not attend the live session, it will beneficial to watch the recording from the live tutorial on <a href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> before the Matplotlib session.</p>
-<h3 id="Sign-Up">Sign Up<a class="anchor-link" href="#Sign-Up">¶</a>
-</h3>
-<p>If you would like join the <em>learnpython@ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking "Join Group" next to the group name.</p>
-<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<p>Here is a compilation of questions and issues that arose during the <a href="https://colab.research.google.com/drive/1zcjaGXofLzUXkQzJKnANE9Z3yFUt0q7E?usp=sharing">Numpy</a> session of the Python Tutorial Seminar Series.</p>
+<p>The live video recording of this content can be found <a href="https://www.youtube.com/watch?v=kstc-6uz7AQ&amp;t=10s">here</a>.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Is it possible to provide a “step” instead of a number of elements when using <code>numpy.linspace</code> to create an array?</p>
+<p><strong>A.</strong> The step size is derived from the input arguments <code>start</code>, <code>stop</code>, and <code>number</code> with <code>numpy.linspace</code>. If you instead want to supply the step size and derive the number of steps, you would instead use the function <code>numpy.arange</code> that takes the input arguments <code>start</code>, <code>stop</code>, and <code>number</code>. <code>numpy.arange()</code> differs from Python’s built-in <code>range()</code> function which only supports integers and produces a <code>list</code> rather than an <code>array</code>.</p>
+<hr>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Are there Python methods that mutate the object, or do they always generate a new object? If so, are there any good heuristics for knowing which methods change their objects and which generate changed copies?</p>
+<p><strong>A.</strong> Yes there are Python functions that mutate the object. Checking the documentation is the safest way to confirm how the functions from library or package behaves.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Is it faster to work with a Python <code>list</code> or a Numpy <code>array</code>?</p>
+<p><strong>A.</strong> Arrays are faster if you want to modify the object. You can test which is faster in a Jupyter notebook by typing <code>%%time</code> at the top of your cells, or <code>%%timeit</code> which will run the cell multiple times and produce the average time of computation.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Can numpy Arrays hold non-numeric data?</p>
+<p><strong>A.</strong> Yes, a Numpy <code>array</code> can hold any data type of equivalent size as well as any Numpy native data type. It cannot hold varying like <code>string</code>s, but <code>string</code>s of the same lengths are acceptable. All of the elements of a Numpy <code>array</code> must be the same type as each other.</p>
+<hr>
+</div>
 </div>
 </div>
 </div></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>

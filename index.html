@@ -32,7 +32,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://ncar.github.io/xdev/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/matplotlib-tutorial/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/numpy-faq/" type="text/html">
 </head>
 <body>
   <div class="site-wrapper">
@@ -75,6 +75,40 @@
     
 <div class="post-feed">
     <article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
+        <a class="post-card-content-link" href="posts/numpy-faq/">
+          <header class="post-card-header"><h2 class="post-card-title">Numpy FAQ</h2>
+            <section class="post-meta"><time class="post-meta-date" datetime="2021-03-19T14:23:39-06:00">
+                2021 March 19
+              </time><span class="post-meta-divider">|</span>
+              <a href="authors/julia-kent/">Julia Kent</a>
+            </section></header><section class="post-card-excerpt"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions and issues that arose during the <a href="https://colab.research.google.com/drive/1zcjaGXofLzUXkQzJKnANE9Z3yFUt0q7E?usp=sharing">Numpy</a> session of the Python Tutorial Seminar Series.</p>
+<p>The live video recording of this content can be found <a href="https://www.youtube.com/watch?v=kstc-6uz7AQ&amp;t=10s">here</a>.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Is it possible to provide a “step” instead of a number of elements when using <code>numpy.linspace</code> to create an array?</p>
+<p><strong>A.</strong> The step size is derived from the input arguments <code>start</code>, <code>stop</code>, and <code>number</code> with <code>numpy.linspace</code>. If you instead want to supply the step size and derive the number of steps, you would instead use the function <code>numpy.arange</code> that takes the input arguments <code>start</code>, <code>stop</code>, and <code>number</code>. <code>numpy.arange()</code> differs from Python’s built-in <code>range()</code> function which only supports integers and produces a <code>list</code> rather than an <code>array</code>.</p>
+<hr>
+<p class="more"><a href="posts/numpy-faq/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+          </section></a>
+      </div>
+    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
         <a class="post-card-content-link" href="posts/matplotlib-tutorial/">
           <header class="post-card-header"><h2 class="post-card-title">Matplotlib Tutorial</h2>
             <section class="post-meta"><time class="post-meta-date" datetime="2021-03-19T08:21:56-07:00">
@@ -348,35 +382,6 @@ What should I do?</p>
 <p>Because we are unable to host an in-person tutorial for this fall season, the Xdev team has decided to switch to a virtual seminar series. We will be hosting one hour tutorial sessions scheduled for the 2nd and 4th Wednesdays of each month at 1 PM Mountain starting in October. The first tutorial session, covering how to create your first Python script, will be on October 14th. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.
 </p>
 <p class="more"><a href="posts/tutorial-seminar-series/">Read more…</a></p>
-</div>
-</div>
-</div>
-          </section></a>
-      </div>
-    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
-        <a class="post-card-content-link" href="posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">
-          <header class="post-card-header"><h2 class="post-card-title">Writing multiple netCDF files in parallel with xarray and dask</h2>
-            <section class="post-meta"><time class="post-meta-date" datetime="2020-06-29T13:55:46-06:00">
-                2020 June 29
-              </time><span class="post-meta-divider">|</span>
-              <a href="authors/anderson-banihirwe/">Anderson Banihirwe</a>
-              <span class="post-meta-divider">|</span>
-              <a href="tags/dask/">dask</a>, 
-              <a href="tags/netcdf/">netcdf</a>, 
-              <a href="tags/xarray/">xarray</a>
-            </section></header><section class="post-card-excerpt"><div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A typical computation workflow with xarray consists of:</p>
-<ol>
-<li>reading one or more netCDF files into an xarray dataset backed by dask using <code>xr.open_mfdataset()</code> or <code>xr.open_dataset(chunks=...)</code>,</li>
-<li>applying some transformation to the input dataset, and</li>
-<li>saving the resulting output to disk in a netCDF file using <code>xr.to_netcdf()</code>.</li>
-</ol>
-<p>The last step (3) can easily lead to a large netCDF file (&gt;=10GB in size). As a result, this step can take a very long time to complete (since it is run in serial), and sometimes may hang. So, to avoid these issues one can use one of the lesser-used but helpful xarray capabilities: the <a href="https://xarray.pydata.org/en/latest/generated/xarray.save_mfdataset.html"><code>xr.save_mfdataset()</code></a> function. </p>
-<p class="more"><a href="posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">Read more…</a></p>
 </div>
 </div>
 </div>

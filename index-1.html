@@ -75,6 +75,35 @@
     
 <div class="post-feed">
     <article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
+        <a class="post-card-content-link" href="posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">
+          <header class="post-card-header"><h2 class="post-card-title">Writing multiple netCDF files in parallel with xarray and dask</h2>
+            <section class="post-meta"><time class="post-meta-date" datetime="2020-06-29T13:55:46-06:00">
+                2020 June 29
+              </time><span class="post-meta-divider">|</span>
+              <a href="authors/anderson-banihirwe/">Anderson Banihirwe</a>
+              <span class="post-meta-divider">|</span>
+              <a href="tags/dask/">dask</a>, 
+              <a href="tags/netcdf/">netcdf</a>, 
+              <a href="tags/xarray/">xarray</a>
+            </section></header><section class="post-card-excerpt"><div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A typical computation workflow with xarray consists of:</p>
+<ol>
+<li>reading one or more netCDF files into an xarray dataset backed by dask using <code>xr.open_mfdataset()</code> or <code>xr.open_dataset(chunks=...)</code>,</li>
+<li>applying some transformation to the input dataset, and</li>
+<li>saving the resulting output to disk in a netCDF file using <code>xr.to_netcdf()</code>.</li>
+</ol>
+<p>The last step (3) can easily lead to a large netCDF file (&gt;=10GB in size). As a result, this step can take a very long time to complete (since it is run in serial), and sometimes may hang. So, to avoid these issues one can use one of the lesser-used but helpful xarray capabilities: the <a href="https://xarray.pydata.org/en/latest/generated/xarray.save_mfdataset.html"><code>xr.save_mfdataset()</code></a> function. </p>
+<p class="more"><a href="posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">Read more…</a></p>
+</div>
+</div>
+</div>
+          </section></a>
+      </div>
+    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
         <a class="post-card-content-link" href="posts/templating-isnt-just-for-web-developers/">
           <header class="post-card-header"><h2 class="post-card-title">Templating isn't just for Web Developers!</h2>
             <section class="post-meta"><time class="post-meta-date" datetime="2020-05-08T10:42:05-06:00">
