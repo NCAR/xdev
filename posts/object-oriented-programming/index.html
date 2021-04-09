@@ -8,7 +8,7 @@
       gtag('config', 'G-50ST3W7ZN6');
     </script><meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Matplotlib FAQ | Xdev</title>
+<title>Object Oriented Programming | Xdev</title>
 <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
@@ -24,26 +24,16 @@
 <meta name="theme-color" content="#1A658F">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://ncar.github.io/xdev/posts/matplotlib-faq/">
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/object-oriented-programming/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
-<link rel="prev" href="../numpy-faq/" title="Numpy FAQ" type="text/html">
-<link rel="next" href="../object-oriented-programming/" title="Object Oriented Programming" type="text/html">
+<link rel="prev" href="../matplotlib-faq/" title="Matplotlib FAQ" type="text/html">
 <meta property="og:site_name" content="Xdev">
-<meta property="og:title" content="Matplotlib FAQ">
-<meta property="og:url" content="https://ncar.github.io/xdev/posts/matplotlib-faq/">
-<meta property="og:description" content="Here is a compilation of questions and issues that arose during the Matplotlib session of the Python Tutorial Seminar Series.
-
-
-
-
-
-
-
-
-Q. Are all the colormaps perceptually ordered?
-A. They are not all">
+<meta property="og:title" content="Object Oriented Programming">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/object-oriented-programming/">
+<meta property="og:description" content="The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on Wednesday, April 14th at 1 PM Mountain. This session will be led by Austin Kootz.
+">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-03-30T08:26:01-06:00">
+<meta property="article:published_time" content="2021-04-09T08:43:36-06:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@NCARXdev">
 </head>
@@ -74,76 +64,51 @@ A. They are not all">
     </header><main class="site-main outer" role="main"><div class="inner">
         
 
-    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Matplotlib FAQ</h1>
-        <section class="post-meta"><time class="post-meta-date" datetime="2021-03-30T08:26:01-06:00">
-            2021 March 30
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Object Oriented Programming</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2021-04-09T08:43:36-06:00">
+            2021 April 9
           </time><span class="post-meta-divider">|</span>
           <a href="../../authors/julia-kent/">Julia Kent</a>
-        </section></header><section class="post-full-content"><div>
-<div class="cell border-box-sizing text_cell rendered">
+        </section></header><section class="post-full-content"><div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is a compilation of questions and issues that arose during the <a href="https://www.youtube.com/watch?v=EiPRIdHQEmE">Matplotlib</a> session of the Python Tutorial Seminar Series.</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Are all the colormaps perceptually ordered?</p>
-<p><strong>A.</strong> They are not all perceptually ordered. Any color map you can think of exists or can be made. The <a href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Matplotlib Documentation</a> has a good guide for choosing colormaps.</p>
-<hr>
-<!-- TEASER_END -->
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> How do you set the x-axis boundary to remove the padding left and right of where the data begins/ends?</p>
-<p><strong>A.</strong> You would use <code>ax.set_xlim</code> and provide the minimum and maximum x-values as input. You can infer these from your <code>x</code> data with the full command <code>ax.set_xlim([min(x), max(x)])</code>.</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> How do you create a .png from a notebook?</p>
-<p><strong>A.</strong> You can save a figure by running <code>plt.savefig(‘filename.png’)</code> in the cell you plotted the figure. The file type is inferred from the filename. <code>png</code>, <code>pdf</code>, <code>ps</code>, <code>eps</code>, <code>jpg</code>, and <code>svg</code> are all supported image formats on most backends.</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> How can we set resolution (dpi) when saving plots?</p>
-<p><strong>A.</strong> <code>dpi</code> is a keyword argument to <code>savefig</code>. So you can call <code>plt.savefig(FIGURENAME.EXT, dpi=FLOAT)</code> where you specify your desired dots per inch as a float.</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> How can I add a shared colorbar for the subplots?</p>
-<p><strong>A.</strong> There are many of examples of how to do this in the GeoCAT-examples documentation. <a href="https://geocat-examples.readthedocs.io/en/latest/gallery/Contours/NCL_eof_1_1.html#sphx-glr-gallery-contours-ncl-eof-1-1-py">Here</a> is an example that does so while plotting EOFs of the Sea Level Pressure over the North Atlantic. The <a href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/colorbar_placement.html">Matplotlib documentation</a> also has great instructions on how to manipulate colorbars.</p>
-<hr>
-</div>
+<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on <strong>Wednesday, April 14th at 1 PM Mountain</strong>. This session will be led by Austin Kootz.</p>
+<p>The content for this tutorial is hosted on Austin's <a href="https://github.com/pilotchute/oop_hrrr_tutorial">oop_hrrr_tutorial GitHub repository</a>.</p>
+<h3 id="Preparation">Preparation<a class="anchor-link" href="#Preparation">¶</a>
+</h3>
+<ul>
+<li>Check your conda install if this is the first tutorial in the series you are joining us for with <code>conda --version</code> and if necessary <a href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</li>
+</ul>
+<!-- TEASER_END --><p><em>These commands are to be run in the terminal</em></p>
+<ul>
+<li>
+<p>Clone the GitHub repository locally with:
+<code>git clone https://github.com/pilotchute/oop_hrrr_tutorial</code>.</p>
+</li>
+<li>
+<p>Move into your new directory with:
+<code>cd oop_hrrr_tutorial</code></p>
+</li>
+<li>
+<p>There is a file called <code>environment.yml</code> that lists all of the necessary packages for this session. Create a conda environment from this file with:
+<code>conda env create -f environement.yml</code></p>
+</li>
+<li>
+<p>Avtivate the environment:
+<code>conda activate oop_tutorial</code></p>
+</li>
+<li>
+<p>And test that it runs correctly by launching Jupyter:
+<code>jupyter lab</code></p>
+</li>
+</ul>
+<p>If you did not attend the live session, it will beneficial to watch the recording from the live tutorial on <a href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> before the Object Oriented Programming session.</p>
+<h3 id="Sign-Up">Sign Up<a class="anchor-link" href="#Sign-Up">¶</a>
+</h3>
+<p>If you would like join the <em>learnpython@ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking "Join Group" next to the group name.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 </div>
 </div></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>
