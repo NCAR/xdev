@@ -8,7 +8,7 @@
       gtag('config', 'G-50ST3W7ZN6');
     </script><meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Object Oriented Programming | Xdev</title>
+<title>Cartopy Tutorial | Xdev</title>
 <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
@@ -24,17 +24,15 @@
 <meta name="theme-color" content="#1A658F">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://ncar.github.io/xdev/posts/object-oriented-programming/">
+<link rel="canonical" href="https://ncar.github.io/xdev/posts/cartopy-tutorial/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Julia Kent">
-<link rel="prev" href="../matplotlib-faq/" title="Matplotlib FAQ" type="text/html">
-<link rel="next" href="../cartopy-tutorial/" title="Cartopy Tutorial" type="text/html">
+<link rel="prev" href="../object-oriented-programming/" title="Object Oriented Programming" type="text/html">
 <meta property="og:site_name" content="Xdev">
-<meta property="og:title" content="Object Oriented Programming">
-<meta property="og:url" content="https://ncar.github.io/xdev/posts/object-oriented-programming/">
-<meta property="og:description" content="The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on Wednesday, April 14th at 1 PM Mountain. This session will be led by Austin Kootz.
-">
+<meta property="og:title" content="Cartopy Tutorial">
+<meta property="og:url" content="https://ncar.github.io/xdev/posts/cartopy-tutorial/">
+<meta property="og:description" content="The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package cartopy on Wednesday, April 28th at 1 PM Mountain. This session will be led by Michaela Sizemo">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-04-09T08:43:36-06:00">
+<meta property="article:published_time" content="2021-04-26T08:27:07-06:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@NCARXdev">
 </head>
@@ -65,9 +63,9 @@
     </header><main class="site-main outer" role="main"><div class="inner">
         
 
-    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Object Oriented Programming</h1>
-        <section class="post-meta"><time class="post-meta-date" datetime="2021-04-09T08:43:36-06:00">
-            2021 April 9
+    <article class="post-full"><header class="post-full-header"><h1 class="post-full-title">Cartopy Tutorial</h1>
+        <section class="post-meta"><time class="post-meta-date" datetime="2021-04-26T08:27:07-06:00">
+            2021 April 26
           </time><span class="post-meta-divider">|</span>
           <a href="../../authors/julia-kent/">Julia Kent</a>
         </section></header><section class="post-full-content"><div class="cell border-box-sizing text_cell rendered">
@@ -75,37 +73,31 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on <strong>Wednesday, April 14th at 1 PM Mountain</strong>. This session will be led by Austin Kootz.</p>
-<p>The content for this tutorial is hosted on Austin's <a href="https://github.com/pilotchute/oop_hrrr_tutorial">oop_hrrr_tutorial GitHub repository</a>.</p>
+<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package <code>cartopy</code> on <strong>Wednesday, April 28th at 1 PM Mountain</strong>. This session will be led by Michaela Sizemore.</p>
+<p>The content for this tutorial is hosted on Michaelsa's <a href="https://github.com/michaelavs/cartopy_tutorial">Cartopy Tutorial Github Repository</a></p>
 <h3 id="Preparation">Preparation<a class="anchor-link" href="#Preparation">¶</a>
 </h3>
 <ul>
 <li>Check your conda install if this is the first tutorial in the series you are joining us for with <code>conda --version</code> and if necessary <a href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</li>
 </ul>
-<!-- TEASER_END --><p><em>These commands are to be run in the terminal</em></p>
-<ul>
+<!-- TEASER_END --><ul>
 <li>
-<p>Clone the GitHub repository locally with:
-<code>git clone https://github.com/pilotchute/oop_hrrr_tutorial</code>.</p>
+<p>Navigate to Michaela's <a href="https://github.com/michaelavs/cartopy_tutorial">Cartopy Tutorial Github Repository</a>.</p>
 </li>
 <li>
-<p>Move into your new directory with:
-<code>cd oop_hrrr_tutorial</code></p>
+<p>Clone this repository by clicking the green "Code" button and copying the SSH address under the word "Clone". This can be done by clicking the clipboard icon.</p>
 </li>
 <li>
-<p>There is a file called <code>environment.yml</code> that lists all of the necessary packages for this session. Create a conda environment from this file with:
-<code>conda env create -f environment.yml</code></p>
+<p>In your terminal, type <code>git clone PASTE</code> where you paste the SSH address you just copied (<code>git clone git@github.com:michaelavs/cartopy_tutorial.git</code>)</p>
 </li>
 <li>
-<p>Avtivate the environment:
-<code>conda activate oop_tutorial</code></p>
+<p>Create a Conda environment from the <code>conda_environment.yml</code> file with the terminal command <code>conda env create -f conda_environment.yml</code>. Make sure you are in the local <code>cartopy_tutorial</code> directory for this step.</p>
 </li>
 <li>
-<p>And test that it runs correctly by launching Jupyter:
-<code>jupyter lab</code></p>
+<p>Test your installation in the terminal with <code>conda activate cartopy_tutorial</code>.</p>
 </li>
 </ul>
-<p>If you did not attend the live session, it will beneficial to watch the recording from the live tutorial on <a href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> before the Object Oriented Programming session.</p>
+<p>If you did not attend the live session, it will be beneficial to watch the recording from the live tutorial on <a href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> and on <a href="https://youtu.be/EiPRIdHQEmE">Matplotlib</a> before the Cartopy session.</p>
 <h3 id="Sign-Up">Sign Up<a class="anchor-link" href="#Sign-Up">¶</a>
 </h3>
 <p>If you would like join the <em>learnpython@ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking "Join Group" next to the group name.</p>

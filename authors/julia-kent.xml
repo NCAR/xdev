@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev (Posts by Julia Kent)</title><link>https://ncar.github.io/xdev/</link><description></description><atom:link href="https://ncar.github.io/xdev/authors/julia-kent.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Wed, 14 Apr 2021 19:09:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Object Oriented Programming</title><link>https://ncar.github.io/xdev/posts/object-oriented-programming/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev (Posts by Julia Kent)</title><link>https://ncar.github.io/xdev/</link><description></description><atom:link href="https://ncar.github.io/xdev/authors/julia-kent.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Mon, 26 Apr 2021 16:46:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cartopy Tutorial</title><link>https://ncar.github.io/xdev/posts/cartopy-tutorial/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code&gt;cartopy&lt;/code&gt; on &lt;strong&gt;Wednesday, April 28th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Michaela Sizemore.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Michaelsa's &lt;a href="https://github.com/michaelavs/cartopy_tutorial"&gt;Cartopy Tutorial Github Repository&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="Preparation"&gt;Preparation&lt;a class="anchor-link" href="https://ncar.github.io/xdev/posts/cartopy-tutorial/#Preparation"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Check your conda install if this is the first tutorial in the series you are joining us for with &lt;code&gt;conda --version&lt;/code&gt; and if necessary &lt;a href="https://docs.conda.io/en/latest/miniconda.html"&gt;install by following these instructions&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/cartopy-tutorial/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/cartopy-tutorial/</guid><pubDate>Mon, 26 Apr 2021 14:27:07 GMT</pubDate></item><item><title>Object Oriented Programming</title><link>https://ncar.github.io/xdev/posts/object-oriented-programming/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on &lt;strong&gt;Wednesday, April 14th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Austin Kootz.&lt;/p&gt;
@@ -116,19 +124,4 @@ An introduction to Jupyter Notebooks that will be fundamental for following many
 &lt;p&gt;&lt;strong&gt;A.&lt;/strong&gt; The numeric type is inferred. &lt;code&gt;/&lt;/code&gt; always returns a float for numeric types. &lt;code&gt;//&lt;/code&gt; always returns an integer.&lt;/p&gt;
 &lt;p&gt;One should note that Python 2 does not behave this way.  In Python 2, the &lt;code&gt;//&lt;/code&gt; operator does not exist and the &lt;code&gt;/&lt;/code&gt; operator behaves like it does in other languages (i.e., division of two integers yields an integer and division with a float yields a float).&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/</guid><pubDate>Wed, 18 Nov 2020 22:17:45 GMT</pubDate></item><item><title>Python Tutorial FAQ - Part 2</title><link>https://ncar.github.io/xdev/posts/python-tutorial-faq-part-2/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the &lt;a href="https://ncar.github.io/python-tutorial/"&gt;Xdev tutorial website&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Why is &lt;code&gt;list[0:10]&lt;/code&gt; the first 10 elements, not 11?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A.&lt;/strong&gt; In Python, "list slicing" uses square brackets with the syntax &lt;code&gt;[start:stop:step]&lt;/code&gt;.  The &lt;code&gt;start&lt;/code&gt; is &lt;em&gt;inclusive&lt;/em&gt;, while the &lt;code&gt;step&lt;/code&gt; is &lt;em&gt;exclusive&lt;/em&gt;.  So, you read up to (but excluding) the &lt;code&gt;stop&lt;/code&gt; index.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-2/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/python-tutorial-faq-part-2/</guid><pubDate>Thu, 05 Nov 2020 18:19:51 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/</guid><pubDate>Wed, 18 Nov 2020 22:17:45 GMT</pubDate></item></channel></rss>
