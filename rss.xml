@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev</title><link>https://ncar.github.io/xdev/</link><description>Experimenting. Prototyping.</description><atom:link href="https://ncar.github.io/xdev/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Mon, 26 Apr 2021 16:46:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cartopy Tutorial</title><link>https://ncar.github.io/xdev/posts/cartopy-tutorial/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xdev</title><link>https://ncar.github.io/xdev/</link><description>Experimenting. Prototyping.</description><atom:link href="https://ncar.github.io/xdev/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 UCAR Apache 2.0</copyright><lastBuildDate>Fri, 07 May 2021 20:28:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Git and GitHub Tutorial</title><link>https://ncar.github.io/xdev/posts/git-and-github-tutorial/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code&gt;Git&lt;/code&gt; and &lt;code&gt;GitHub&lt;/code&gt; on &lt;strong&gt;Wednesday, May 12th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Kevin Paul.&lt;/p&gt;
+&lt;p&gt;The purpose of this seminar is to cover just some of the common content needed to understand and use git and GitHub for collaboration on software.  This is not meant to be an introduction to git or GitHub.&lt;/p&gt;
+&lt;h3 id="Assumptions-of-past-Git-experience"&gt;Assumptions of past Git experience&lt;a class="anchor-link" href="https://ncar.github.io/xdev/posts/git-and-github-tutorial/#Assumptions-of-past-Git-experience"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;We assume that you understand these basic Git commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating a git repository with "git init"&lt;/li&gt;
+&lt;li&gt;Staging changes to a git repository with "git add"&lt;/li&gt;
+&lt;li&gt;Committing staged changes to a git repository history with "git commit"&lt;/li&gt;
+&lt;li&gt;Checking the status of a git repository with "git status"&lt;/li&gt;
+&lt;li&gt;Looking at the commit history of a git repository with "git log"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/git-and-github-tutorial/"&gt;Read more…&lt;/a&gt; (2 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/git-and-github-tutorial/</guid><pubDate>Fri, 07 May 2021 20:04:42 GMT</pubDate></item><item><title>Cartopy Tutorial</title><link>https://ncar.github.io/xdev/posts/cartopy-tutorial/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code&gt;cartopy&lt;/code&gt; on &lt;strong&gt;Wednesday, April 28th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Michaela Sizemore.&lt;/p&gt;
@@ -108,20 +121,4 @@
 &lt;h3 id="Please-join-us-(virtually)-on-the-following-dates:"&gt;Please join us (virtually) on the following dates:&lt;a class="anchor-link" href="https://ncar.github.io/xdev/posts/python-tutorial-seminar-series-spring-2021/#Please-join-us-(virtually)-on-the-following-dates:"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;All events are at 1 PM Mountain&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;February 24, 2021&lt;/em&gt; -  Jupyter Notebooks &lt;br&gt;
 An introduction to Jupyter Notebooks that will be fundamental for following many subsequent tutorials.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/python-tutorial-seminar-series-spring-2021/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/python-tutorial-seminar-series-spring-2021/</guid><pubDate>Tue, 16 Feb 2021 20:56:01 GMT</pubDate></item><item><title>Python Tutorial FAQ - Part 3</title><link>https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/</link><dc:creator>Julia Kent</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.&lt;/p&gt;
-&lt;hr&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Seeing how &lt;code&gt;2/2&lt;/code&gt; returns &lt;code&gt;1.0&lt;/code&gt; instead of &lt;code&gt;1&lt;/code&gt;, is the numeric type automatically determined from the inputs or do you have to force it?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A.&lt;/strong&gt; The numeric type is inferred. &lt;code&gt;/&lt;/code&gt; always returns a float for numeric types. &lt;code&gt;//&lt;/code&gt; always returns an integer.&lt;/p&gt;
-&lt;p&gt;One should note that Python 2 does not behave this way.  In Python 2, the &lt;code&gt;//&lt;/code&gt; operator does not exist and the &lt;code&gt;/&lt;/code&gt; operator behaves like it does in other languages (i.e., division of two integers yields an integer and division with a float yields a float).&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/python-tutorial-faq-part-3/</guid><pubDate>Wed, 18 Nov 2020 22:17:45 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://ncar.github.io/xdev/posts/python-tutorial-seminar-series-spring-2021/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>https://ncar.github.io/xdev/posts/python-tutorial-seminar-series-spring-2021/</guid><pubDate>Tue, 16 Feb 2021 20:56:01 GMT</pubDate></item></channel></rss>
