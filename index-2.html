@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-50ST3W7ZN6"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-50ST3W7ZN6');
+    </script><meta charset="utf-8">
+<meta name="description" content="Experimenting. Prototyping.">
+<meta name="viewport" content="width=device-width">
+<title>Xdev (old posts, page 2) | Xdev</title>
+<link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="assets/css/icons.css">
+<link href="https://fonts.googleapis.com/css?family=Audiowide%7CCrimson+Pro%7CMerriweather%7CSaira+Stencil+One&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<link href="assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="assets/css/ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#1A658F">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://ncar.github.io/xdev/index-2.html">
+<link rel="prev" href="." type="text/html">
+<link rel="next" href="index-1.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+  <div class="site-wrapper">
+
+    
+    <header class="site-header outer"><div class="site-header-logo">
+        <span>Supported by</span>
+        <a href="https://nsf.gov"><img src="assets/img/NSF_4-Color_bitmap_Logo.png" height="50" alt="NSF"></a>
+      </div>
+      <div class="inner">
+        
+    <div class="site-title">
+      <h1><img class="site-logo" src="assets/img/xdev_logo.png" alt="Logo" style="height: 3rem;"></h1>
+      <h3>Experimenting. Prototyping.</h3>
+    </div>
+
+        
+    <nav class="site-nav"><div class="site-nav-menu">
+        <ul class="nav" role="menu">
+<li class="nav-item" role="menuitem"><a class="nav-link" href="pages/about/">About</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="rss.xml">RSS</a></li>
+        <li class="nav-item" role="menuitem"><a class="nav-link" href="pages/status/">Dashboard</a></li>
+
+          
+
+        </ul>
+</div>
+      <div class="site-nav-social">
+        <a href="https://github.com/NCAR/xdev" class="social-link" target="_blank"><span class="icon-github"></span></a>
+        <a href="https://twitter.com/NCARXdev" class="social-link" target="_blank"><span class="icon-twitter"></span></a>
+      </div>
+    </nav>
+</div>
+    </header><main class="site-main outer" role="main"><div class="inner">
+        
+
+    
+
+
+    
+<div class="post-feed">
+    <article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
+        <a class="post-card-content-link" href="posts/your-first-package-python-tutorial-faq/">
+          <header class="post-card-header"><h2 class="post-card-title">Your First Package Python Tutorial FAQ</h2>
+            <section class="post-meta"><time class="post-meta-date" datetime="2021-02-19T16:59:27-07:00">
+                2021 February 19
+              </time><span class="post-meta-divider">|</span>
+              <a href="authors/julia-kent/">Julia Kent</a>
+            </section></header><section class="post-card-excerpt"><div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is a compilation of questions from the fourth and fifth sessions (<a href="https://ncar.github.io/python-tutorial/tutorials/yourfirst.html#first-python-package">"Your First Package"</a>) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (<code>math</code>), and how to publish your package</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Q.</strong> Should we add <code>__init__.py</code> to <code>.gitignore</code>?</p>
+<p><strong>A.</strong> We do not advise that. <code>__init__.py</code> is a special file that needs to be in that directory for Python to know to treat that directory like a Python package. So you need it even though it is, in this case, an empty file.</p>
+<p>Whenever you do an import of a module, that module is executed. So if you’ve defined variables or run code in that file - at import time, that code will be executed. Modules tend to only contain function definitions or the construction of data or classes, so that at import time these definitions are available to us without. <code>__init__.py</code> works much the same way. Whenever you import something from a package its <code>__init__.py</code> will be executed. Since we don’t need anything done, in our situation, it is empty.</p>
+<hr>
+<p class="more"><a href="posts/your-first-package-python-tutorial-faq/">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+          </section></a>
+      </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="." rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-1.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="ncar-xdev-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script>
+</div>
+    </main><footer class="site-footer outer"><div class="site-footer-content inner">
+        <div class="site-footer-image" style="width: 409px; height: 40px;">
+          <a href="https://www2.cisl.ucar.edu/"><img src="assets/img/CISL-contemp-logo-white.svg" alt="CISL"></a>
+        </div>
+        <div class="site-footer-section">
+          <section><a href="https://www.ucar.edu/">University Corporation for Atmospheric Research</a> © 2021<br>Proudly published with <a href="https://getnikola.com/">Nikola</a> &amp; <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a><br>Apache 2.0</section>
+</div>
+      </div>
+      <div class="site-footer-content inner" style="border: 0; padding: 0; flex-wrap: nowrap;">
+        <div class="site-footer-image" style="width: 60px; height: 60px;">
+          <a href="https://nsf.gov/"><img src="assets/img/footer-logo-nsf.png" alt="NSF"></a>
+        </div>
+        <div class="site-footer-section" style="width: 100%;">
+          <section>This material is based upon work supported by the National Center for Atmospheric Research, a major facility sponsored by the National Science Foundation and managed by the University Corporation for Atmospheric Research. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.</section>
+</div>
+      </div>
+    </footer>
+</div>
+  
+    <script type="text/javascript" src="assets/js/jquery.js"></script><script type="text/javascript" src="assets/js/jquery.fitvids.js"></script><script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+</html>

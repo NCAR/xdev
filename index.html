@@ -26,8 +26,8 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://ncar.github.io/xdev/">
-<link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/pandas-tutorial/" type="text/html">
+<link rel="next" href="index-2.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/xarray-tutorial/" type="text/html">
 </head>
 <body>
   <div class="site-wrapper">
@@ -70,6 +70,31 @@
     
 <div class="post-feed">
     <article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
+        <a class="post-card-content-link" href="posts/xarray-tutorial/">
+          <header class="post-card-header"><h2 class="post-card-title">Xarray Tutorial</h2>
+            <section class="post-meta"><time class="post-meta-date" datetime="2021-06-04T10:02:54-06:00">
+                2021 June 4
+              </time><span class="post-meta-divider">|</span>
+              <a href="authors/julia-kent/">Julia Kent</a>
+            </section></header><section class="post-card-excerpt"><div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package <code>xarray</code> on <strong>Wednesday, June 9th at 1 PM Mountain Standard Time</strong>. This session will be led by Anderson Banihirwe.</p>
+<p>The content for this tutorial is hosted on Anderson's <a href="https://github.com/andersy005/xarray-tutorial">Xarray Tutorial Github Repository</a>. However, since final edits are being made to these notebooks we ask that you please wait until after 1 PM MST on June 8 to download the materials (the Tuesday before the session). This will ensure that you have the latest version of the notebooks.</p>
+<h3 id="Preparation">Preparation<a class="anchor-link" href="posts/xarray-tutorial/#Preparation">¶</a>
+</h3>
+<ul>
+<li>Check your conda install if this is the first tutorial in the series you are joining us for with <code>conda --version</code> and if necessary <a href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</li>
+</ul>
+<p class="more"><a href="posts/xarray-tutorial/">Read more…</a></p>
+</div>
+</div>
+</div>
+          </section></a>
+      </div>
+    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
         <a class="post-card-content-link" href="posts/pandas-tutorial/">
           <header class="post-card-header"><h2 class="post-card-title">Pandas Tutorial</h2>
             <section class="post-meta"><time class="post-meta-date" datetime="2021-05-19T13:16:51-06:00">
@@ -336,46 +361,12 @@
 </div>
           </section></a>
       </div>
-    </article><article class="post-card"><div class="post-card-content" style="flex: 0 1 auto">
-        <a class="post-card-content-link" href="posts/your-first-package-python-tutorial-faq/">
-          <header class="post-card-header"><h2 class="post-card-title">Your First Package Python Tutorial FAQ</h2>
-            <section class="post-meta"><time class="post-meta-date" datetime="2021-02-19T16:59:27-07:00">
-                2021 February 19
-              </time><span class="post-meta-divider">|</span>
-              <a href="authors/julia-kent/">Julia Kent</a>
-            </section></header><section class="post-card-excerpt"><div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is a compilation of questions from the fourth and fifth sessions (<a href="https://ncar.github.io/python-tutorial/tutorials/yourfirst.html#first-python-package">"Your First Package"</a>) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (<code>math</code>), and how to publish your package</p>
-<hr>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Q.</strong> Should we add <code>__init__.py</code> to <code>.gitignore</code>?</p>
-<p><strong>A.</strong> We do not advise that. <code>__init__.py</code> is a special file that needs to be in that directory for Python to know to treat that directory like a Python package. So you need it even though it is, in this case, an empty file.</p>
-<p>Whenever you do an import of a module, that module is executed. So if you’ve defined variables or run code in that file - at import time, that code will be executed. Modules tend to only contain function definitions or the construction of data or classes, so that at import time these definitions are available to us without. <code>__init__.py</code> works much the same way. Whenever you import something from a package its <code>__init__.py</code> will be executed. Since we don’t need anything done, in our situation, it is empty.</p>
-<hr>
-<p class="more"><a href="posts/your-first-package-python-tutorial-faq/">Read more…</a></p>
-</div>
-</div>
-</div>
-</div>
-          </section></a>
-      </div>
     </article>
 </div>
 
         <nav class="postindexpager"><ul class="pager">
 <li class="next">
-                <a href="index-1.html" rel="next">Older posts</a>
+                <a href="index-2.html" rel="next">Older posts</a>
             </li>
         </ul></nav><script>var disqus_shortname="ncar-xdev-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
