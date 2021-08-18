@@ -15,12 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: repo-sync/pull-request@v2
         with:
-          ref: main
-      - uses: peter-evans/create-pull-request@v3.10.0
-        with:
-          commit-message: Merging hackmd branch into main
-          title: Sync HackMD content
-          branch: hackmd
-          body: Automatically merging changes from the `hackmd` branch into `main`, includes changes pushed from HackMD.
-                
+          destination_branch: "main"
+          github_token: ${{ secrets.GH_TOKEN }}
