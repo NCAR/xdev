@@ -7,3 +7,4 @@ output
 .idea/
 .vscode
 .ipynb_checkpoints
+build/
