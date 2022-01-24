@@ -74,8 +74,7 @@
           <span class="post-meta-divider">|</span>
           <a href="../../tags/intake/">intake</a>, 
           <a href="../../tags/tooling/">tooling</a>
-        </section></header><section class="post-full-content"><div>
-<div class="cell border-box-sizing text_cell rendered">
+        </section></header><section class="post-full-content"><div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -416,21 +415,21 @@
 <p>The earlier version of <a href="https://github.com/NCAR/esm-collection-spec">esm collection spec</a> required that the <code>catalog_file</code> entry in the input JSON file point to a CSV file. In some cases, it is useful to embed the content that would otherwise be in the CSV file in the input JSON file, itself. To support this use case, a <code>catalog_dict</code> entry was added to the esm collection spec (see <a href="https://github.com/NCAR/esm-collection-spec/pull/15">NCAR/esm-collection-spec#15</a>)</p>
 <p>Example:</p>
 <p><code>sample-collection.json</code>:</p>
-<div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">"esmcat_version"</span><span class="p">:</span><span class="s2">"0.1.0"</span><span class="p">,</span>
-    <span class="nt">"id"</span><span class="p">:</span><span class="s2">"aws-cesm1-le"</span><span class="p">,</span>
-    <span class="nt">"description"</span><span class="p">:</span><span class="s2">"This is an ESM collection for CESM1 Large Ensemble Zarr dataset publicly available on Amazon S3 (us-west-2 region)"</span><span class="p">,</span>
-    <span class="nt">"catalog_file"</span><span class="p">:</span> <span class="s2">"sample-catalog.csv"</span><span class="p">,</span>
-    <span class="nt">"attributes"</span><span class="p">:[</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"component"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"frequency"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"experiment"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"variable"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span> <span class="s2">""</span><span class="p">}</span>
-        <span class="p">],</span>
+<div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"esmcat_version"</span><span class="p">:</span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"aws-cesm1-le"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="s2">"This is an ESM collection for CESM1 Large Ensemble Zarr dataset publicly available on Amazon S3 (us-west-2 region)"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"catalog_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sample-catalog.csv"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"attributes"</span><span class="p">:[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"component"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"frequency"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"experiment"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"variable"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
 
-    <span class="nt">"assets"</span><span class="p">:{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"path"</span><span class="p">,</span> <span class="nt">"format"</span><span class="p">:</span><span class="s2">"zarr"</span><span class="p">},</span>
-    <span class="err">...</span>
- <span class="p">}</span>
+<span class="w">    </span><span class="nt">"assets"</span><span class="p">:{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"path"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="s2">"zarr"</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="err">...</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 <p><code>sample-catalog.csv</code>:</p>
 
@@ -439,38 +438,38 @@ atm,daily,20C,FLNS,s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNS.zarr
 atm,daily,20C,FLNSC,s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNSC.zarr</code></pre>
 <p>For the example above, we have both <code>sample-collection.json</code> and <code>sample-catalog.csv</code> files. We can put the content of the <code>sample-catalog.csv</code> in the <code>sample-collection.json</code> file as follows:</p>
 <p><code>sample-collection.json</code>:</p>
-<div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">"esmcat_version"</span><span class="p">:</span><span class="s2">"0.1.0"</span><span class="p">,</span>
-    <span class="nt">"id"</span><span class="p">:</span><span class="s2">"aws-cesm1-le"</span><span class="p">,</span>
-    <span class="nt">"description"</span><span class="p">:</span><span class="s2">"This is an ESM collection for CESM1 Large Ensemble Zarr dataset publicly available on Amazon S3 (us-west-2 region)"</span><span class="p">,</span>
-    <span class="nt">"catalog_dict"</span><span class="p">:[</span>
-        <span class="p">{</span>
-            <span class="nt">"component"</span><span class="p">:</span><span class="s2">"atm"</span><span class="p">,</span>
-            <span class="nt">"frequency"</span><span class="p">:</span><span class="s2">"daily"</span><span class="p">,</span>
-            <span class="nt">"experiment"</span><span class="p">:</span><span class="s2">"20C"</span><span class="p">,</span>
-            <span class="nt">"variable"</span><span class="p">:</span><span class="s2">"FLNS"</span><span class="p">,</span>
-            <span class="nt">"path"</span><span class="p">:</span><span class="s2">"s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNS.zarr"</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">"component"</span><span class="p">:</span><span class="s2">"atm"</span><span class="p">,</span>
-            <span class="nt">"frequency"</span><span class="p">:</span><span class="s2">"daily"</span><span class="p">,</span>
-            <span class="nt">"experiment"</span><span class="p">:</span><span class="s2">"20C"</span><span class="p">,</span>
-            <span class="nt">"variable"</span><span class="p">:</span><span class="s2">"FLNSC"</span><span class="p">,</span>
-            <span class="nt">"path"</span><span class="p">:</span><span class="s2">"s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNSC.zarr"</span>
-        <span class="p">},</span>
-       <span class="err">...</span>
-    <span class="p">],</span>
-  <span class="nt">"attributes"</span><span class="p">:[</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"component"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"frequency"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"experiment"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span>
-        <span class="p">{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"variable"</span><span class="p">,</span> <span class="nt">"vocabulary"</span><span class="p">:</span> <span class="s2">""</span><span class="p">}</span>
-        <span class="p">],</span>
+<div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"esmcat_version"</span><span class="p">:</span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"aws-cesm1-le"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="s2">"This is an ESM collection for CESM1 Large Ensemble Zarr dataset publicly available on Amazon S3 (us-west-2 region)"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"catalog_dict"</span><span class="p">:[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"component"</span><span class="p">:</span><span class="s2">"atm"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"frequency"</span><span class="p">:</span><span class="s2">"daily"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"experiment"</span><span class="p">:</span><span class="s2">"20C"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"variable"</span><span class="p">:</span><span class="s2">"FLNS"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"path"</span><span class="p">:</span><span class="s2">"s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNS.zarr"</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"component"</span><span class="p">:</span><span class="s2">"atm"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"frequency"</span><span class="p">:</span><span class="s2">"daily"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"experiment"</span><span class="p">:</span><span class="s2">"20C"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"variable"</span><span class="p">:</span><span class="s2">"FLNSC"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"path"</span><span class="p">:</span><span class="s2">"s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNSC.zarr"</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">       </span><span class="err">...</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">"attributes"</span><span class="p">:[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"component"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"frequency"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"experiment"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="s2">""</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"variable"</span><span class="p">,</span><span class="w"> </span><span class="nt">"vocabulary"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
 
-    <span class="nt">"assets"</span><span class="p">:{</span> <span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"path"</span><span class="p">,</span> <span class="nt">"format"</span><span class="p">:</span><span class="s2">"zarr"</span><span class="p">},</span>
-    <span class="err">...</span>
+<span class="w">    </span><span class="nt">"assets"</span><span class="p">:{</span><span class="w"> </span><span class="nt">"column_name"</span><span class="p">:</span><span class="s2">"path"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="s2">"zarr"</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="err">...</span><span class="w"></span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 
 </div>
@@ -510,26 +509,26 @@ atm,daily,20C,FLNSC,s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNSC.zarr</code></
 <p>For example:</p>
 <ul>
 <li>
-<code>old_sample.json</code>: <div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">"esmcat_version"</span><span class="p">:</span> <span class="s2">"0.1.0"</span><span class="p">,</span>
-<span class="nt">"id"</span><span class="p">:</span> <span class="s2">"campaign-cesm2-cmip6-timeseries"</span><span class="p">,</span>
-<span class="nt">"description"</span><span class="p">:</span> <span class="s2">"ESM collection for the CESM2 raw output that went into CMIP6 data. Located in campaign storage, accessible via GLADE on casper"</span><span class="p">,</span>
-<span class="nt">"catalog_file"</span><span class="p">:</span> <span class="s2">"/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/campaign-cesm2-cmip6-timeseries.csv.gz"</span><span class="p">,</span>
-  <span class="err">...</span>
-<span class="p">}</span>
+<code>old_sample.json</code>: <div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="nt">"esmcat_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w"></span>
+<span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign-cesm2-cmip6-timeseries"</span><span class="p">,</span><span class="w"></span>
+<span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ESM collection for the CESM2 raw output that went into CMIP6 data. Located in campaign storage, accessible via GLADE on casper"</span><span class="p">,</span><span class="w"></span>
+<span class="nt">"catalog_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/campaign-cesm2-cmip6-timeseries.csv.gz"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="err">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </li>
 </ul>
 <p>Today  the <code>catalog_file</code> can point to a full path or a path relative to the input JSON file path:</p>
 <ul>
 <li>
-<code>new_sample.json</code>:<div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">"esmcat_version"</span><span class="p">:</span> <span class="s2">"0.1.0"</span><span class="p">,</span>
-<span class="nt">"id"</span><span class="p">:</span> <span class="s2">"campaign-cesm2-cmip6-timeseries"</span><span class="p">,</span>
-<span class="nt">"description"</span><span class="p">:</span> <span class="s2">"ESM collection for the CESM2 raw output that went into CMIP6 data. Located in campaign storage, accessible via GLADE on casper"</span><span class="p">,</span>
-<span class="nt">"catalog_file"</span><span class="p">:</span> <span class="s2">"campaign-cesm2-cmip6-timeseries.csv.gz"</span><span class="p">,</span>
-  <span class="err">...</span>
-<span class="p">}</span>
+<code>new_sample.json</code>:<div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="nt">"esmcat_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w"></span>
+<span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign-cesm2-cmip6-timeseries"</span><span class="p">,</span><span class="w"></span>
+<span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ESM collection for the CESM2 raw output that went into CMIP6 data. Located in campaign storage, accessible via GLADE on casper"</span><span class="p">,</span><span class="w"></span>
+<span class="nt">"catalog_file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign-cesm2-cmip6-timeseries.csv.gz"</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="err">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </li>
 </ul>
@@ -557,8 +556,7 @@ atm,daily,20C,FLNSC,s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNSC.zarr</code></
 
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
-</script>
-</div></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>
+</script></section></article><footer class="post-footer"><section class="comments hidden-print"><h2 style="padding-left: 3vw">Comments</h2>
         <script src="https://utteranc.es/client.js" repo="NCAR/xdev-blog-comments" issue-term="title" theme="github-light" crossorigin="anonymous" async>
         </script></section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -579,7 +577,7 @@ MathJax.Hub.Config({
           <a href="https://www2.cisl.ucar.edu/"><img src="../../assets/img/CISL-contemp-logo-white.svg" alt="CISL"></a>
         </div>
         <div class="site-footer-section">
-          <section><a href="https://www.ucar.edu/">University Corporation for Atmospheric Research</a> © 2021<br>Proudly published with <a href="https://getnikola.com/">Nikola</a> &amp; <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a><br>Apache 2.0</section>
+          <section><a href="https://www.ucar.edu/">University Corporation for Atmospheric Research</a> © 2022<br>Proudly published with <a href="https://getnikola.com/">Nikola</a> &amp; <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a><br>Apache 2.0</section>
 </div>
       </div>
       <div class="site-footer-content inner" style="border: 0; padding: 0; flex-wrap: nowrap;">
