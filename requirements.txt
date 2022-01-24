@@ -1,2 +1,0 @@
-nikola[extras]
-nbconvert==5.6.1
