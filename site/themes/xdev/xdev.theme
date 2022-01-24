@@ -1,6 +1,0 @@
-[Theme]
-engine = mako
-parent = base
-license = Apache 2.0
-based_on = Jasper2 <https://github.com/jekyller/jasper2>
-
